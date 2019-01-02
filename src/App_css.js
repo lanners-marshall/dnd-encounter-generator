@@ -15,3 +15,12 @@ export const Banner = styled.div`
 		font-size: 2rem;
 	}
 `
+
+export const GroupAndSearch = styled.div`
+	margin-top: 100px;
+	display: flex;
+`
+
+export const Container = styled.div`
+	margin: 0 4%;
+`

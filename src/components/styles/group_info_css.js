@@ -1,13 +1,5 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-	margin: 0 4%;
-`
-
-export const GroupAndSearch = styled.div`
-	margin-top: 100px;
-	display: flex;
-`
 export const GroupInfo = styled.div`
 	border:solid black 1px;
 	padding: 4%;
@@ -48,8 +40,3 @@ export const PlayersDiv = styled.div`
 		}
 	}
 `
-
-export const SearchInfo = styled.div`
-
-`
-

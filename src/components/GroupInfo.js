@@ -1,29 +1,30 @@
 import React from 'react';
 import Select from 'react-select';
-import {Banner, GroupAndSearch, Container, GroupInfo, SearchInfo, AddPlayer, PlayersDiv} from './styles/group_info_css.js'
+import {Banner, GroupInfo, AddPlayer, PlayersDiv} from './styles/group_info_css.js'
 
 const options = [
-  { value: 'level1', label: '1' },
-  { value: 'level2', label: '2' },
-  { value: 'level3', label: '3' },
-  { value: 'leve4', label: '4' },
-  { value: 'level5', label: '5' },
-  { value: 'level6', label: '6' },
-  { value: 'level7', label: '7' },
-  { value: 'level8', label: '8' },
-  { value: 'level9', label: '9' },
-  { value: 'level10', label: '10' },
-  { value: 'level11', label: '11' },
-  { value: 'level12', label: '12' },
-  { value: 'level13', label: '13' },
-  { value: 'level14', label: '14' },
-  { value: 'level15', label: '15' },
-  { value: 'level16', label: '16' },
-  { value: 'level17', label: '17' },
-  { value: 'level18', label: '18' },
-  { value: 'level19', label: '19' },
-  { value: 'level20', label: '20' },
+  { value: [25, 50, 75, 100], label: '1' },
+  { value: [50, 100, 150, 200], label: '2' },
+  { value: [75, 150, 225, 400], label: '3' },
+  { value: [125, 250, 375, 500], label: '4' },
+  { value: [250, 500, 750, 1100], label: '5' },
+  { value: [300, 600, 900, 1400], label: '6' },
+  { value: [350, 750, 1100, 1700], label: '7' },
+  { value: [450, 900, 1400, 2100], label: '8' },
+  { value: [500, 1100, 1600, 2400], label: '9' },
+  { value: [600, 1200, 1900, 2800], label: '10' },
+  { value: [800, 1600, 2400, 3600], label: '11' },
+  { value: [1000, 2000, 3000, 4500], label: '12' },
+  { value: [1100, 2200, 3400, 5100], label: '13' },
+  { value: [1250, 2500, 3800, 5700], label: '14' },
+  { value: [1400, 2800, 4300, 6400], label: '15' },
+  { value: [1600, 3200, 4800, 7200], label: '16' },
+  { value: [2000, 3900, 5900, 8800], label: '17' },
+  { value: [2100, 4200, 6300, 9500], label: '18' },
+  { value: [2400, 4900, 7300, 10900], label: '19' },
+  { value: [2800, 5700, 8500, 12700], label: '20' },
 ];
+
 
 class Players extends React.Component {
 	constructor(){
@@ -43,10 +44,12 @@ class Players extends React.Component {
 
   addPlayer = () => {
   	if (this.state.selectedOption.label != null){
-	  	let player = {level: this.state.selectedOption.label, id: Date.now()}
+	  	let player = {level: this.state.selectedOption.label, id: Date.now(), xp_range: this.state.selectedOption.value}
 	  	this.setState({
 	  		players: [...this.state.players, player ]
-	  	})
+	  	}, () => {
+        this.props.getPlayers(this.state.players)
+      });
   	}
   }
 
@@ -63,14 +66,11 @@ class Players extends React.Component {
   	}
   	this.setState({
   		players: filtered
-  	})
+  	}, () => {
+      this.props.removePlayer(filtered)
+    });
+    
   }
-
-// for(var i = array.length - 1; i >= 0; i--) {
-//     if(array[i] === number) {
-//        array.splice(i, 1);
-//     }
-// }
 
 	render() {
 
@@ -81,35 +81,26 @@ class Players extends React.Component {
 		}
 
 		return (
-			<div>
-			<Container>
-          <GroupAndSearch>
-            <GroupInfo>
-              <h2>Form Group</h2>
-				       <Select
-				        value={selectedOption}
-				        onChange={this.handleChange}
-				        options={options}
-				      />
-				      <AddPlayer onClick={this.addPlayer}>add player</AddPlayer>
-				      {bol? (
-                <PlayersDiv>
-                {this.state.players.map((p, i) => {
-                  return (
-                    <p key={p.id} id={p.id} onClick={this.removePlayer}>p-level {p.level}</p>
-                  )
-                })}
-                </PlayersDiv>
-              ) :
-                null
-              }
-            </GroupInfo>
-
-            <SearchInfo>
-            </SearchInfo>
-          </GroupAndSearch>
-        </Container>
-			</div>
+      <GroupInfo>
+        <h2>Form Group</h2>
+	       <Select
+	        value={selectedOption}
+	        onChange={this.handleChange}
+	        options={options}
+	      />
+	      <AddPlayer onClick={this.addPlayer}>add player</AddPlayer>
+	      {bol? (
+          <PlayersDiv>
+          {this.state.players.map((p, i) => {
+            return (
+              <p key={p.id} id={p.id} onClick={this.removePlayer}>level {p.level}</p>
+            )
+          })}
+          </PlayersDiv>
+        ) :
+          null
+        }
+      </GroupInfo>
 		)
 	}
 }
