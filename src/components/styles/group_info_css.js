@@ -42,6 +42,10 @@ export const PlayersDiv = styled.div`
     padding: 1%;
     border-radius: 4px;
     margin-bottom; 10px;
+	  &:hover {
+			background-color: #f5f3f3;
+			cursor: pointer;
+		}
 	}
 `
 

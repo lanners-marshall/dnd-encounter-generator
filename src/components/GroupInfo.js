@@ -43,12 +43,34 @@ class Players extends React.Component {
 
   addPlayer = () => {
   	if (this.state.selectedOption.label != null){
-	  	let player = this.state.selectedOption.label
+	  	let player = {level: this.state.selectedOption.label, id: Date.now()}
 	  	this.setState({
 	  		players: [...this.state.players, player ]
 	  	})
   	}
   }
+
+  removePlayer = (event) => {
+  	console.log(event.target.id)
+  	let eventId = parseInt(event.target.id)
+  	let players = this.state.players
+  	let filtered = []
+  	console.log(typeof event.target.id)
+  	for (let i in players){
+  		if (players[i].id !== eventId){
+  			filtered.push(players[i])
+  		}
+  	}
+  	this.setState({
+  		players: filtered
+  	})
+  }
+
+// for(var i = array.length - 1; i >= 0; i--) {
+//     if(array[i] === number) {
+//        array.splice(i, 1);
+//     }
+// }
 
 	render() {
 
@@ -74,7 +96,7 @@ class Players extends React.Component {
                 <PlayersDiv>
                 {this.state.players.map((p, i) => {
                   return (
-                    <p key={i}>p-level {p}</p>
+                    <p key={p.id} id={p.id} onClick={this.removePlayer}>p-level {p.level}</p>
                   )
                 })}
                 </PlayersDiv>
