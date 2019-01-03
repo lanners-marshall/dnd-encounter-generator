@@ -5,8 +5,11 @@ export const SearchDiv = styled.div`
 	border: solid black 1px;
 	margin-left: 2%
 	padding: 2%;
+	padding-right: 8%;
 	@media (max-width: 1375px){
 		margin-left: 0;
+		margin-right: 1%;
+		padding: 2%;
 	}
 	> h2 {
 		font-size: 2rem;

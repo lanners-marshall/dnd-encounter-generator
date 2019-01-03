@@ -101,7 +101,16 @@ class App extends React.Component {
             />
 
           </GroupAndSearch>
-          <MonsterList />
+          <MonsterList 
+            players={this.state.players}
+            numberOfMonsters={this.state.numberOfMonsters}
+            difficulty={this.state.encounterDifficulty}
+            size={this.state.monsterSize}
+            type={this.state.monsterType}
+            minCr={this.state.minChallenge}
+            maxChallenge={this.state.maxChallenge}
+            environment={this.state.environment}
+          />
         </Container>
       </div>
     )
