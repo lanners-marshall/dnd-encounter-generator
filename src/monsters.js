@@ -1,4 +1,4 @@
-const monsters = [const monsters = [
+const monsters = [
     {
       name: "Aboleth",
       environment: new Set(['underground']),
@@ -79,7 +79,7 @@ const monsters = [const monsters = [
     },
     {
       name: "Adult Blue Dragon",
-      environment: new Set(['coast, desert']),
+      environment: new Set(['coast', 'desert']),
       size: 'huge',
       type: "dragon",
       xp: 15000,
@@ -339,7 +339,7 @@ const monsters = [const monsters = [
     },
     {
       name: "Allosaurus",
-      environment: new Set(['grass land']),
+      environment: new Set(['grass', 'land']),
       size: 'large',
       type: "beast",
       xp: 450,
@@ -4217,7 +4217,7 @@ const monsters = [const monsters = [
     },
     {
       name: "Half-Red Dragon Veteran",
-      environment: new set(['any']),
+      environment: new Set(['any']),
       size: 'medium',
       type: "humanoid",
       challenge_rating: '5',
@@ -4243,7 +4243,7 @@ const monsters = [const monsters = [
     },
     {
       name: "Harpy",
-      environment: new set(['coast', 'forest', 'hill', 'mountain']),
+      environment: new Set(['coast', 'forest', 'hill', 'mountain']),
       size: 'medium',
       type: "monstrosity",
       challenge_rating: '1',
