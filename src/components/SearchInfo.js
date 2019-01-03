@@ -29,7 +29,6 @@ const options = [
 const options2 = [
   { value: 'easy', label: 'easy' },
   { value: 'medium', label: 'medium' },
-  { value: 'easy', label: 'easy' },
   { value: 'hard', label: 'hard' },
   { value: 'deadly', label: 'deadly' },
 ]
