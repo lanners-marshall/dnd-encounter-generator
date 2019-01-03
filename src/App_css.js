@@ -26,5 +26,5 @@ export const GroupAndSearch = styled.div`
 `
 
 export const Container = styled.div`
-	margin: 0 4%;
+	margin: 0 2%;
 `

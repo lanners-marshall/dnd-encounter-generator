@@ -4,10 +4,11 @@ export const GroupInfo = styled.div`
 	border:solid black 1px;
 	padding: 4%;
 	background-color: white;
-	width: 40%;
+	width: 100%;
 	max-width: 200px;
 	height: 300px;
 	overflow: scroll;
+	padding-left: 3.3%;
 	@media (max-width: 1375px){
 		width: 91.7%;
 		height: 150px;
