@@ -1,7 +1,11 @@
 import React from 'react';
 import Select from 'react-select';
+import './styles/custom.css'
 import {Banner, GroupInfo, AddPlayer, PlayersDiv} from './styles/group_info_css.js'
 
+
+// value:
+//[0] easy, [1] medium, [2] hard, [3] deadly
 const options = [
   { value: [25, 50, 75, 100], label: '1' },
   { value: [50, 100, 150, 200], label: '2' },
@@ -24,7 +28,6 @@ const options = [
   { value: [2400, 4900, 7300, 10900], label: '19' },
   { value: [2800, 5700, 8500, 12700], label: '20' },
 ];
-
 
 class Players extends React.Component {
 	constructor(){
@@ -87,6 +90,7 @@ class Players extends React.Component {
 	        value={selectedOption}
 	        onChange={this.handleChange}
 	        options={options}
+          className="select"
 	      />
 	      <AddPlayer onClick={this.addPlayer}>add player</AddPlayer>
 	      {bol? (

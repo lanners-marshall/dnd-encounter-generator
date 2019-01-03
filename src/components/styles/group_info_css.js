@@ -6,7 +6,7 @@ export const GroupInfo = styled.div`
 	background-color: white;
 	width: 100%;
 	max-width: 200px;
-	height: 200px;
+	height: 300px;
 	overflow: scroll;
 	> h2 {
 		font-size: 2rem;
