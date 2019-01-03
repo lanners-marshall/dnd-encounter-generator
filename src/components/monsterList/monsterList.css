@@ -1,0 +1,77 @@
+.monster-div{
+    margin-top: 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap:wrap;
+    color:white;
+    background-color: #ECECEC;
+  }
+  .monster-title{
+    color: #D1AE78;
+    border-bottom: 1px solid rgb(46, 46, 46);
+    font-size: 1.8rem;
+    padding: 15px;
+  }
+  .monster-title2{
+    color: #D1AE78;
+    font-size: 1.55rem;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  .monster-card{
+    background-color: rgb(19, 19, 19);
+    bordeR: 2px solid #D1AE78;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  .exp-div{
+      margin-bottom: 10px;
+  }
+  .exp-div h5{
+      font-size: 1.55rem;
+  }
+  .stat-title{
+    font-size: 1.15rem;
+    margin-bottom: 0px;
+  }
+  .stat{
+    background-color: rgb(41, 41, 41);
+    box-shadow: inset 1px 1px 1px black;
+    border: 2px solid #D1AE78;
+    padding: 5px;
+    width: 70px;
+    font-size: 1.5rem;
+  }
+  .monster-text{
+    display: flex;
+    flex-direction: row;
+  }
+  .monster-info{
+    width: 90%;
+    margin: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+  }
+  .monster-pic{
+    margin:auto;
+    border-bottom: 2px solid #D1AE78;
+    width: 300px;
+    height: 250px;
+  }
+  .monster-stats{
+  
+    padding: 5px;
+  }
+  .buttons{
+      display: flex;
+      flex-direction: column;
+      width: 100px;
+      margin: auto;
+  }
