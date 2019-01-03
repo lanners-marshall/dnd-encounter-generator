@@ -8,7 +8,14 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      players: []
+      players: [],
+      numberOfMonsters: '',
+      encounterDifficulty: '',
+      monsterSize: '',
+      environment: '',
+      monsterType: '',
+      minChallenge: '',
+      maxChallenge: ''
     };
   }
 
@@ -16,13 +23,55 @@ class App extends React.Component {
 
   getPlayers = (players) => {
     this.setState({
-      players: players
+      players: players,
+    })
+  }
+
+  getNumMonsters = (num) => {
+    this.setState({
+      numberOfMonsters: num,
+    })
+  }
+
+  getEncounterDifficulty = (difficulty) => {
+    this.setState({
+      encounterDifficulty: difficulty,
+    })
+  }
+
+  getMonsterSize = (size) => {
+    this.setState({
+      monsterSize: size,
+    })
+  }
+
+  getEnvironment = (environment) => {
+    this.setState({
+      environment: environment,
+    })
+  }
+
+  getMonsterType = (type) => {
+    this.setState({
+      monsterType: type,
+    })
+  }
+
+  getMinChallenge = (min) => {
+    this.setState({
+      minChallenge: min,
+    })
+  }
+
+  maxChallenge = (max) => {
+    this.setState({
+      maxChallenge: max,
     })
   }
 
   removePlayer = (filtered) => {
     this.setState({
-      players: filtered
+      players: filtered,
     })
   }
 
@@ -35,7 +84,16 @@ class App extends React.Component {
         <Container>
           <GroupAndSearch>
             <Players getPlayers={this.getPlayers} removePlayer={this.removePlayer}/>
-            <SearchInfo/>
+            <SearchInfo
+              getNumMonsters={this.getNumMonsters}
+              getEnvironment={this.getEnvironment}
+              getEncounterDifficulty={this.getEncounterDifficulty}
+              getMonsterSize={this.getMonsterSize}
+              getEnvironment={this.getEnvironment}
+              getMonsterType={this.getMonsterType}
+              getMinChallenge={this.getMinChallenge}
+              maxChallenge={this.maxChallenge}
+            />
           </GroupAndSearch>
         </Container>
       </div>

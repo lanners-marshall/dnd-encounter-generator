@@ -132,41 +132,41 @@ class SearchInfo extends React.Component {
 	componentDidMount(){}
 
 	handleChange = (selectedOption) => {
-	  this.setState({ selectedOption });
-	  console.log(`Option selected:`, selectedOption);
+  this.setState({ selectedOption }, () => {this.props.getNumMonsters(selectedOption.label)});
 	}
 
 	handleChange2 = (selectedOption2) => {
-	  this.setState({ selectedOption2 });
+	  this.setState({ selectedOption2 }, () => {this.props.getEncounterDifficulty(selectedOption2.label)});
 	  console.log(`Option selected:`, selectedOption2);
 	}
 
 	handleChange3 = (selectedOption3) => {
-	  this.setState({ selectedOption3 });
+	  this.setState({ selectedOption3 }, () => {this.props.getMonsterSize(selectedOption3.label)});
 	  console.log(`Option selected:`, selectedOption3);
 	}
 
 	handleChange4 = (selectedOption4) => {
-	  this.setState({ selectedOption4 });
+	  this.setState({ selectedOption4 }, () => {this.props.getEnvironment(selectedOption4.label)});
 	  console.log(`Option selected:`, selectedOption4);
 	}
 
 	handleChange5 = (selectedOption5) => {
-	  this.setState({ selectedOption5 });
+	  this.setState({ selectedOption5 }, ()=> {this.props.getMonsterType(selectedOption5.label)});
 	  console.log(`Option selected:`, selectedOption5);
 	}
 
 	handleChange6 = (selectedOption6) => {
-	  this.setState({ selectedOption6 });
+	  this.setState({ selectedOption6 }, () => {this.props.getMinChallenge(selectedOption6.label)});
 	  console.log(`Option selected:`, selectedOption6);
 	}
 
 	handleChange7 = (selectedOption7) => {
-	  this.setState({ selectedOption7 });
+	  this.setState({ selectedOption7 }, () => {this.props.maxChallenge(selectedOption7.label)});
 	  console.log(`Option selected:`, selectedOption7);
 	}
 
 	render() {
+		console.log(this.props)
 		return (
 			<SearchDiv> 
 				<h2>Filter Selection</h2>
