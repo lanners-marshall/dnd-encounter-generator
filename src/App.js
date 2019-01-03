@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Banner, GroupAndSearch, Container} from './App_css.js'
 import Players from './components/GroupInfo';
 import SearchInfo from './components/SearchInfo';
+import MonsterList from './components/monsterList/monsterList';
 import dnd from './components/images/dnd.png'
 import './components/styles/custom.css'
 
@@ -100,6 +101,7 @@ class App extends React.Component {
             />
 
           </GroupAndSearch>
+          <MonsterList />
         </Container>
       </div>
     )
