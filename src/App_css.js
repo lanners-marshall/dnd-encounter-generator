@@ -17,8 +17,12 @@ export const Banner = styled.div`
 `
 
 export const GroupAndSearch = styled.div`
-	margin-top: 100px;
 	display: flex;
+	margin-top: 100px;
+	justify-content: center;
+	@media (max-width: 1375px){
+		flex-direction: column;
+	}
 `
 
 export const Container = styled.div`

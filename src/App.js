@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Banner, GroupAndSearch, Container} from './App_css.js'
 import Players from './components/GroupInfo';
 import SearchInfo from './components/SearchInfo';
+import dnd from './components/images/dnd.png'
+import './components/styles/custom.css'
 
 
 class App extends React.Component {
@@ -79,8 +81,10 @@ class App extends React.Component {
     return (
       <div>
         <Banner>
-          <h1>DnD 5e Encounter Generator</h1>
+          <img src={dnd} alt="dungeons and dragons" className="dnd" />
+          <h1>Encounter Generator</h1>
         </Banner>
+
         <Container>
           <GroupAndSearch>
             <Players getPlayers={this.getPlayers} removePlayer={this.removePlayer}/>
@@ -94,6 +98,7 @@ class App extends React.Component {
               getMinChallenge={this.getMinChallenge}
               maxChallenge={this.maxChallenge}
             />
+
           </GroupAndSearch>
         </Container>
       </div>
