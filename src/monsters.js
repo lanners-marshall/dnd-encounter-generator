@@ -4698,7 +4698,7 @@ const monsters = [
       meta:  "unaligned",
       size: "large",
       type: "ooze",
-      page: "243"
+      page: "243",
       xp: 450,
       armorClass: 8 ,
       hitPoints: 45,
@@ -4715,7 +4715,6 @@ const monsters = [
       WIS_mod: (-2),
       CHA: 1,
       CHA_mod: (-5),
-      
       Traits: <p><em><strong>Amorphous.</strong></em> The jelly can move through a space as narrow as 1 inch wide without squeezing. </p><p><em><strong>Spider Climb.</strong></em> The jelly can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.</p>,
       Actions: <p><em><strong>Pseudopod.</strong></em> <em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one target. <em>Hit:</em> 9 (2d6 + 2) bludgeoning damage plus 3 (1d6) acid damage.</p>,
       Reactions: <p><em><strong>Split.</strong></em> When a jelly that is Medium or larger is subjected to lightning or slashing damage, it splits into two new jellies if it has at least 10 hit points. Each new jelly has hit points equal to half the original jelly's, rounded down. New jellies are one size smaller than the original jelly.</p>,
