@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
 export const SearchDiv = styled.div`
-	width: 100%;
 	background-color: white;
 	border: solid black 1px;
 	margin-left: 2%
 	padding: 2%;
+	@media (max-width: 1375px){
+		margin-left: 0;
+	}
 	> h2 {
 		font-size: 2rem;
 		margin-bottom: 10px;
@@ -24,7 +26,8 @@ export const SearchDiv = styled.div`
 export const FlexDiv = styled.div`
 	display:flex;
 	flex-wrap: wrap;
-  width: 900px;
+	width: 100%;
+  max-width: 800px;
   margin: 0 auto;
 `
 
