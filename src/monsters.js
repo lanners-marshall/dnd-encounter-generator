@@ -1,6 +1,13 @@
 const monsters = [
     {
       name: "Aboleth",
+      environment: new set(['underground']),
+      size: "large",
+      type: "aberration",
+      xp: 5900,
+      challenge_rating: "10",
+      page: '13',
+      alignment: "lawful evil",
       armorClass: 17,
       hitPoints: 135,
       Speed: 10,
@@ -16,12 +23,18 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 18,
       CHA_mod: (+4),
-      Challenge: 5900,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/11/1000/1000/636238825975375671.jpeg"
     },
     {
       name: "Acolyte",
-      armorClass: 10 ,
+      environment: new set(['urban']),
+      size: "medium",
+      type: "humanoid",
+      xp: 50,
+      challenge_rating: "1/4",
+      page: '342',
+      alignment: "any alignment",
+      armorClass: 10,
       hitPoints: 9,
       Speed: 30,
       STR: 10,
@@ -36,11 +49,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 11,
       CHA_mod: (+0),
-      Challenge: 50,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/656/humanoid.jpg"
     },
     {
       name: "Adult Black Dragon",
+      environment: new set(['swamp']),
+      size: "huge",
+      type: "dragon",
+      xp: 11500,
+      challenge_rating: "14",
+      page: '98',
+      alignment: "chaotic evil",
       armorClass: 19,
       hitPoints: 195,
       Speed: 40,
@@ -56,12 +75,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 17,
       CHA_mod: (+3),
-      Challenge: 11500,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/13/1000/1000/636238871029832086.jpeg"
     },
     {
       name: "Adult Blue Dragon",
-      meta: "lawful evil",
+      environment: new set(['coast, desert']),
+      size: 'huge',
+      type: "dragon",
+      xp: 15000,
+      challenge_rating: '16',
+      page: '91',
+      alignment: "lawful evil",
       armorClass: 19,
       hitPoints: 225,
       Speed: 40,
@@ -77,12 +101,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 19,
       CHA_mod: (+4),
-      Challenge: 15000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/16/1000/1000/636238882493439723.jpeg"
     },
     {
       name: "Adult Brass Dragon",
-      meta: "chaotic good",
+      environment: new set(['desert']),
+      size: 'huge',
+      type: "dragon",
+      xp: 10000,
+      challenge_rating: '13',
+      page: '105',
+      alignment: "chaotic good",
       armorClass: 18,
       hitPoints: 172,
       Speed: 40,
@@ -98,12 +127,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 17,
       CHA_mod: (+3),
-      Challenge: 10000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/18/1000/1000/636238885681129014.jpeg"
     },
     {
       name: "Adult Bronze Dragon",
-      meta: "Huge dragon, lawful good",
+      environment: new set(['coast']),
+      size: 'huge',
+      type: "dragon",
+      xp: 13000,
+      challenge_rating: '15',
+      page: '108',
+      alignment: "lawful good",
       armorClass: 19,
       hitPoints: 212,
       Speed: 40,
@@ -119,12 +153,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 19,
       CHA_mod: (+4),
-      Challenge: 13000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/20/1000/1000/636238888310108665.jpeg"
     },
     {
       name: "Adult Copper Dragon",
-      meta:"Huge dragon, chaotic good",
+      environment: new set(['hill']),
+      size: 'huge',
+      type: "dragon",
+      xp: 13000,
+      challenge_rating: '14',
+      page: '112',
+      alignment: "chaotic good",
       armorClass: 18,
       hitPoints: 184,
       Speed: 40,
@@ -140,12 +179,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 17,
       CHA_mod: (+3),
-      Challenge: 11500,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/22/1000/1000/636238956325913912.jpeg"
     },
     {
       name: "Adult Gold Dragon",
-      meta: "Huge dragon, lawful good",
+      environment: new set(['hill']),
+      size: 'huge',
+      type: "dragon",
+      xp: 18000,
+      challenge_rating: '17',
+      page: '114',
+      alignment: "lawful good",
       armorClass: 19,
       hitPoints: 256,
       Speed: 40,
@@ -161,12 +205,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 24,
       CHA_mod: (+7),
-      Challenge: 18000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/24/1000/1000/636238958915127190.jpeg"
     },
     {
       name: "Adult Green Dragon",
-      meta: "Huge dragon, lawful evil",
+      environment: new set(['forest']),
+      size: 'huge',
+      type: "dragon",
+      xp: 13000,
+      challenge_rating: '15',
+      page: '94',
+      alignment: "lawful evil",
       armorClass: 19,
       hitPoints: 207,
       Speed: 40,
@@ -182,12 +231,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 17,
       CHA_mod: (+3),
-      Challenge: 13000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/26/1000/1000/636238962276510242.jpeg"
     },
     {
       name: "Adult Red Dragon",
-      meta: "Huge dragon, chaotic evil",
+      environment: new set(['hill', 'mountain']),
+      size: 'huge',
+      type: "dragon",
+      xp: 18000,
+      challenge_rating: '17',
+      page: '98',
+      alignment: "chaotic evil",
       armorClass: 19,
       hitPoints: 256,
       Speed: 40,
@@ -203,12 +257,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 21,
       CHA_mod: (+5),
-      Challenge: 18000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/28/1000/1000/636238971817119794.jpeg"
     },
     {
       name: "Adult Silver Dragon",
-      meta: "Huge dragon, lawful good",
+      environment: new set(['mountain', 'urban']),
+      size: 'huge'
+      type: "dragon",
+      xp: 15000,
+      challenge_rating: '16',
+      page: '117',
+      alignment: "lawful good",
       armorClass: 19,
       hitPoints: 243,
       Speed: 40,
@@ -224,12 +283,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 21,
       CHA_mod: (+5),
-      Challenge: 15000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/123/1000/1000/636252753945133025.jpeg"
     },
     {
       name: "Adult White Dragon",
-      meta: "Huge dragon, chaotic evil",
+      environment: new set(['arctic']),
+      size: 'huge'
+      type: "dragon",
+      xp: 10000,
+      challenge_rating: '13',
+      page: '101',
+      alignment: "chaotic evil",
       armorClass: 18,
       hitPoints: 200,
       Speed: 40,
@@ -245,12 +309,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 12,
       CHA_mod: (+1),
-      Challenge: 10000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/125/1000/1000/636252755468117001.jpeg"
     },
     {
       name: "Air Elemental",
-      meta: "Large elemental, neutral",
+      environment: new set(['desert', 'mountain']),
+      size: 'large'
+      type: "elemental",
+      xp: 1800,
+      challenge_rating: '5',
+      page: '124',
+      alignment: "neutral",
       armorClass: 15 ,
       hitPoints: 90,
       Speed: 0,
@@ -266,12 +335,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 6,
       CHA_mod: (-2),
-      Challenge: 1800,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/127/1000/1000/636252755648556800.jpeg"
     },
     {
       name: "Allosaurus",
-      meta: "Large beast, unaligned",
+      environment: new set(['grass land']),
+      size: 'large'
+      type: "beast",
+      xp: 450,
+      challenge_rating: '2',
+      page: '79',
+      alignment: "unaligned",
       armorClass: 13,
       hitPoints: 5,
       Speed: 60,
@@ -287,12 +361,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge: 450,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Ancient Black Dragon",
-      meta: "Gargantuan dragon, chaotic evil",
+      environment: new set(['swamp']),
+      size: 'gargantuan',
+      type: "dragon",
+      xp: 1800,
+      challenge_rating: '21',
+      page: '87',
+      alignment: "chaotic evil",
       armorClass: 22,
       hitPoints: 367,
       Speed: 40,
@@ -313,7 +392,13 @@ const monsters = [
     },
     {
       name: "Ancient Blue Dragon",
-      meta: "Gargantuan dragon, lawful evil",
+      environment: new set(['coast', 'desert']),
+      size: 'gargantuan',
+      type: "dragon",
+      xp: 50000,
+      challenge_rating: '23',
+      page: '90',
+      alignment: "lawful evil",
       armorClass: 22,
       hitPoints: 481,
       Speed: 40,
@@ -329,12 +414,17 @@ const monsters = [
       WIS_mod: (+3),
       CHA: 21,
       CHA_mod: (+5),
-      Challenge: 50000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/131/1000/1000/636252756020185006.jpeg"
     },
     {
       name: "Ancient Brass Dragon",
-      meta: "Gargantuan dragon, chaotic good",
+      environment: new set(['desert']),
+      size: 'gargantuan',
+      type: "dragon",
+      xp: 25000,
+      challenge_rating: '20',
+      page: '104',
+      alignment: "chaotic good",
       armorClass: 20,
       hitPoints: 297,
       Speed: 40,
@@ -350,12 +440,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 19,
       CHA_mod: (+4),
-      Challenge: 25000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/133/1000/1000/636252756157427258.jpeg"
     },
     {
       name: "Ancient Bronze Dragon",
-      meta: "Gargantuan dragon, lawful good",
+      environment: new set(['coast']),
+      size: 'gargantuan',
+      type: "dragon",
+      xp: 41000,
+      challenge_rating: '22',
+      page: '107',
+      alignment: "lawful good",
       armorClass: 22,
       hitPoints: 444,
       Speed: 40,
@@ -371,12 +466,17 @@ const monsters = [
       WIS_mod: (+3),
       CHA: 21,
       CHA_mod: (+5),
-      Challenge: 41000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/135/315/315/636252756372367681.jpeg"
     },
     {
       name: "Ancient Copper Dragon",
-      meta: "Gargantuan dragon, chaotic good",
+      environment: new set(['hill']),
+      size: 'gargantuan',
+      type: "dragon",
+      xp: 33000,
+      challenge_rating: '21',
+      page: '110',
+      alignment: "chaotic good",
       armorClass: 21,
       hitPoints: 350,
       Speed: 40,
@@ -392,12 +492,17 @@ const monsters = [
       WIS_mod: (+3),
       CHA: 19,
       CHA_mod: (+4),
-      Challenge: 33000,
+      xp: 33000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/137/1000/1000/636252756714896878.jpeg"
     },
     {
       name: "Ancient Gold Dragon",
-      meta: "Gargantuan dragon, lawful good",
+      environment: new set(['hill']),
+      size: 'gargantuan',
+      type: "dragon",
+      challenge_rating: '24',
+      page: '113',
+      alignment: "lawful good",
       armorClass: 22,
       hitPoints: 546,
       Speed: 40,
@@ -413,12 +518,17 @@ const monsters = [
       WIS_mod: (+3),
       CHA: 28,
       CHA_mod: (+9),
-      Challenge: 62000,
+      xp: 62000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/139/315/315/636252756930565101.jpeg"
     },
     {
       name: "Ancient Green Dragon",
-      meta: "Gargantuan dragon, lawful evil",
+      environment: new set(['forest']),
+      size: 'gargantuan',
+      type: "dragon",
+      challenge_rating: '22',
+      page: '93',
+      alignment: "lawful evil",
       armorClass: 21,
       hitPoints: 385,
       Speed: 40,
@@ -434,12 +544,17 @@ const monsters = [
       WIS_mod: (+3),
       CHA: 19,
       CHA_mod: (+4),
-      Challenge: 41000,
+      xp: 41000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/141/1000/1000/636252757319464533.jpeg"
     },
     {
       name: "Ancient Red Dragon",
-      meta: "Gargantuan dragon, chaotic evil",
+      environment: new set(['hill', 'mountain']),
+      size: 'gargantuan',
+      type: "dragon",
+      challenge_rating: '24',
+      page: '97',
+      alignment: "chaotic evil",
       armorClass: 22,
       hitPoints: 546,
       Speed: 40,
@@ -455,12 +570,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 23,
       CHA_mod: (+6),
-      Challenge: 62000,
+      xp: 62000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/147/1000/1000/636252758629652181.jpeg"
     },
     {
       name: "Ancient Silver Dragon",
-      meta: "Gargantuan dragon, lawful good",
+      environment: new set(['urban', 'mountain']),
+      size: 'gargantuan',
+      type: "dragon",
+      challenge_rating: '23',
+      page: '116',
+      alignment: "lawful good",
       armorClass: 22,
       hitPoints: 487,
       Speed: 40,
@@ -476,12 +596,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 23,
       CHA_mod: (+6),
-      Challenge: 23,
+      xp: 50000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/151/1000/1000/636252758799225927.jpeg"
     },
     {
       name: "Ancient White Dragon",
-      meta: "Gargantuan dragon, chaotic evil",
+      environment: new set(['arctic']),
+      size: 'gargantuan',
+      type: "dragon",
+      challenge_rating: '20',
+      page: '100',
+      alignment: "chaotic evil",
       armorClass: 20,
       hitPoints: 333,
       Speed: 40,
@@ -497,12 +622,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 14,
       CHA_mod: (+2),
-      Challenge: 25000,
+      xp: 25000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/153/1000/1000/636252758955886210.jpeg"
     },
     {
       name: "Androsphinx",
-      meta:"Large monstrosity, lawful neutral",
+      environment: new set(['desert']),
+      size: 'large',
+      type: "monstrosity",
+      challenge_rating: '17',
+      page: '281',
+      alignment: "lawful neutral",
       armorClass: 17,
       hitPoints: 199,
       Speed: 40,
@@ -518,12 +648,17 @@ const monsters = [
       WIS_mod: (+4),
       CHA: 23,
       CHA_mod: (+6),
-      Challenge:18000,
+      xp:18000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/157/1000/1000/636252759145617281.jpeg"
     },
     {
       name: "Animated Armor",
-      meta: "Medium construct, unaligned",
+      environment: new set(['any']),
+      size: 'medium',
+      type: "construct",
+      challenge_rating: '1',
+      page: '19',
+      alignment: "lawful neutral",
       armorClass: 18,
       hitPoints: 33,
       Speed: 25,
@@ -539,12 +674,17 @@ const monsters = [
       WIS_mod: (-4),
       CHA: 1,
       CHA_mod: (-5),
-      Challenge: 200,
+      xp: 200,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/8/429/1000/1000/636306156895834255.jpeg"
     },
     {
       name: "Ankheg",
-      meta: "Large monstrosity, unaligned",
+      environment: new set(['forest', 'grass land']),
+      size: 'large',
+      type: "monstrosity",
+      challenge_rating: '2',
+      page: '21',
+      alignment: "unaligned",
       armorClass: 14,
       hitPoints: 39,
       Speed: 30,
@@ -560,12 +700,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 6,
       CHA_mod: (-2),
-      Challenge: 450,
+      xp: 450,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/161/315/315/636252759871983921.jpeg"
     },
     {
       name: "Ankylosaurus",
-      meta: "Huge beast, unaligned",
+      environment: new set(['grass land']),
+      size: 'huge',
+      type: "beast",
+      challenge_rating: '3',
+      page: '79',
+      alignment: "unaligned",
       armorClass: 15,
       hitPoints: 68,
       Speed: 30,
@@ -581,12 +726,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge: 700,
+      xp: 700,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Ape",
-      meta: "Medium beast, unaligned",
+      environment: new set(['forest']),
+      size: 'medium',
+      type: "beast",
+      challenge_rating: '1/2',
+      page: '317',
+      alignment: "unaligned",
       armorClass: 12 ,
       hitPoints: 19,
       Speed: 30,
@@ -602,12 +752,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 7,
       CHA_mod: (-2),
-      Challenge: 100,
+      xp: 100,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Archmage",
-      meta: "Medium humanoid, any",
+      environment: new set(['urban']),
+      size: 'medium',
+      type: "humanoid",
+      challenge_rating: '12',
+      page: '342',
+      alignment: "any",
       armorClass: 12,
       hitPoints: 99,
       Speed: 30,
@@ -623,12 +778,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 16,
       CHA_mod: (+3),
-      Challenge: 8400,
+      xp: 8400,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/167/1000/1000/636252760213195530.jpeg"
     },
     {
       name: "Assassin",
-      meta: "Medium humanoid, any",
+      environment: new set(['urban']),
+      size: 'medium',
+      type: "humanoid",
+      challenge_rating: '8',
+      page: '343',
+      alignment: "non-good",
       armorClass: 15,
       hitPoints: 78,
       Speed: 30,
@@ -644,12 +804,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 10,
       CHA_mod: (+0),
-      Challenge: 3900,
+      xp: 3900,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/9/910/315/315/636334293020978804.png"
     },
     {
       name:"Awakened Shrub",
-      meta: "Small plant, unaligned",
+      environment: new set(['forest']),
+      size: 'small',
+      type: "plant",
+      challenge_rating: '0',
+      page: '317',
+      alignment: "unaligned",
       armorClass: 9 ,
       hitPoints: 10,
       Speed: 20,
@@ -665,12 +830,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 6,
       CHA_mod: (-2),
-      Challenge: 10,
+      xp: 10,
       img_url:"https://media-waterdeep.cursecdn.com/attachments/2/659/plant.jpg"
     },
     {
       name: "Awakened Tree",
-      meta: "Huge plant, unaligned",
+      environment: new set(['forest']),
+      size: 'huge',
+      type: "plant",
+      challenge_rating: '2',
+      page: '317',
+      alignment: "unaligned",
       armorClass: 13,
       hitPoints: 59,
       Speed: 20,
@@ -686,12 +856,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 7,
       CHA_mod: (-2),
-      Challenge: 450,
+      xp: 450,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/659/plant.jpg"
     },
     {
       name: "Axe Beak",
-      meta: "Large beast, unaligned",
+      environment: new set(['grass land', 'hill']),
+      size: 'large',
+      type: "beast",
+      challenge_rating: '1/4',
+      page: '317',
+      alignment: "unaligned",
       armorClass: 11 ,
       hitPoints: 19,
       Speed: 50,
@@ -707,12 +882,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge: 50,
+      xp: 50,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Azer",
-      meta: "Medium elemental, lawful neutral",
+      environment: new set(['any']),
+      size: 'medium',
+      type: "elemental",
+      challenge_rating: '2',
+      page: '22',
+      alignment: "lawful neutral",
       armorClass: 17,
       hitPoints: 39,
       Speed: 30,
@@ -728,12 +908,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 10,
       CHA_mod: (+0),
-      Challenge: 450,
+      xp: 450,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/171/1000/1000/636252761112348397.jpeg"
     },
     {
       name: "Baboon",
-      meta: "Small beast, unaligned",
+      environment: new set(['forest', 'hill']),
+      size: 'small',
+      type: "beast",
+      challenge_rating: '0',
+      page: '22',
+      alignment: "unaligned",
       armorClass: 12 ,
       hitPoints: 3,
       Speed: 30,
@@ -749,12 +934,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 6,
       CHA_mod: (-2),
-      Challenge: 10,
+      xp: 10,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Badger",
-      meta: "Tiny beast, unaligned",
+      environment: new set(['forest']),
+      size: 'tiny',
+      type: "beast",
+      challenge_rating: '0',
+      page: '318',
+      alignment: "unaligned",
       armorClass: 10 ,
       hitPoints: 3,
       Speed: 20,
@@ -770,12 +960,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge: 0,
+      xp: 10,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/528/1000/1000/636376327632236333.jpeg"
     },
     {
       name: "Balor",
-      meta: "Huge fiend, chaotic evil",
+      environment: new set(['any']),
+      size: 'huge',
+      type: "fiend",
+      challenge_rating: '19',
+      page: '55',
+      alignment: "chaotic evil",
       armorClass: 19,
       hitPoints: 262,
       Speed: 40,
@@ -791,12 +986,17 @@ const monsters = [
       WIS_mod: (+3),
       CHA: 22,
       CHA_mod: (+6),
-      Challenge: 22000,
+      xp: 22000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/175/1000/1000/636252761612038117.jpeg"
     },
     {
       name: "Bandit",
-      meta: "Medium humanoid, any",
+      environment: new set(['arctic', 'coast', 'desert', 'forest', 'hill', 'urban']),
+      size: 'medium',
+      type: "humanoid",
+      challenge_rating: '1/8',
+      page: '343',
+      alignment: "non-lawful",
       armorClass: 12,
       hitPoints: 11,
       Speed: 30,
@@ -812,12 +1012,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 10,
       CHA_mod: (+0),
-      Challenge: 25,
+      xp: 25,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/656/humanoid.jpg"
     },
     {
       name: "Bandit Captain",
-      meta: "Medium humanoid, any",
+      environment: new set(['arctic', 'coast', 'desert', 'forest', 'hill', 'urban']),
+      size: 'medium',
+      type: "humanoid",
+      challenge_rating: '2',
+      page: '344',
+      alignment: "non-lawful",
       armorClass: 15,
       hitPoints: 65,
       Speed: 30,
@@ -833,12 +1038,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 14,
       CHA_mod: (+2),
-      Challenge: 450,
+      xp: 450,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/181/1000/1000/636252761965117015.jpeg"
     },
     {
       name: "Banshee",
-      meta: "Medium undead, chaotic evil",
+      environment: new set(['any']),
+      size: 'medium',
+      type: "undead",
+      challenge_rating: '4',
+      page: '23',
+      alignment: "chaotic evil",
       armorClass: 12 ,
       hitPoints: 58,
       Speed: 40,
@@ -854,12 +1064,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 17,
       CHA_mod: (+3),
-      Challenge: 1100,
+      xp: 1100,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/8/446/315/315/636306384206418474.jpeg"
     },
     {
       name: "Barbed Devil",
-      meta: "Medium fiend, lawful evil",
+      environment: new set(['any']),
+      size: 'medium',
+      type: "fiend",
+      challenge_rating: '5',
+      page: '70',
+      alignment: "lawful evil",
       armorClass: 15,
       hitPoints: 110,
       Speed: 30,
@@ -875,12 +1090,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 14,
       CHA_mod: (+2),
-      Challenge: 1800,
+      xp: 1800,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/486/315/315/636376302569423870.jpeg"
     },
     {
       name: "Basilisk",
-      meta: "Medium monstrosity, unaligned",
+      environment: new set(['mountain']),
+      size: 'medium',
+      type: "monstrosity",
+      challenge_rating: '3',
+      page: '24',
+      alignment: "unaligned",
       armorClass: 15,
       hitPoints: 52,
       Speed: 20,
@@ -896,12 +1116,17 @@ const monsters = [
       WIS_mod: (-1),
       CHA: 7,
       CHA_mod: (-2),
-      Challenge: 700,
+      xp: 700,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/185/1000/1000/636252762168821795.jpeg"
     },
     {
       name: "Bat",
-      meta: "Tiny beast, unaligned",
+      environment: new set(['cave']),
+      size: 'medium',
+      type: "beast",
+      challenge_rating: '0',
+      page: '318',
+      alignment: "unaligned",
       armorClass: 12 ,
       hitPoints: 1,
       Speed: 5,
@@ -917,12 +1142,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 4,
       CHA_mod: (-3),
-      Challenge: 10,
+      xp: 10,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/18/305/1000/1000/636379812593010967.jpeg"
     },
     {
       name: "Bearded Devil",
-      meta: "Medium fiend, lawful evil",
+      environment: new set(['any']),
+      size: 'medium',
+      type: "fiend",
+      challenge_rating: '3',
+      page: '70',
+      alignment: "lawful evil",
       armorClass: 13,
       hitPoints: 52,
       Speed: 30,
@@ -938,12 +1168,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 11,
       CHA_mod: (+0),
-      Challenge: 700,
+      xp: 700,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/193/1000/1000/636252763397604505.jpeg"
     },
     {
       name:"Behir",
-      meta: "Huge monstrosity, neutral evil",
+      environment: new set(['cave']),
+      size: 'huge',
+      type: "monstrosity",
+      challenge_rating: '3',
+      page: '25',
+      alignment: "neutral evil",
       armorClass: 17,
       hitPoints: 168,
       Speed: 50,
@@ -959,12 +1194,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 12,
       CHA_mod: (+1),
-      Challenge: 7200,
+      xp: 7200,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/195/1000/1000/636252763748680024.jpeg"
     },
     {
       name:"Berserker",
-      meta: "Medium humanoid, any",
+      environment: new set(['arctic', 'coast', 'desert', 'forest', 'hill', 'mountain']),
+      size: 'medium',
+      type: "humanoid",
+      challenge_rating: '2',
+      page: '344',
+      alignment: "any chaotic",
       armorClass: 13,
       hitPoints: 67,
       Speed: 30,
@@ -980,12 +1220,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 9,
       CHA_mod: (-1),
-      Challenge: 450,
+      xp: 450,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/656/humanoid.jpg"
     },
     {
       name: "Black Bear",
-      meta: "Medium beast, unaligned",
+      environment: new set(['forest']),
+      size: 'medium',
+      type: "beast",
+      challenge_rating: '1/2',
+      page: '318',
+      alignment: "unaligned",
       armorClass: 11,
       hitPoints: 19,
       Speed: 40,
@@ -1001,12 +1246,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 7,
       CHA_mod: (-2),
-      Challenge: 100,
+      xp: 100,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Black Dragon Wyrmling",
-      meta: "Medium dragon, chaotic evil",
+      environment: new set(['any']),
+      size: 'medium',
+      type: "dragon",
+      challenge_rating: '2',
+      page: '88',
+      alignment: "chaotic evil",
       armorClass: 17,
       hitPoints: 33,
       Speed: 30,
@@ -1022,15 +1272,20 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 13,
       CHA_mod: (+1),
-      Challenge: 2,
+      xp: 2,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/496/1000/1000/636376308217017511.jpeg"
     },
     {
       name: "Black Pudding",
-      meta: "Large ooze, unaligned",
-      armorClass: 7 ,
-      hitPoints: 85 (10d10 + 30),
-      Speed: 20 ft., climb 20,
+      environment: new set(['cave']),
+      size: 'large',
+      type: "ooze",
+      challenge_rating: '2',
+      page: '241',
+      alignment: "unaligned",
+      armorClass: 7,
+      hitPoints: 85,
+      Speed: 20,
       STR: 16,
       STR_mod: (+3),
       DEX: 5,
@@ -1043,13 +1298,18 @@ const monsters = [
       WIS_mod: (-2),
       CHA: 1,
       CHA_mod: (-5),
-      Challenge: 1100,
+      xp: 1100,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/201/315/315/636252764027417823.jpeg"
     },
     {
       name:"Blink Dog",
-      meta: "Medium fey, lawful good",
-      armorClass: 13 ,
+      environment: new set(['forest']),
+      size: 'medium',
+      type: "fey",
+      challenge_rating: '1/4',
+      page: '318',
+      alignment: "lawful good",
+      armorClass: 13,
       hitPoints: 22,
       Speed: 40,
       STR: 12,
@@ -1064,12 +1324,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 11,
       CHA_mod: (+0),
-      Challenge: 50,
+      xp: 50,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/205/315/315/636252764168652859.jpeg"
     },
     {
       name: "Blood Hawk",
-      meta: "Small beast, unaligned",
+      environment: new set(['arctic', 'coast', 'forest', 'grass land', 'hill', 'mountain']),
+      size: 'small',
+      type: "beast",
+      challenge_rating: '1/8',
+      page: '319',
+      alignment: "unaligned",
       armorClass: 12 ,
       hitPoints: 7,
       Speed: 10,
@@ -1085,12 +1350,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge: 25,
+      xp: 25,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Blue Dragon Wyrmling",
-      meta:"Medium dragon, lawful evil",
+      environment: new set(['any']),
+      size: 'medium',
+      type: "dragon",
+      challenge_rating: '3',
+      page: '91',
+      alignment: "lawful evil",
       armorClass: 17,
       hitPoints: 52,
       Speed: 30,
@@ -1106,12 +1376,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 15,
       CHA_mod: (+2),
-      Challenge: 700,
+      xp: 700,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/209/1000/1000/636252764637244026.jpeg"
     },
     {
       name: "Boar",
-      meta: "Medium beast, unaligned",
+      environment: new set(['forest', 'grass land', 'hill']),
+      size: 'medium',
+      type: "beast",
+      challenge_rating: '1/4',
+      page: '319',
+      alignment: "unaligned",
       armorClass: 11,
       hitPoints: 11,
       Speed: 40,
@@ -1127,12 +1402,17 @@ const monsters = [
       WIS_mod: (-1),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge: 50,
+      xp: 50,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Bone Devil",
-      meta: "Large fiend, lawful evil",
+      environment: new set(['any']),
+      size: 'large',
+      type: "fiend",
+      challenge_rating: '9',
+      page: '71',
+      alignment: "lawful evil",
       armorClass: 19,
       hitPoints: 142,
       Speed: 40,
@@ -1148,12 +1428,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 16,
       CHA_mod: (+3),
-      Challenge: 5000,
+      xp: 5000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/9/481/1000/1000/636328225187253200.jpeg"
     },
     {
       name:"Brass Dragon Wyrmling",
-      meta: "Medium dragon, chaotic good",
+      environment: new set(['any']),
+      size: 'medium',
+      type: "dragon",
+      challenge_rating: '1',
+      page: '106',
+      alignment: "chaotic good",
       armorClass: 16,
       hitPoints: 16,
       Speed: 30,
@@ -1169,12 +1454,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 13,
       CHA_mod: (+1),
-      Challenge: 200,
+      xp: 200,
       img_url:"https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/215/315/315/636252764963208954.jpeg"
     },
     {
       name: "Bronze Dragon Wyrmling",
-      meta: "Medium dragon, lawful good",
+      environment: new set(['any']),
+      size: 'medium',
+      type: "dragon",
+      challenge_rating: '2',
+      page: '109',
+      alignment: "lawful good",
       armorClass: 17,
       hitPoints: 32,
       Speed: 30,
@@ -1190,12 +1480,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 15,
       CHA_mod: (+2),
-      Challenge: 450,
+      xp: 450,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/492/315/315/636376306909593829.jpeg"
     },
     {
       name: "Brown Bear",
-      meta: "Large beast, unaligned",
+      environment: new set(['arctic', 'forest', 'hill']),
+      size: 'large',
+      type: "beast",
+      challenge_rating: '1',
+      page: '319',
+      alignment: "unaligned",
       armorClass: 11,
       hitPoints: 30,
       Speed: 40,
@@ -1211,12 +1506,18 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 7,
       CHA_mod: (-2),
-      Challenge: 200,
+      xp: 200,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name:"Bugbear",
-      meta: "Medium humanoid, chaotic evil",
+      environment: new set(['forest', 'grass land', 'cave']),
+      size: 'Medium',
+      type: "humanoid",
+      challenge_rating: '1',
+      page: '33',
+      alignment: "chaotic evil",
+      armorClass: 11,
       armorClass: 16,
       hitPoints: 27,
       Speed: 30,
@@ -1232,12 +1533,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 9,
       CHA_mod: (-1),
-      Challenge: 200,
+      xp: 200,
       img_url:"https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/221/1000/1000/636252765234633232.jpeg"
     },
     {
       name: "Bulette",
-      meta: "Large monstrosity, unaligned",
+      environment: new set(['mountain', 'grass land', 'hill']),
+      size: 'large',
+      type: "monstrosity",
+      challenge_rating: '5',
+      page: '34',
+      alignment: "unaligned",
       armorClass: 17,
       hitPoints: 94,
       Speed: 40,
@@ -1253,12 +1559,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge: 1800,
+      xp: 1800,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/223/315/315/636252765369632881.jpeg"
     },
     {
       name: "Camel",
-      meta: "Large beast, unaligned",
+      environment: new set(['desert']),
+      size: 'large',
+      type: "beast",
+      challenge_rating: '1/8',
+      page: '320',
+      alignment: "unaligned",
       armorClass: 9 ,
       hitPoints: 15,
       Speed: 50,
@@ -1274,12 +1585,17 @@ const monsters = [
       WIS_mod: (-1),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge:25,
+      xp:25,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Cat",
-      meta:"Tiny beast, unaligned",
+      environment: new set(['desert', 'forest', 'grass land', 'urban']),
+      size: 'tiny',
+      type: "beast",
+      challenge_rating: '1/8',
+      page: '320',
+      alignment: "unaligned",
       armorClass: 12 ,
       hitPoints: 2,
       Speed: 40,
@@ -1295,12 +1611,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 7,
       CHA_mod: (-2),
-      Challenge: 10,
+      xp: 10,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Centaur",
-      meta: "Large monstrosity, neutral good",
+      environment: new set(['forest', 'grass land',]),
+      size: 'large',
+      type: "monstrosity",
+      challenge_rating: '2',
+      page: '38',
+      alignment: "neutral good",
       armorClass: 12 ,
       hitPoints: 45,
       Speed: 50,
@@ -1316,12 +1637,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 11,
       CHA_mod: (+0),
-      Challenge: 450,
+      xp: 450,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/227/1000/1000/636252765573266420.jpeg"
     },
     {
       name: "Chain Devil",
-      meta:"Medium fiend, lawful evil",
+      environment: new set(['any']),
+      size: 'medium',
+      type: "fiend",
+      challenge_rating: '8',
+      page: '72',
+      alignment: "awful evil",
       armorClass: 16,
       hitPoints: 85,
       Speed: 30,
@@ -1337,12 +1663,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 14,
       CHA_mod: (+2),
-      Challenge: 3900,
+      xp: 3900,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/235/1000/1000/636252766618069332.jpeg"
     },
     {
       name: "Chimera",
-      meta: "chaotic evil",
+      environment: new set(['grass land', 'hill', 'mountain', 'cave']),
+      size: 'large',
+      type: "monstrosity",
+      challenge_rating: '6',
+      page: '39',
+      alignment: "chaotic evil",
       armorClass: 14,
       hitPoints: 114,
       Speed: 30,
@@ -1358,12 +1689,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 10,
       CHA_mod: (+0),
-      Challenge: 2300,
+      xp: 2300,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/237/1000/1000/636252766770156389.jpeg"
     },
     {
       name: "Chuul",
-      meta: "chaotic evil",
+      environment: new set(['aquatic']),
+      size: 'large',
+      type: "chaotic evil",
+      challenge_rating: '4',
+      page: '40',
+      alignment: "chaotic evil",
       armorClass: 16,
       hitPoints: 93,
       Speed: 30,
@@ -1379,11 +1715,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge: 1100,
+      xp: 1100,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/241/1000/1000/636252767122656355.jpeg"
     },
     {
       name: "Clay Golem",
+      environment: new set(['any']),
+      size: 'large',
+      type: "construct",
+      challenge_rating: '9',
+      page: '168',
+      alignment: "unaligned",
       meta: "unaligned",
       armorClass: 14,
       hitPoints: 133,
@@ -1400,12 +1742,17 @@ const monsters = [
       WIS_mod: (-1),
       CHA: 1,
       CHA_mod: (-5),
-      Challenge: 5000,
+      xp: 5000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/243/315/315/636252767318152303.jpeg"
     },
     {
       name: "Cloaker",
-      meta: "chaotic neutral",
+      environment: new set(['cave']),
+      size: 'large',
+      type: "aberration",
+      challenge_rating: '8',
+      page: '41',
+      alignment: "chaotic neutral",
       armorClass: 14,
       hitPoints: 78,
       Speed: 10,
@@ -1421,12 +1768,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 14,
       CHA_mod: (+2),
-      Challenge: 3900,
+      xp: 3900,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/245/1000/1000/636252767458838228.jpeg"
     },
     {
       name: "Cloud Giant",
-      meta: "Huge giant, neutral",
+      environment: new set(['mountain']),
+      size: 'huge',
+      type: "giant",
+      challenge_rating: '8',
+      page: '154',
+      alignment: "neutral",
       armorClass: 14,
       hitPoints: 200,
       Speed: 40,
@@ -1442,12 +1794,17 @@ const monsters = [
       WIS_mod: (+3),
       CHA: 16,
       CHA_mod: (+3),
-      Challenge: 5000,
+      xp: 5000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/249/1000/1000/636252767619414260.jpeg"
     },
     {
       name: "Cockatrice",
-      meta: "Small monstrosity, unaligned",
+      environment: new set(['grass land']),
+      size: 'huge',
+      type: "monstrosity",
+      challenge_rating: '1/2',
+      page: '42',
+      alignment: "unaligned",
       armorClass: 11 ,
       hitPoints: 27,
       Speed: 20,
@@ -1463,12 +1820,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge: 100,
+      xp: 100,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/251/315/315/636252767744669874.jpeg"
     },
     {
       name: "Commoner",
-      meta: "Medium humanoid, any",
+      environment: new set(['arctic', 'coast', 'desert', 'forest', 'grass land', 'hill', 'urban']),
+      size: 'medium',
+      type: "humanoid",
+      challenge_rating: '0',
+      page: '345',
+      alignment: "any",
       armorClass: 10 ,
       hitPoints: 4,
       Speed: 30,
@@ -1484,12 +1846,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 10,
       CHA_mod: (+0),
-      Challenge: 10,
+      xp: 10,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/656/humanoid.jpg"
     },
     {
       name: "Constrictor Snake",
-      meta: "Large beast, unaligned",
+      environment: new set(['desert', 'forest', 'swamp', 'aquatic']),
+      size: 'large',
+      type: "beast",
+      challenge_rating: '1/4',
+      page: '320',
+      alignment: "unaligned",
       armorClass: 12 ,
       hitPoints: 13,
       Speed: 30,
@@ -1505,12 +1872,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 3,
       CHA_mod: (-4),
-      Challenge: 50,
+      xp: 50,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Copper Dragon Wyrmling",
-      meta: "Medium dragon, chaotic good",
+      environment: new set(['any']),
+      size: 'medium',
+      type: "dragon",
+      challenge_rating: '1',
+      page: '320',
+      alignment: "chaotic good",
       armorClass: 16,
       hitPoints: 22,
       Speed: 30,
@@ -1526,12 +1898,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 13,
       CHA_mod: (+1),
-      Challenge: 200,
+      xp: 200,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/255/1000/1000/636252768002215182.jpeg"
     },
     {
       name: "Couatl",
-      meta: "Medium celestial, lawful good",
+      environment: new set(['desert', 'forest', 'grass land', 'urban']),
+      size: 'medium',
+      type: "celestial",
+      challenge_rating: '4',
+      page: '43',
+      alignment: "lawful good",
       armorClass: 19,
       hitPoints: 97,
       Speed: 30,
@@ -1547,12 +1924,17 @@ const monsters = [
       WIS_mod: (+5),
       CHA: 18,
       CHA_mod: (+4),
-      Challenge: 1100,
+      xp: 1100,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/257/1000/1000/636252768143323827.jpeg"
     },
     {
       name: "Crab",
-      meta: "Tiny beast, unaligned",
+      environment: new set(['coast']),
+      size: 'tiny',
+      type: "beast",
+      challenge_rating: '0',
+      page: '320',
+      alignment: "unaligned",
       armorClass: 11,
       hitPoints: 2,
       Speed: 20,
@@ -1568,12 +1950,17 @@ const monsters = [
       WIS_mod: (-1),
       CHA: 2,
       CHA_mod: (-4),
-      Challenge: 10,
+      xp: 10,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Crocodile",
-      meta: "Large beast, unaligned",
+      environment: new set(['swamp', 'urban']),
+      size: 'large',
+      type: "beast",
+      challenge_rating: '1/2',
+      page: '320',
+      alignment: "unaligned",
       armorClass: 12,
       hitPoints: 19,
       Speed: 20,
@@ -1589,12 +1976,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge: 100,
+      xp: 100,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Cult Fanatic",
-      meta: "Medium humanoid, any",
+      environment: new set(['urban']),
+      size: 'medium',
+      type: "humanoid",
+      challenge_rating: '1/2',
+      page: '345',
+      alignment: "non-good",
       armorClass: 13,
       hitPoints: 33,
       Speed: 30,
@@ -1610,12 +2002,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 14,
       CHA_mod: (+2),
-      Challenge: 450,
+      xp: 450,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/259/1000/1000/636252768307230924.jpeg"
     },
     {
       name: "Cultist",
-      meta:"Medium humanoid, any",
+      environment: new set(['urban']),
+      size: 'medium',
+      type: "humanoid",
+      challenge_rating: '1/8',
+      page: '345',
+      alignment: "non-good",
       armorClass: 12,
       hitPoints: 9,
       Speed: 30,
@@ -1631,12 +2028,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 10,
       CHA_mod: (+0),
-      Challenge: 25,
+      xp: 25,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/14/481/1000/1000/636364323106021375.png"
     },
     {
       name: "Cyclops",
-      meta: "Huge giant, chaotic neutral",
+      environment: new set(['coast' 'desert', 'grass land', 'hill', 'mountain', 'cave']),
+      size: 'huge',
+      type: "giant",
+      challenge_rating: '6',
+      page: '45',
+      alignment: "chaotic neutral",
       armorClass: 14,
       hitPoints: 138,
       Speed: 30,
@@ -1652,12 +2054,17 @@ const monsters = [
       WIS_mod: (-2),
       CHA: 10,
       CHA_mod: (+0),
-      Challenge: 2300,
+      xp: 2300,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/470/1000/1000/636376290137285130.jpeg"
     },
     {
       name: "Darkmantle",
-      meta: "Small monstrosity, unaligned",
+      environment: new set(['cave']),
+      size: 'small',
+      type: "monstrosity",
+      challenge_rating: '1/2',
+      page: '45',
+      alignment: "unaligned",
       armorClass: 11 ,
       hitPoints: 22,
       Speed: 10,
@@ -1673,12 +2080,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge: 100,
+      xp: 100,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/263/315/315/636252768676699519.jpeg"
     },
     {
       name: "Death Dog",
-      meta: "Medium monstrosity, neutral evil",
+      environment: new set(['desert']),
+      size: 'medium',
+      type: "monstrosity",
+      challenge_rating: '1',
+      page: '321',
+      alignment: "neutral evil",
       armorClass: 12,
       hitPoints: 39,
       Speed: 40,
@@ -1694,12 +2106,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 6,
       CHA_mod: (-2),
-      Challenge: 200,
+      xp: 200,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/265/1000/1000/636252768823194310.jpeg"
     },
     {
       name: "Deep Gnome (Svirfneblin)",
-      meta: "Small humanoid, neutral good",
+      environment: new set(['cave']),
+      size: 'small',
+      type: "humanoid",
+      challenge_rating: '1/2',
+      page: '164',
+      alignment: "neutral goodl",
       armorClass: 15,
       hitPoints: 16,
       Speed: 20,
@@ -1715,12 +2132,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 9,
       CHA_mod: (-1),
-      Challenge: 100,
+      xp: 100,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/9/112/1000/1000/636323610009818415.jpeg"
     },
     {
       name: "Deer",
-      meta: "Medium beast, unaligned",
+      environment: new set(['forest', 'grass land']),
+      size: 'medium',
+      type: "beast",
+      challenge_rating: '1/2',
+      page: '321',
+      alignment: "unaligned",
       armorClass: 13 ,
       hitPoints: 4,
       Speed: 50,
@@ -1736,12 +2158,17 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge: 10,
+      xp: 10,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Deva",
-      meta: "Medium celestial, lawful good",
+      environment: new set(['any']),
+      size: 'medium',
+      type: "celestial",
+      challenge_rating: '10',
+      page: '16',
+      alignment: "lawful good",
       armorClass: 17,
       hitPoints: 136,
       Speed: 30,
@@ -1757,7 +2184,7 @@ const monsters = [
       WIS_mod: (+5),
       CHA: 20,
       CHA_mod: (+5),
-      Challenge: 5900,
+      xp: 5900,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/267/1000/1000/636252768980059444.jpeg"
     },
     {
@@ -1778,7 +2205,7 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 7,
       CHA_mod: (-2),
-      Challenge: 200,
+      xp: 200,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/484/315/315/636376300478361995.jpeg"
     },
     {
@@ -1799,7 +2226,7 @@ const monsters = [
       WIS_mod: (+3),
       CHA: 20,
       CHA_mod: (+5),
-      Challenge: 7200,
+      xp: 7200,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/281/315/315/636252770322204007.jpeg"
     },
     {
@@ -1820,7 +2247,7 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 14,
       CHA_mod: (+2),
-      Challenge: 700,
+      xp: 700,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/289/315/315/636252770983164351.jpeg"
     },
     {
@@ -1841,7 +2268,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 7,
       CHA_mod: (-2),
-      Challenge: 50,
+      xp: 50,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
@@ -1862,7 +2289,7 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 12,
       CHA_mod: (+1),
-      Challenge: 18000,
+      xp: 18000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/291/1000/1000/636252771128151641.jpeg"
     },
     {
@@ -1883,7 +2310,7 @@ const monsters = [
       WIS_mod: (-1),
       CHA: 3,
       CHA_mod: (-4),
-      Challenge: 50,
+      xp: 50,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/293/1000/1000/636252771253285096.jpeg"
     },
     {
@@ -1904,7 +2331,7 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 12,
       CHA_mod: (+1),
-      Challenge: 2300,
+      xp: 2300,
       img_url:"https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/295/1000/1000/636252771409285458.jpeg"
     },
     {
@@ -1925,7 +2352,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 12,
       CHA_mod: (+1),
-      Challenge: 50,
+      xp: 50,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/501/1000/1000/636376310726273495.jpeg"
     },
     {
@@ -1946,7 +2373,7 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 11,
       CHA_mod: (+0),
-      Challenge: 450,
+      xp: 450,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/299/1000/1000/636252771583275655.jpeg"
     },
     {
@@ -1967,7 +2394,7 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 18,
       CHA_mod: (+4),
-      Challenge: 200,
+      xp: 200,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/307/1000/1000/636252771953950206.jpeg"
     },
     {
@@ -1988,7 +2415,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 9,
       CHA_mod: (-1),
-      Challenge: 200,
+      xp: 200,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/309/1000/1000/636252772101183765.jpeg"
     },
     {
@@ -2009,7 +2436,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 10,
       CHA_mod: (+0),
-      Challenge: 100,
+      xp: 100,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/313/1000/1000/636252772213922157.jpeg"
     },
     {
@@ -2030,7 +2457,7 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 7,
       CHA_mod: (-2),
-      Challenge: 10,
+      xp: 10,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/515/1000/1000/636376317171111968.jpeg"
     },
     {
@@ -2051,7 +2478,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge: 1800,
+      xp: 1800,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/317/315/315/636252772331779404.jpeg"
     },
     {
@@ -2072,7 +2499,7 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 16,
       CHA_mod: (+3),
-      Challenge: 7200,
+      xp: 7200,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/325/1000/1000/636252775714332067.jpeg"
     },
     {
@@ -2093,7 +2520,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 6,
       CHA_mod: (-2),
-      Challenge: 1100,
+      xp: 1100,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
@@ -2114,7 +2541,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 6,
       CHA_mod: (-2),
-      Challenge: 50,
+      xp: 50,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
@@ -2135,7 +2562,7 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 18,
       CHA_mod: (+4),
-      Challenge: 8400,
+      xp: 8400,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/329/1000/1000/636252776041158657.jpeg"
     },
     {
@@ -2156,7 +2583,7 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 8,
       CHA_mod: (-1),
-      Challenge:450,
+      xp:450,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/339/315/315/636252776771842998.jpeg"
     },
     {
@@ -2177,7 +2604,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 8,
       CHA_mod: (-1),
-      Challenge: 1100,
+      xp: 1100,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/341/1000/1000/636252776953634777.jpeg"
     },
     {
@@ -2198,7 +2625,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 7,
       CHA_mod: (-2),
-      Challenge:1800,
+      xp:1800,
       img_url:"https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/343/1000/1000/636252777098624896.jpeg"
     },
     {
@@ -2219,7 +2646,7 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 13,
       CHA_mod: (+1),
-      Challenge: 5000,
+      xp: 5000,
       img_url:"https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/357/1000/1000/636252778143767005.jpeg"
     },
     {
@@ -2240,7 +2667,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 11,
       CHA_mod: (+0),
-      Challenge: 1100,
+      xp: 1100,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/14/487/315/315/636364325235118776.png"
     },
     {
@@ -2261,7 +2688,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge: 1800,
+      xp: 1800,
       Traits: <p><em><strong>Berserk.</strong></em> Whenever the golem starts its turn with 40 hit points or fewer, roll a d6. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object, with preference for an object smaller than itself. Once the golem goes berserk, it continues to do so until it is destroyed or regains all its hit points.</p><p>The golem's creator, if within 60 feet of the berserk golem, can try to calm it by speaking firmly and persuasively. The golem must be able to hear its creator, who must take an action to make a DC 15 Charisma (Persuasion) check. If the check succeeds, the golem ceases being berserk. If it takes damage while still at 40 hit points or fewer, the golem might go berserk again. </p><p><em><strong>Aversion of Fire.</strong></em> If the golem takes fire damage, it has disadvantage on attack rolls and ability checks until the end of its next turn. </p><p><em><strong>Immutable Form.</strong></em> The golem is immune to any spell or effect that would alter its form.</p><p> <em><strong>Lightning Absorption.</strong></em> Whenever the golem is subjected to lightning damage, it takes no damage and instead regains a number of hit points equal to the lightning damage dealt.</p><p> <em><strong>Magic Resistance.</strong></em> The golem has advantage on saving throws against spells and other magical effects. </p><p><em><strong>Magic Weapons.</strong></em> The golem's weapon attacks are magical.</p>,
       Actions: <p><em><strong>Multiattack.</strong></em> The golem makes two slam attacks. </p><p><em><strong>Slam.</strong></em> <em>Melee Weapon Attack:</em> +7 to hit, reach 5 ft., one target. <em>Hit:</em> 13 (2d8 + 4) bludgeoning damage.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/359/315/315/636252778311644574.jpeg
@@ -2285,7 +2712,7 @@ const monsters = [
       CHA: 5,
       CHA_mod: (-3),
      
-      Challenge: 25 ,
+      xp: 25 ,
    
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/517/1000/1000/636376319640572721.jpeg"
     },
@@ -2307,7 +2734,7 @@ const monsters = [
       WIS_mod: (-3),
       CHA: 1,
       CHA_mod: (-5),
-      Challenge: 50,
+      xp: 50,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/77/599/1000/1000/636473151106171093.png"
     },
     {
@@ -2329,7 +2756,7 @@ const monsters = [
       CHA: 3,
       CHA_mod: (-4),
    
-      Challenge:10,
+      xp:10,
   
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/523/315/315/636376321230650501.jpeg"
     },
@@ -2352,7 +2779,7 @@ const monsters = [
       CHA: 12,
       CHA_mod: (+1),
      
-      Challenge:3900,
+      xp:3900,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/405/1000/1000/636252786158646348.jpeg"
     },
     {
@@ -2373,7 +2800,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 7,
       CHA_mod: (-2),
-      Challenge: 450,
+      xp: 450,
     
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/407/315/315/636252786295384889.jpeg"
     },
@@ -2395,7 +2822,7 @@ const monsters = [
       WIS_mod: (-2),
       CHA: 1,
       CHA_mod: (-5),
-      Challenge: 450,
+      xp: 450,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/409/1000/1000/636252786406028958.jpeg"
     },
     {
@@ -2416,7 +2843,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 8,
       CHA_mod: (-1),
-      Challenge: 450,
+      xp: 450,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/411/315/315/636252786516023032.jpeg"
     },
     {
@@ -2437,7 +2864,7 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 17,
       CHA_mod: (+3),
-      Challenge: 1100,
+      xp: 1100,
      
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/413/1000/1000/636252786639798307.jpeg"
     },
@@ -2459,7 +2886,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 6,
       CHA_mod: (-2),
-      Challenge: 200,
+      xp: 200,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/14/483/315/315/636364323937041514.png"
     },
     {
@@ -2480,7 +2907,7 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 7,
       CHA_mod: (-2),
-      Challenge: 2900,
+      xp: 2900,
       
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
@@ -2503,7 +2930,7 @@ const monsters = [
       CHA: 5,
       CHA_mod: (-3),
 
-      Challenge: 50 ,
+      xp: 50 ,
       
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/530/1000/1000/636376327839601860.jpeg"
     },
@@ -2526,7 +2953,7 @@ const monsters = [
       CHA: 6,
       CHA_mod: (-2),
 
-      Challenge: 50 ,
+      xp: 50 ,
      
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
@@ -2549,7 +2976,7 @@ const monsters = [
       CHA: 5,
       CHA_mod: (-3),
       
-      Challenge:450,
+      xp:450,
       
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
@@ -2572,7 +2999,7 @@ const monsters = [
       CHA: 3,
       CHA_mod: (-4),
       
-      Challenge: 50,
+      xp: 50,
      
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
@@ -2595,7 +3022,7 @@ const monsters = [
       CHA: 3,
       CHA_mod: (-4),
      
-      Challenge: 450,
+      xp: 450,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
@@ -2616,7 +3043,7 @@ const monsters = [
       WIS_mod: (-1),
       CHA: 3,
       CHA_mod: (-4),
-      Challenge: 25,
+      xp: 25,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
@@ -2638,7 +3065,7 @@ const monsters = [
       CHA: 7,
       CHA_mod: (-2),
      
-      Challenge: 1800,
+      xp: 1800,
      
       img_url:"https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
@@ -2660,7 +3087,7 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 10,
       CHA_mod: (+0),
-      Challenge: 200,
+      xp: 200,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/9/894/315/315/636334286969931904.jpeg"
     },
     {
@@ -2681,7 +3108,7 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 10,
       CHA_mod: (+0),
-      Challenge: 450,
+      xp: 450,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
@@ -2702,7 +3129,7 @@ const monsters = [
       WIS_mod: (-2),
       CHA: 3,
       CHA_mod: (-4),
-      Challenge: 10,
+      xp: 10,
      
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/9/896/1000/1000/636334287498492864.jpeg"
     },
@@ -2725,7 +3152,7 @@ const monsters = [
       CHA: 3,
       CHA_mod: (-4),
      
-      Challenge:50 ,
+      xp:50 ,
       
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/521/1000/1000/636376321052503535.jpeg"
     },
@@ -2748,7 +3175,7 @@ const monsters = [
       CHA: 6,
       CHA_mod: (-2),
       
-      Challenge:100,
+      xp:100,
       
       
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
@@ -2772,7 +3199,7 @@ const monsters = [
       CHA: 7,
       CHA_mod: (-2),
       
-      Challenge: 200 ,
+      xp: 200 ,
      
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
@@ -2795,7 +3222,7 @@ const monsters = [
       CHA: 5,
       CHA_mod: (-3),
       
-      Challenge:50 ,
+      xp:50 ,
      
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
@@ -2818,7 +3245,7 @@ const monsters = [
       CHA: 4,
       CHA_mod: (-3),
      
-      Challenge:200,
+      xp:200,
      
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/9/898/315/315/636334288003435302.jpeg"
     },
@@ -2841,7 +3268,7 @@ const monsters = [
       CHA: 10,
       CHA_mod: (+0),
      
-      Challenge: 50 ,
+      xp: 50 ,
       
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/535/1000/1000/636376331788287090.jpeg"
     },
@@ -2864,7 +3291,7 @@ const monsters = [
       CHA: 3,
       CHA_mod: (-4),
      
-      Challenge: 50,
+      xp: 50,
     
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
@@ -2888,7 +3315,7 @@ const monsters = [
       CHA_mod: (-3),
       
   
-      Challenge:25,
+      xp:25,
      
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/538/1000/1000/636376332197953299.jpeg"
     },
@@ -2911,7 +3338,7 @@ const monsters = [
       CHA: 3,
       CHA_mod: (-4),
      
-      Challenge: 700,
+      xp: 700,
      
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
@@ -2935,7 +3362,7 @@ const monsters = [
       CHA_mod: (-3),
       
       
-      Challenge:100,
+      xp:100,
       
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
@@ -2958,7 +3385,7 @@ const monsters = [
       CHA: 5,
       CHA_mod: (-3),
       
-      Challenge: 1800,
+      xp: 1800,
       
       img_url:"https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
@@ -2981,7 +3408,7 @@ const monsters = [
       CHA: 4,
       CHA_mod: (-3),
      
-      Challenge: 200,
+      xp: 200,
       
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/323/1000/1000/636252775648743317.jpeg"
     },
@@ -3004,7 +3431,7 @@ const monsters = [
       CHA: 3,
       CHA_mod: (-4),
      
-      Challenge: 200,
+      xp: 200,
     
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
@@ -3027,7 +3454,7 @@ const monsters = [
       CHA: 7,
       CHA_mod: (-2),
      
-      Challenge: 200,
+      xp: 200,
      
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
@@ -3050,7 +3477,7 @@ const monsters = [
       CHA: 3,
       CHA_mod: (-4),
       
-      Challenge: 100,
+      xp: 100,
       
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
@@ -3072,7 +3499,7 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 5,
       CHA_mod: (-3),
-      Challenge:25, 
+      xp:25, 
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
@@ -3093,7 +3520,7 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 4,
       CHA_mod: (-3),
-      Challenge: 50,
+      xp: 50,
       Traits: <p><em><strong>Spider Climb.</strong></em> The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.</p><p><em><strong>Web Sense.</strong></em> While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.</p><p><em><strong>Web Walker.</strong></em> The spider ignores movement restrictions caused by webbing.</p>,
       Actions: <p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +3 to hit, reach 5 ft., one creature. <em>Hit:</em> 4 (1d6 + 1) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 7 (2d6) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
@@ -3119,7 +3546,7 @@ const monsters = [
       Condition Immunities: Prone,
       Senses: Darkvision 60 ft.,  Passive Perception 10,
       Languages: --,
-      Challenge: 2 (450 XP),
+      xp: 2 (450 XP),
       Traits: <p><em><strong>Aberrant Ground.</strong></em> The ground in a 10-foot radius around the mouther is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a DC 10 Strength saving throw or have its speed reduced to 0 until the start of its next turn. </p><p><em><strong>Gibbering.</strong></em> The mouther babbles incoherently while it can see any creature and isn't incapacitated. Each creature that starts its turn within 20 feet of the mouther and can hear the gibbering must succeed on a DC 10 Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn and rolls a d8 to determine what it does during its turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action or bonus action and uses all its movement to move in a randomly determined direction. On a 7 or 8, the creature makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack.</p>,
       Actions: <p><em><strong>Multiattack.</strong></em> The gibbering mouther makes one bite attack and, if it can, uses its Blinding Spittle. </p><p><em><strong>Bite.</strong></em>. <em>Melee Weapon Attack:</em> +2 to hit, reach 5 ft., one creature. <em>Hit:</em> 17 (5d6) piercing damage. If the target is Medium or smaller, it must succeed on a DC 10 Strength saving throw or be knocked prone. If the target is killed by this damage, it is absorbed into the mouther. </p><p><em><strong>Blinding Spittle (Recharge 5–6).</strong></em> The mouther spits a chemical glob at a point it can see within 15 feet of it. The glob explodes in a blinding flash of light on impact. Each creature within 5 feet of the flash must succeed on a DC 13 Dexterity saving throw or be blinded until the end of the mouther's next turn.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/333/315/315/636252776252001529.jpeg
@@ -3142,7 +3569,7 @@ const monsters = [
       WIS_mod: (+3),
       CHA: 16,
       CHA_mod: (+3),
-      Challenge:  5000,
+      xp:  5000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/337/315/315/636252776677682465.jpeg"
     },
     {
@@ -3163,7 +3590,7 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 15,
       CHA_mod: (+2),
-      Challenge: 1800,
+      xp: 1800,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/656/humanoid.jpg"
     },
     {
@@ -3186,7 +3613,7 @@ const monsters = [
       CHA_mod: (-2),
       Senses: Darkvision 60 ft.,  Passive Perception 10,
       Languages: Gnoll,
-      Challenge: 1/2 (100 XP),
+      xp: 1/2 (100 XP),
       Traits: <p><em><strong>Rampage.</strong></em> When the gnoll reduces a creature to 0 hit points with a melee attack on its turn, the gnoll can take a bonus action to move up to half its speed and make a bite attack.</p>,
       Actions: <p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one creature. <em>Hit:</em> 4 (1d4 + 2) piercing damage. </p><p><em><strong>Spear.</strong></em> <em>Melee or <em>Ranged Weapon Attack:</em></em> +4 to hit, reach 5or range 20/60 ft., one target. <em>Hit:</em> 5 (1d6 + 2) piercing damage, or 6 (1d8 + 2) piercing damage if used with two hands to make a melee attack. </p><p><em><strong>Longbow.</strong></em> <em>Ranged Weapon Attack:</em> +3 to hit, range 150/600 ft., one target. <em>Hit:</em> 5 (1d8 + 1) piercing damage.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/345/1000/1000/636252777224997611.jpeg
@@ -3211,7 +3638,7 @@ const monsters = [
       CHA_mod: (-3),
       Senses: Passive Perception 10,
       Languages: --,
-      Challenge: 0 (10 XP),
+      xp: 0 (10 XP),
       Traits: <p><em><strong>Charge.</strong></em> If the goat moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 2 (1d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 10 Strength saving throw or be knocked prone. </p><p><em><strong>Sure-Footed.</strong></em> The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.</p>,
       Actions: <p><em><strong>Ram.</strong></em> <em>Melee Weapon Attack:</em> +3 to hit, reach 5 ft., one target. <em>Hit:</em> 3 (1d4 + 1) bludgeoning damage.</p>,
       img_url: https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg
@@ -3237,7 +3664,7 @@ const monsters = [
       Skills: Stealth +6,
       Senses: Darkvision 60 ft.,  Passive Perception 9,
       Languages: Common, Goblin,
-      Challenge: 1/4 (50 XP),
+      xp: 1/4 (50 XP),
       Traits: <p><em><strong>Nimble Escape.</strong></em> The goblin can take the Disengage or Hide action as a bonus action on each of its turns.</p>,
       Actions: <p><em><strong>Scimitar.</strong></em> <em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one target. <em>Hit:</em> 5 (1d6 + 2) slashing damage. </p><p><em><strong>Shortbow.</strong></em> <em>Ranged Weapon Attack:</em> +4 to hit, range 80/320 ft., one target. <em>Hit:</em> 5 (1d6 + 2) piercing damage.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/351/315/315/636252777818652432.jpeg
@@ -3265,7 +3692,7 @@ const monsters = [
       Damage Immunities: Fire,
       Senses: Blindsight 10 ft., Darkvision 60 ft.,  Passive Perception 14,
       Languages: Draconic,
-      Challenge: 3 (700 XP),
+      xp: 3 (700 XP),
       Traits: <p><strong>Amphibious</strong>: The dragon can breathe air and water.</p>,
       Actions: <p><strong>Bite</strong>: <em>Melee Weapon Attack</em>: +6 to hit, reach 5 ft., one target. <em>Hit</em>: 9 (1d10 + 4) piercing damage.</p><p><strong>Breath Weapons (Recharge 5–6)</strong>: The dragon uses one of the following breath weapons.</p><p><strong>Fire Breath</strong>: The dragon exhales fire in a 15-foot cone. Each creature in that area must make a DC 13 Dexterity saving throw, taking 22 (4d10) fire damage on a failed save, or half as much damage on a successful one.</p><p><strong>Weakening Breath</strong>: The dragon exhales gas in a 15-foot cone. Each creature in that area must succeed on a DC 13 Strength saving throw or have disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/7/516/315/315/636285466148376212.jpeg
@@ -3292,7 +3719,7 @@ const monsters = [
       Condition Immunities: Petrified,
       Senses: Darkvision 60 ft.,  Passive Perception 14,
       Languages: --,
-      Challenge: 5 (1,800 XP),
+      xp: 5 (1,800 XP),
       Traits: <p><em><strong>Trampling Charge.</strong></em> If the gorgon moves at least 20 feet straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 16 Strength saving throw or be knocked prone. If the target is prone, the gorgon can make one attack with its hooves against it as a bonus action.</p>,
       Actions: <p><em><strong>Gore.</strong></em> <em>Melee Weapon Attack:</em> +8 to hit, reach 5 ft., one target. <em>Hit:</em> 18 (2d12 + 5) piercing damage.</p><p><em><strong>Hooves.</strong></em> <em>Melee Weapon Attack:</em> +8 to hit, reach 5 ft., one target. <em>Hit:</em> 16 (2d10 + 5) bludgeoning damage. </p><p><em><strong>Petrifying Breath (Recharge 5–6).</strong></em> The gorgon exhales petrifying gas in a 30-foot cone. Each creature in that area must succeed on a DC 13 Constitution saving throw. On a failed save, a target begins to turn to stone and is restrained. The restrained target must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is petrified until freed by the greater restoration spell or other magic.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/355/315/315/636252778125099430.jpeg
@@ -3320,7 +3747,7 @@ const monsters = [
       Condition Immunities: Blinded, Charmed, Deafened, Exhaustion, Frightened, Prone,
       Senses: Blindsight 60 ft.,  Passive Perception 8,
       Languages: --,
-      Challenge: 1/2 (100 XP),
+      xp: 1/2 (100 XP),
       Traits: <p><em><strong>Amorphous.</strong></em> The ooze can move through a space as narrow as 1 inch wide without squeezing. </p><p><em><strong>Corrode Metal.</strong></em> Any nonmagical weapon made of metal that hits the ooze corrodes. After dealing damage, the weapon takes a permanent and cumulative −1 penalty to damage rolls. If its penalty drops to −5, the weapon is destroyed. Nonmagical ammunition made of metal that hits the ooze is destroyed after dealing damage.</p><p>The ooze can eat through 2-inch-thick, nonmagical metal in 1 round. </p><p><em><strong>False Appearance.</strong></em> While the ooze remains motionless, it is indistinguishable from an oily pool or wet rock.</p>,
       Actions: <p><em><strong>Pseudopod.</strong></em> <em>Melee Weapon Attack:</em> +3 to hit, reach 5 ft., one target. <em>Hit:</em> 4 (1d6 + 1) bludgeoning damage plus 7 (2d6) acid damage, and if the target is wearing nonmagical metal armor, its armor is partly corroded and takes a permanent and cumulative −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10.</p>,
       img_url: https://media-waterdeep.cursecdn.com/attachments/2/658/ooze.jpg
@@ -3349,7 +3776,7 @@ const monsters = [
       Condition Immunities: Poisoned,
       Senses: Blindsight 10 ft., Darkvision 60 ft.,  Passive Perception 14,
       Languages: Draconic,
-      Challenge: 2 (450 XP),
+      xp: 2 (450 XP),
       Traits: <p><em><strong>Amphibious.</strong></em> The dragon can breathe air and water.</p>,
       Actions: <p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one target. <em>Hit:</em> 7 (1d10 + 2) piercing damage plus 3 (1d6) poison damage. </p><p><em><strong>Poison Breath (Recharge 5–6).</strong></em> The dragon exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 11 Constitution saving throw, taking 21 (6d6) poison damage on a failed save, or half as much damage on a successful one.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/363/315/315/636252778639163748.jpeg
@@ -3375,7 +3802,7 @@ const monsters = [
       Skills: Arcana +3, Deception +4, Perception +4, Stealth +3,
       Senses: Darkvision 60 ft.,  Passive Perception 14,
       Languages: Common, Draconic, Sylvan,
-      Challenge: 3 (700 XP),
+      xp: 3 (700 XP),
       Traits: <p><em><strong>Amphibious.</strong></em> The hag can breathe air and water. </p><p><em><strong>Innate Spellcasting.</strong></em> The hag's innate spellcasting ability is Charisma (spell save DC 12). She can innately cast the following spells, requiring no material components: </p><p>At will: dancing lights, minor illusion, vicious mockery </p><p><em><strong>Mimicry.</strong></em> The hag can mimic animal sounds and humanoid voices. A creature that hears the sounds can tell they are imitations with a successful DC 14 Wisdom (Insight) check.</p>,
       Actions: <p><em><strong>Claws.</strong></em> <em>Melee Weapon Attack:</em> +6 to hit, reach 5 ft., one target. <em>Hit:</em> 13 (2d8 + 4) slashing damage. </p><p><em><strong>Illusory Appearance.</strong></em> The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like another creature of her general size and humanoid shape. The illusion ends if the hag takes a bonus action to end it or if she dies.</p><p>The changes wrought by this effect fail to hold up to physical inspection. For example, the hag could appear to have smooth skin, but someone touching her would feel her rough flesh. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a DC 20 Intelligence (Investigation) check to discern that the hag is disguised. </p><p><em><strong>Invisible Passage.</strong></em> The hag magically turns invisible until she attacks or casts a spell, or until her concentration ends (as if concentrating on a spell). While invisible, she leaves no physical evidence of her passage, so she can be tracked only by magic. Any equipment she wears or carries is invisible with her.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/365/315/315/636252778948574879.jpeg
@@ -3401,7 +3828,7 @@ const monsters = [
       Damage Resistances: Bludgeoning, Piercing, and Slashing from Nonmagical Attacks,
       Senses: Darkvision 60 ft.,  Passive Perception 12,
       Languages: --,
-      Challenge: 2 (450 XP),
+      xp: 2 (450 XP),
       Traits: <p><em><strong>Stone Camouflage.</strong></em> The grick has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.</p>,
       Actions: <p><em><strong>Multiattack.</strong></em> The grick makes one attack with its tentacles. If that attack hits, the grick can make one beak attack against the same target. </p><p><em><strong>Tentacles.</strong></em> <em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one target. <em>Hit:</em> 9 (2d6 + 2) slashing damage. </p><p><em><strong>Beak.</strong></em> <em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one target. <em>Hit:</em> 5 (1d6 + 2) piercing damage.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/369/1000/1000/636252779341924439.jpeg
@@ -3427,7 +3854,7 @@ const monsters = [
       Skills: Perception +5,
       Senses: Darkvision 60 ft.,  Passive Perception 15,
       Languages: --,
-      Challenge: 2 (450 XP),
+      xp: 2 (450 XP),
       Traits: <p><em><strong>Keen Sight.</strong></em> The griffon has advantage on Wisdom (Perception) checks that rely on sight.</p>,
       Actions: <p><em><strong>Multiattack.</strong></em> The griffon makes two attacks: one with its beak and one with its claws. </p><p><em><strong>Beak.</strong></em> <em>Melee Weapon Attack:</em> +6 to hit, reach 5 ft., one target. <em>Hit:</em> 8 (1d8 + 4) piercing damage. </p><p><em><strong>Claws.</strong></em> <em>Melee Weapon Attack:</em> +6 to hit, reach 5 ft., one target. <em>Hit:</em> 11 (2d6 + 4) slashing damage.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/373/315/315/636252779693862725.jpeg
@@ -3454,7 +3881,7 @@ const monsters = [
       Condition Immunities: Blinded,
       Senses: Blindsight 30 ft.,  Passive Perception 13,
       Languages: Undercommon,
-      Challenge: 1/4 (50 XP),
+      xp: 1/4 (50 XP),
       Traits: <p><em><strong>Blind Senses</strong></em>. The grimlock can't use its blindsight while deafened and unable to smell. </p><p><em><strong>Keen Hearing and Smell.</strong></em> The grimlock has advantage on Wisdom (Perception) checks that rely on hearing or smell. </p><p><em><strong>Stone Camouflage.</strong></em> The grimlock has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.</p>,
       Actions: <p><em><strong>Spiked Bone Club.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 5 (1d4 + 3) bludgeoning damage plus 2 (1d4) piercing damage.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/375/315/315/636252780049813181.jpeg
@@ -3480,7 +3907,7 @@ const monsters = [
       Skills: Perception +2,
       Senses: Passive Perception 12,
       Languages: Any one language (usually Common),
-      Challenge: 1/8 (25 XP),
+      xp: 1/8 (25 XP),
       Actions: <p><em><strong>Spear.</strong></em> <em>Melee or <em>Ranged Weapon Attack:</em></em> +3 to hit, reach 5or range 20/60 ft., one target. <em>Hit:</em> 4 (1d6 + 1) piercing damage, or 5 (1d8 + 1) piercing damage if used with two hands to make a melee attack.</p>,
       img_url: https://media-waterdeep.cursecdn.com/attachments/2/656/humanoid.jpg
     },
@@ -3507,7 +3934,7 @@ const monsters = [
       Condition Immunities: Charmed, Poisoned,
       Senses: Darkvision 60 ft.,  Passive Perception 14,
       Languages: Celestial, Common,
-      Challenge: 10 (5,900 XP),
+      xp: 10 (5,900 XP),
       Traits: <p><em><strong>Rejuvenation.</strong></em> If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a wish spell can prevent this trait from functioning. </p><p><em><strong>Spellcasting.</strong></em> The naga is an 11th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following cleric spells prepared: </p><p>Cantrips (at will): mending, sacred flame, thaumaturgy </p><p>1st level (4 slots): command, cure wounds, shield of faith </p><p>2nd level (3 slots): calm emotions, hold person </p><p>3rd level (3 slots): bestow curse, clairvoyance </p><p>4th level (3 slots): banishment, freedom of movement </p><p>5th level (2 slots): flame strike, geas </p><p>6th level (1 slot): true seeing</p>,
       Actions: <p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +8 to hit, reach 10 ft., one creature. <em>Hit:</em> 8 (1d8 + 4) piercing damage, and the target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one. </p><p><em><strong>Spit Poison.</strong></em> <em>Ranged Weapon Attack:</em> +8 to hit, range 15/30 ft., one creature. <em>Hit:</em> The target must make a DC 15 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/377/315/315/636252780447421771.jpeg
@@ -3536,7 +3963,7 @@ const monsters = [
       Condition Immunities: Charmed, Frightened,
       Senses: Truesight 120 ft.,  Passive Perception 18,
       Languages: Common, Sphinx,
-      Challenge: 11 (7,200 XP),
+      xp: 11 (7,200 XP),
       Traits: <p><em><strong>Inscrutable.</strong></em> The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage. </p><p><em><strong>Magic Weapons.</strong></em> The sphinx's weapon attacks are magical. </p><p><em><strong>Spellcasting.</strong></em> The sphinx is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 16, +8 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following wizard spells prepared: </p><p>Cantrips (at will): mage hand, minor illusion, prestidigitation </p><p>1st level (4 slots): detect magic, identify, shield </p><p>2nd level (3 slots): darkness, locate object, suggestion </p><p>3rd level (3 slots): dispel magic, remove curse, tongues </p><p>4th level (3 slots): banishment, greater invisibility </p><p>5th level (1 slot): legend lore</p>,
       Actions: <p><em><strong>Multiattack.</strong></em> The sphinx makes two claw attacks. </p><p><em><strong>Claw.</strong></em> <em>Melee Weapon Attack:</em> +8 to hit, reach 5 ft., one target. <em>Hit:</em> 13 (2d8 + 4) slashing damage.</p>,
       Legendary Actions: <p>The sphinx can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The sphinx regains spent legendary actions at the start of its turn. </p><p><em><strong>Claw Attack.</strong></em> The sphinx makes one claw attack. </p><p><em><strong>Teleport (Costs 2 Actions).</strong></em> The sphinx magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see. </p><p><em><strong>Cast a Spell (Costs 3 Actions).</strong></em> The sphinx casts a spell from its list of prepared spells, using a spell slot as normal.</p>,
@@ -3564,7 +3991,7 @@ const monsters = [
       Damage Resistances: Fire,
       Senses: Blindsight 10 ft., Darkvision 60 ft.,  Passive Perception 12,
       Languages: Common, Draconic,
-      Challenge: 5 (1,800 XP),
+      xp: 5 (1,800 XP),
       Actions: <p><em><strong>Multiattack.</strong></em> The veteran makes two longsword attacks. If it has a shortsword drawn, it can also make a shortsword attack. </p><p><em><strong>Longsword.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 7 (1d8 + 3) slashing damage, or 8 (1d10 + 3) slashing damage if used with two hands. </p><p><em><strong>Shortsword.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 6 (1d6 + 3) piercing damage. </p><p><em><strong>Heavy Crossbow.</strong></em> <em>Ranged Weapon Attack:</em> +3 to hit, range 100/400 ft., one target. <em>Hit:</em> 6 (1d10 + 1) piercing damage. </p><p><em><strong>Fire Breath (Recharge 5–6).</strong></em> The veteran exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 24 (7d6) fire damage on a failed save, or half as much damage on a successful one.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/387/315/315/636252781353903793.jpeg
     },
@@ -3588,7 +4015,7 @@ const monsters = [
       CHA_mod: (+1),
       Senses: Passive Perception 10,
       Languages: Common,
-      Challenge: 1 (200 XP),
+      xp: 1 (200 XP),
       Actions: <p><em><strong>Multiattack.</strong></em> The harpy makes two attacks: one with its claws and one with its club. </p><p><em><strong>Claws.</strong></em> <em>Melee Weapon Attack:</em> +3 to hit, reach 5 ft., one target. <em>Hit:</em> 6 (2d4 + 1) slashing damage. </p><p><em><strong>Club.</strong></em> <em>Melee Weapon Attack:</em> +3 to hit, reach 5 ft., one target. <em>Hit:</em> 3 (1d4 + 1) bludgeoning damage. </p><p><em><strong>Luring Song.</strong></em> The harpy sings a magical melody. Every humanoid and giant within 300 feet of the harpy that can hear the song must succeed on a DC 11 Wisdom saving throw or be charmed until the song ends. The harpy must take a bonus action on its subsequent turns to continue singing. It can stop singing at any time. The song ends if the harpy is incapacitated.</p><p>While charmed by the harpy, a target is incapacitated and ignores the songs of other harpies. If the charmed target is more than 5 feet away from the harpy, the target must move on its turn toward the harpy by the most direct route, trying to get within 5 feet. It doesn't avoid opportunity attacks, but before moving into damaging terrain, such as lava or a pit, and whenever it takes damage from a source other than the harpy, the target can repeat the saving throw. A charmed target can also repeat the saving throw at the end of each of its turns. If the saving throw is successful, the effect ends on it.</p><p>A target that successfully saves is immune to this harpy's song for the next 24 hours.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/391/315/315/636252781955908234.jpeg
     },
@@ -3613,7 +4040,7 @@ const monsters = [
       Skills: Perception +4,
       Senses: Passive Perception 14,
       Languages: --,
-      Challenge: 0 (10 XP),
+      xp: 0 (10 XP),
       Traits: <p><em><strong>Keen Sight.</strong></em> The hawk has advantage on Wisdom (Perception) checks that rely on sight.</p>,
       Actions: <p><em><strong>Talons.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 1 slashing damage.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/9/900/1000/1000/636334288270143064.jpeg
@@ -3640,7 +4067,7 @@ const monsters = [
       Damage Immunities: Fire,
       Senses: Darkvision 60 ft.,  Passive Perception 15,
       Languages: Understands Infernal but can't speak it,
-      Challenge: 3 (700 XP),
+      xp: 3 (700 XP),
       Traits: <p><em><strong>Keen Hearing and Smell.</strong></em> The hound has advantage on Wisdom (Perception) checks that rely on hearing or smell. </p><p><em><strong>Pack Tactics.</strong></em> The hound has advantage on an attack roll against a creature if at least one of the hound's allies is within 5 feet of the creature and the ally isn't incapacitated.</p>,
       Actions: <p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 7 (1d8 + 3) piercing damage plus 7 (2d6) fire damage. </p><p><em><strong>Fire Breath (Recharge 5–6).</strong></em> The hound exhales fire in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 21 (6d6) fire damage on a failed save, or half as much damage on a successful one.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/393/315/315/636252782461361426.jpeg
@@ -3669,7 +4096,7 @@ const monsters = [
       Condition Immunities: Poisoned,
       Senses: Darkvision 120 ft.,  Passive Perception 11,
       Languages: Abyssal, Telepathy 120 ft.,
-      Challenge: 8 (3,900 XP),
+      xp: 8 (3,900 XP),
       Traits: <p><em><strong>Magic Resistance.</strong></em> The hezrou has advantage on saving throws against spells and other magical effects. </p><p><em><strong>Stench.</strong></em> Any creature that starts its turn within 10 feet of the hezrou must succeed on a DC 14 Constitution saving throw or be poisoned until the start of its next turn. On a successful saving throw, the creature is immune to the hezrou's stench for 24 hours.</p>,
       Actions: <p><em><strong>Multiattack.</strong></em> The hezrou makes three attacks: one with its bite and two with its claws. </p><p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +7 to hit, reach 5 ft., one target. <em>Hit:</em> 15 (2d10 + 4) piercing damage. </p><p><em><strong>Claw.</strong></em> <em>Melee Weapon Attack:</em> +7 to hit, reach 5 ft., one target. <em>Hit:</em> 11 (2d6 + 4) slashing damage.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/321/315/315/636252775562934524.jpeg
@@ -3695,7 +4122,7 @@ const monsters = [
       Skills: Perception +2,
       Senses: Passive Perception 12,
       Languages: Giant,
-      Challenge: 5 (1,800 XP),
+      xp: 5 (1,800 XP),
       Actions: <p><em><strong>Multiattack.</strong></em> The giant makes two greatclub attacks. </p><p><em><strong>Greatclub.</strong></em> <em>Melee Weapon Attack:</em> +8 to hit, reach 10 ft., one target. <em>Hit:</em> 18 (3d8 + 5) bludgeoning damage. </p><p><em><strong>Rock.</strong></em> <em>Ranged Weapon Attack:</em> +8 to hit, range 60/240 ft., one target. <em>Hit:</em> 21 (3d10 + 5) bludgeoning damage.</p>,
       img_url: https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/331/315/315/636252776196140305.jpeg
     },
