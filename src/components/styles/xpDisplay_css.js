@@ -24,7 +24,7 @@ export const XpDiv = styled.div`
 		}
 	}
 	> p {
-		font-size: 1.6rem;
+		font-size: 1.5rem;
 		text-align: center;
 		@media (max-width: 1375px){
 			font-size: 2.5rem;
