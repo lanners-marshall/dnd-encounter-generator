@@ -37,5 +37,8 @@ export const FlexDiv = styled.div`
 	display:flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	@media (max-width: 1375px){
+		justify-content:center;
+	}
 `
 

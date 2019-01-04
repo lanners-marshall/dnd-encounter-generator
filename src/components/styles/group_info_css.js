@@ -19,6 +19,8 @@ export const GroupInfo = styled.div`
 		max-width: none;
 		margin-bottom: 20px;
 		padding-right: 0;
+		padding-bottom: 4%;
+		overflow: scroll;
 	}
 	> h2 {
 		font-size: 4rem;

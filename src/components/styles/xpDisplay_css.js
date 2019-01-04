@@ -19,9 +19,15 @@ export const XpDiv = styled.div`
 		text-align: center;
 		font-size: 3rem;
 		margin-bottom: 30px;
+		@media (max-width: 1375px){
+			font-size: 6rem;
+		}
 	}
 	> p {
-		font-size: 2rem;
+		font-size: 1.6rem;
 		text-align: center;
+		@media (max-width: 1375px){
+			font-size: 2.5rem;
+		}
 	}
 `   

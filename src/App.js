@@ -104,8 +104,13 @@ class App extends React.Component {
             environment={this.state.environment}
           />
         </Container>
-        <div className='footer'>This App was created by Marshall Lanners,
-         Mark Stesney, and Joseph Hayden.
+        <div className='footer'>
+        <p className="footer-p">
+          This App was created by <a href="https://github.com/lanners-marshall" className="footer-a">Marshall Lanners</a>,
+           <a href="https://github.com/markstez05" className="footer-a"> Mark Stesney</a>
+           , and <a href="https://github.com/JHaydenDev" className="footer-a">Joseph Hayden</a>.
+           <br /> It can be be viewed <a href="https://github.com/lanners-marshall/dnd-encounter-generator" className="footer-a">here</a>.
+         </p>
         </div>
       </AppContainer>
     )

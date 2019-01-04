@@ -24,6 +24,9 @@ class MonsterList extends Component{
     getXpForFight = () => {
         let players = this.props.players
         let difficulty = this.props.difficulty
+        if (difficulty === ""){
+            return false
+        }
         let num
         let xp_total = 0
         if (difficulty === 'easy'){
@@ -43,8 +46,12 @@ class MonsterList extends Component{
     }
 
     generateEncounter = () => {
-
         let xp_allowed = this.getXpForFight()
+
+        if (xp_allowed === false){
+            return
+        }
+
         console.log(xp_allowed)
         let env = this.props.environment
         let max = this.props.maxChallenge.value

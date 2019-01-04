@@ -1121,7 +1121,7 @@ const monsters = [
     },
     {
       name: "Bat",
-      environment: new Set(['cave']),
+      environment: new Set(['underground']),
       size: 'medium',
       type: "beast",
       challenge_rating: '0',
@@ -1173,7 +1173,7 @@ const monsters = [
     },
     {
       name:"Behir",
-      environment: new Set(['cave']),
+      environment: new Set(['underground']),
       size: 'huge',
       type: "monstrosity",
       challenge_rating: '3',
@@ -1277,7 +1277,7 @@ const monsters = [
     },
     {
       name: "Black Pudding",
-      environment: new Set(['cave']),
+      environment: new Set(['underground']),
       size: 'large',
       type: "ooze",
       challenge_rating: '2',
@@ -1511,7 +1511,7 @@ const monsters = [
     },
     {
       name:"Bugbear",
-      environment: new Set(['forest', 'grass land', 'cave']),
+      environment: new Set(['forest', 'grass land', 'underground']),
       size: 'Medium',
       type: "humanoid",
       challenge_rating: '1',
@@ -1668,7 +1668,7 @@ const monsters = [
     },
     {
       name: "Chimera",
-      environment: new Set(['grass land', 'hill', 'mountain', 'cave']),
+      environment: new Set(['grass land', 'hill', 'mountain', 'underground']),
       size: 'large',
       type: "monstrosity",
       challenge_rating: '6',
@@ -1747,7 +1747,7 @@ const monsters = [
     },
     {
       name: "Cloaker",
-      environment: new Set(['cave']),
+      environment: new Set(['underground']),
       size: 'large',
       type: "aberration",
       challenge_rating: '8',
@@ -2033,7 +2033,7 @@ const monsters = [
     },
     {
       name: "Cyclops",
-      environment: new Set(['coast', 'desert', 'grass land', 'hill', 'mountain', 'cave']),
+      environment: new Set(['coast', 'desert', 'grass land', 'hill', 'mountain', 'underground']),
       size: 'huge',
       type: "giant",
       challenge_rating: '6',
@@ -2059,7 +2059,7 @@ const monsters = [
     },
     {
       name: "Darkmantle",
-      environment: new Set(['cave']),
+      environment: new Set(['underground']),
       size: 'small',
       type: "monstrosity",
       challenge_rating: '1/2',
@@ -2111,7 +2111,7 @@ const monsters = [
     },
     {
       name: "Deep Gnome (Svirfneblin)",
-      environment: new Set(['cave']),
+      environment: new Set(['underground']),
       size: 'small',
       type: "humanoid",
       challenge_rating: '1/2',
@@ -2241,7 +2241,7 @@ const monsters = [
     },
     {
       name: "Doppelganger",
-      environment: new Set(['cave','urban']),
+      environment: new Set(['underground','urban']),
       size: 'medium',
       type: "monstrosity",
       challenge_rating: '3',
@@ -2345,7 +2345,7 @@ const monsters = [
     },
     {
       name: "Drider",
-      environment: new Set(['cave']),
+      environment: new Set(['underground']),
       size: 'large',
       type: "monstrosity",
       challenge_rating: '6',
@@ -2371,7 +2371,7 @@ const monsters = [
     },
     {
       name: "Drow",
-      environment: new Set(['cave']),
+      environment: new Set(['underground']),
       size: 'medium',
       type: "humanoid",
       challenge_rating: '1/4',
@@ -2397,7 +2397,7 @@ const monsters = [
     },
     {
       name: "Druid",
-      environment: new Set(['arctic', 'coast','desert', 'forest', 'grass land', 'hill', 'mountain', 'swamp', 'cave']),
+      environment: new Set(['arctic', 'coast','desert', 'forest', 'grass land', 'hill', 'mountain', 'swamp', 'underground']),
       size: 'medium',
       type: "humanoid",
       challenge_rating: '2',
@@ -2449,7 +2449,7 @@ const monsters = [
     },
     {
       name: "Duergar",
-      environment: new Set(['cave']),
+      environment: new Set(['underground']),
       size: 'medium',
       type: "humanoid",
       challenge_rating: '1',
@@ -2683,7 +2683,7 @@ const monsters = [
     },
     {
       name: "Ettin",
-      environment: new Set(['hill', 'mountain', 'cave']),
+      environment: new Set(['hill', 'mountain', 'underground']),
       size: 'large',
       type: "giant",
       challenge_rating: '4',
@@ -2735,7 +2735,7 @@ const monsters = [
     },
     {
       name: "Fire Giant",
-      environment: new Set(['mountain', 'cave']),
+      environment: new Set(['mountain', 'underground']),
       size: 'huge',
       type: "giant",
       challenge_rating: '9',
@@ -2761,7 +2761,7 @@ const monsters = [
     },
     {
       name: "Flameskull",
-      environment: new Set(['cave']),
+      environment: new Set(['underground']),
       size: 'tiny',
       type: "undead",
       challenge_rating: '4',
@@ -2917,7 +2917,7 @@ const monsters = [
     },
     {
       name: "Gargoyle",
-      environment: new Set(['cave', 'urban']),
+      environment: new Set(['underground', 'urban']),
       size: 'medium',
       type: "elemental",
       challenge_rating: '2',
@@ -2943,7 +2943,7 @@ const monsters = [
     },
     {
       name: "Gelatinous Cube",
-      environment: new Set(['cave']),
+      environment: new Set(['underground']),
       size: 'large',
       type: "ooze",
       challenge_rating: '2',
@@ -2969,7 +2969,7 @@ const monsters = [
     },
     {
       name:"Ghast",
-      environment: new Set(['swamp', 'cave', 'urban']),
+      environment: new Set(['swamp', 'underground', 'urban']),
       size: 'medium',
       type: "undead",
       challenge_rating: '2',
@@ -2995,7 +2995,7 @@ const monsters = [
     },
     {
       name: "Ghost",
-      environment: new Set(['cave', 'urban']),
+      environment: new Set(['underground', 'urban']),
       size: 'medium',
       type: "undead",
       challenge_rating: '2',
@@ -3021,7 +3021,7 @@ const monsters = [
     },
     {
       name: "Ghoul",
-      environment: new Set(['swamp', 'cave', 'urban']),
+      environment: new Set(['swamp', 'underground', 'urban']),
       size: 'medium',
       type: "undead",
       challenge_rating: '2',
@@ -3151,7 +3151,7 @@ const monsters = [
     },
     {
       name: "Giant Centipede",
-      environment: new Set(['cave', 'urban']),
+      environment: new Set(['underground', 'urban']),
       size: 'small',
       type: "beast",
       challenge_rating: '1/4',
@@ -3177,7 +3177,7 @@ const monsters = [
     },
     {
       name: "Giant Constrictor Snake",
-      environment: new Set(['desert', 'forest','swamp','cave','aquatic']),
+      environment: new Set(['desert', 'forest','swamp','underground','aquatic']),
       size: 'huge',
       type: "beast",
       challenge_rating: '2',
@@ -3307,7 +3307,7 @@ const monsters = [
     },
     {
       name: "Giant Fire Beetle",
-      environment: new Set(['cave']),
+      environment: new Set(['underground']),
       size: 'huge',
       type: "beast",
       challenge_rating: '0',
@@ -3411,7 +3411,7 @@ const monsters = [
     },
     {
       name: "Giant Lizard",
-      environment: new Set(['coast', 'desert', 'forest', 'swamp', 'cave']),
+      environment: new Set(['coast', 'desert', 'forest', 'swamp', 'underground']),
       size: 'large',
       type: "beast",
       challenge_rating: '1/4',
@@ -3489,7 +3489,7 @@ const monsters = [
     },
     {
       name: "Giant Poisonous Snake",
-      environment: new Set(['desert', 'forest', 'grass land', 'swamp', 'cave', 'urban']),
+      environment: new Set(['desert', 'forest', 'grass land', 'swamp', 'underground', 'urban']),
       size: 'medium',
       type: "beast",
       challenge_rating: '1/4',
@@ -3515,7 +3515,7 @@ const monsters = [
     },
     {
       name: "Giant Rat",
-      environment: new Set(['forest', 'swamp', 'cave', 'urban']),
+      environment: new Set(['forest', 'swamp', 'underground', 'urban']),
       size: 'small',
       type: "beast",
       challenge_rating: '1/8',
@@ -3619,7 +3619,7 @@ const monsters = [
     },
     {
       name: "Giant Spider",
-      environment: new Set(['desert','forest','swamp','cave','urban']),
+      environment: new Set(['desert','forest','swamp','underground','urban']),
       size: 'large',
       type: "beast",
       challenge_rating: '1',
@@ -3645,7 +3645,7 @@ const monsters = [
     },
     {
       name: "Giant Toad",
-      environment: new Set(['coast','desert','forest','swamp','cave']),
+      environment: new Set(['coast','desert','forest','swamp','underground']),
       size: 'large',
       type: "beast",
       challenge_rating: '1',
@@ -3905,7 +3905,7 @@ const monsters = [
     },
     {
       name: "Goblin",
-      environment: new Set(['forest', 'hill', 'grass land', 'cave']),
+      environment: new Set(['forest', 'hill', 'grass land', 'underground']),
       size: 'small',
       type: "humanoid",
       challenge_rating: '1/4',
@@ -3931,7 +3931,7 @@ const monsters = [
     },
     {
       name: "Gold Dragon Wyrmling",
-      environment: new Set(['forest', 'hill', 'grass land', 'cave']),
+      environment: new Set(['forest', 'hill', 'grass land', 'underground']),
       size: 'medium',
       type: "dragon",
       challenge_rating: '3',
@@ -4061,7 +4061,7 @@ const monsters = [
     },
     {
       name: "Grick",
-      environment: new Set(['forest', 'cave']),
+      environment: new Set(['forest', 'underground']),
       size: 'medium',
       type: "monstrosity",
       challenge_rating: '2',
@@ -4113,7 +4113,7 @@ const monsters = [
     },
     {
       name: "Grimlock",
-      environment: new Set(['cave']),
+      environment: new Set(['underground']),
       size: 'medium',
       type: "humanoid",
       challenge_rating: '1/4',

@@ -93,5 +93,10 @@
     font-size: 2rem;
     color: red;
   }
+  @media (max-width: 1375px){ 
+    .buttons {
+      margin-top: 30px;
+    }
+  }
   
 
