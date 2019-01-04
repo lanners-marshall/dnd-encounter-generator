@@ -16,8 +16,8 @@ export const Banner = styled.div`
 	background-image: url(${headerBackground});
 	background-size: 100% 100%;
 	top: 0;
-	width: 100%;
-	max-width: 1307px;
+	width: 80%;
+	max-width: 80%;
 	z-index: 1;
 	display: flex;
 	align-items: center;
@@ -41,7 +41,8 @@ export const GroupAndSearch = styled.div`
 `
 
 export const Container = styled.div`
-	margin: 0 2%;
+	margin: 0 auto;
+	width:80%;
 	
 	
 `
