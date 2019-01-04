@@ -58,7 +58,7 @@ class MonsterList extends Component{
             }
         } else {
             for (let i in monsters){
-                if (monsters[i].envirement.has(env) && monsters[i].size === size && monsters[i].type === type){
+                if (monsters[i].environment.has(env) && monsters[i].size === size && monsters[i].type === type){
                     ar.push(monsters[i])
                 }
             }
@@ -115,7 +115,7 @@ class MonsterList extends Component{
                 <div className="buttons">
                 <button className="sort-button1" onClick={this.generateEncounter}>Generate</button>
                 <button className="sort-button2" onClick={this.clear}>Clear</button>
-                <button onClick={this.logProps}>log props</button>
+                <button onClick={this.logProps}>Log Props</button>
                 </div>
                 <div className="monster-div">
                     {this.state.monsters.map(monster =>(

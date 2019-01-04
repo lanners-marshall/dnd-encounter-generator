@@ -5614,14 +5614,7 @@ const monsters = [
       WIS_mod: (-2),
       CHA: 1,
       CHA_mod: (-5),
-<<<<<<< HEAD
-      Traits: <p><em><strong>Amorphous.</strong></em> The jelly can move through a space as narrow as 1 inch wide without squeezing. </p><p><em><strong>Spider Climb.</strong></em> The jelly can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.</p>,
-      Actions: <p><em><strong>Pseudopod.</strong></em> <em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one target. <em>Hit:</em> 9 (2d6 + 2) bludgeoning damage plus 3 (1d6) acid damage.</p>,
-      Reactions: <p><em><strong>Split.</strong></em> When a jelly that is Medium or larger is subjected to lightning or slashing damage, it splits into two new jellies if it has at least 10 hit points. Each new jelly has hit points equal to half the original jelly's, rounded down. New jellies are one size smaller than the original jelly.</p>,
-      img_url:" https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/279/1000/1000/636252770058723674.jpeg"
-=======
       img_url:"https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/279/1000/1000/636252770058723674.jpeg"
->>>>>>> 890c941c0835da725fb122f8edcfce15c8d0c00f
     },
     {
       name: "Octopus",

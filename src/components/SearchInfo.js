@@ -174,7 +174,7 @@ class SearchInfo extends React.Component {
 				<h2>Filter Selection</h2>
 				<FlexDiv>
 					<div>
-						<h3>number of monsters</h3>
+						<h3>Number Of Monsters</h3>
 						<Select
 							className="select"
 			        value={this.selectedOption}

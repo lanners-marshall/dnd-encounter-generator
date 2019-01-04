@@ -26,6 +26,30 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+button {
+	font-family: 'Charm', cursive;
+	height: 40px;
+	width: 150px;
+	background-color: black;
+	border-radius: 8px;
+	border: none;
+	color: crimson;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+  	transition-duration: 0.4s;
+  	cursor: pointer;
+}
+
+button:hover {
+	background-color:crimson;
+	color:black;
+	box-shadow: 5px 5px 5px 0px black;
+  }
+
 ol, ul {
 	
 }
@@ -49,11 +73,15 @@ table {
 }
 
 html, body {
-  font-family: 'Ubuntu', sans-serif;
+	font-family: 'Charm', cursive;
+	font-weight: bold;
+	color: crimson;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Roboto', sans-serif;
+	font-family: 'Charm', cursive;
+	font-weight: bold;
+	color: crimson;
 }
 
 html {

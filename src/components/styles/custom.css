@@ -1,9 +1,11 @@
 .select {
 	font-size: 1.6rem;
-	width: 150px;
+	width: 200px;
+	
 }
 
 .dnd {
-	width: 40px;
-	margin-left: 5%;
+	width: 100px;
+    margin-left: 1%;
+    margin-top: 13%;
 }
