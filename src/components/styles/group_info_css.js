@@ -1,24 +1,27 @@
 import styled from 'styled-components'
 
 export const GroupInfo = styled.div`
-
 	border: 1px solid black;
 	padding: 10px;
-	box-shadow: 5px 10px 8px 10px black;
+	box-shadow: 2.5px 5px 4px 5px black;
 	margin: 3% auto;
+	margin-right: 1%;
 	width: 100%;
 	max-width: 200px;
-	height: 300px;
+	height: 410px;
 	padding-left: 3.3%;
-	@media (max-width: 1375px){
-		width: 91.7%;
+	padding-right: 3.3%;
+	background-color: #f5f5f5;
+	@media (max-width: 1375px){ 
+		width: 95%;
+		margin: 0;
 		height: 200px;
 		max-width: none;
 		margin-bottom: 20px;
+		padding-right: 0;
 	}
 	> h2 {
 		font-size: 4rem;
-		margin-left:40%;
 		margin-bottom: 10px;
 	}
 `

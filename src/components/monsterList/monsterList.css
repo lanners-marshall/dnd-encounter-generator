@@ -5,7 +5,7 @@
     justify-content: center;
     flex-wrap:wrap;
     color:white;
-    background-color: #ECECEC;
+    padding-bottom: 100px;
   }
   .monster-title{
     color: #D1AE78;
@@ -21,7 +21,7 @@
   }
   .monster-card{
     background-color: rgb(19, 19, 19);
-    bordeR: 2px solid #D1AE78;
+    border: 2px solid #D1AE78;
     text-align: center;
     margin: 10px;
     display: flex;
@@ -81,14 +81,21 @@
     padding: 5px;
   }
   .buttons{
-      display: flex;
-      flex-direction: column;
-      width: 100px;
-      margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 612px;
+    margin: 0 auto;
+    padding-bottom: 30px;
   }
 
   .count {
     font-size: 2rem;
     color: red;
+  }
+  @media (max-width: 1375px){
+    .buttons{
+      margin: 0;
+    }
   }
 
