@@ -32,7 +32,7 @@ class XpDisplay extends React.Component {
 
 		return (
 			<XpDiv>
-				<h2>XP for Group</h2>
+				<h2>XP</h2>
 				<p>Easy: {easy}</p>
 				<p>Medium: {mid}</p>
 				<p>Hard: {hard}</p>
