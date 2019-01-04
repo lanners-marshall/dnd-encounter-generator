@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import formBackground from './formBackground.jpg'
 export const GroupInfo = styled.div`
 	border: 1px solid black;
 	padding: 10px;
@@ -10,7 +10,8 @@ export const GroupInfo = styled.div`
 	max-width: 200px;
 	padding-left: 3.3%;
 	padding-right: 3.3%;
-	background-color: #f5f5f5;
+	background-image: url(${formBackground});
+	background-size:100%;
 	@media (max-width: 1375px){ 
 		width: 95%;
 		margin: 0;
