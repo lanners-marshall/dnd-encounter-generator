@@ -94,14 +94,22 @@ class App extends React.Component {
               getEnvironment={this.getEnvironment}
               getEncounterDifficulty={this.getEncounterDifficulty}
               getMonsterSize={this.getMonsterSize}
-              getEnvironment={this.getEnvironment}
               getMonsterType={this.getMonsterType}
               getMinChallenge={this.getMinChallenge}
               maxChallenge={this.maxChallenge}
             />
 
           </GroupAndSearch>
-          <MonsterList />
+          <MonsterList 
+            players={this.state.players}
+            numberOfMonsters={this.state.numberOfMonsters}
+            difficulty={this.state.encounterDifficulty}
+            size={this.state.monsterSize}
+            type={this.state.monsterType}
+            minCr={this.state.minChallenge}
+            maxChallenge={this.state.maxChallenge}
+            environment={this.state.environment}
+          />
         </Container>
       </div>
     )

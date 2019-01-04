@@ -42,7 +42,7 @@ class Players extends React.Component {
 
 	handleChange = (selectedOption) => {
     this.setState({ selectedOption });
-    console.log(`Option selected:`, selectedOption);
+    // console.log(`Option selected:`, selectedOption);
   }
 
   addPlayer = () => {

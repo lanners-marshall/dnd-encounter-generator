@@ -28,11 +28,22 @@
     flex-direction: column;
     width: 300px;
   }
+  .exp-div1{
+    margin: auto;
+     width: 70%;
+  }
   .exp-div{
-      margin-bottom: 10px;
+      padding-bottom: 0px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
   }
   .exp-div h5{
+      justify-self: center;
       font-size: 1.55rem;
+      text-align: left;
+     
   }
   .stat-title{
     font-size: 1.15rem;
@@ -75,3 +86,24 @@
       width: 100px;
       margin: auto;
   }
+  .sort-button1 {
+    margin-top: 30px;
+    width: 150px;
+    height: 40px;
+    font-size: 2rem;
+    border-radius: 6px
+  }
+
+  .sort-button2 {
+    margin-top: 15px;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 2rem;
+  }
+
+  .count {
+    font-size: 2rem;
+    color: red;
+  }
+
