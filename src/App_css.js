@@ -34,7 +34,9 @@ export const Banner = styled.div`
 export const GroupAndSearch = styled.div`
 	display: flex;
 	margin-top: 20px;
-	justify-content: center;
+	width: 100%;
+  max-width: 1312px;
+  margin: 0 auto;
 	@media (max-width: 1375px){
 		flex-direction: column;
 	}
@@ -42,6 +44,4 @@ export const GroupAndSearch = styled.div`
 
 export const Container = styled.div`
 	margin: 0 2%;
-	
-	
 `

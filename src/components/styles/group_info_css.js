@@ -8,7 +8,6 @@ export const GroupInfo = styled.div`
 	margin-right: 1%;
 	width: 100%;
 	max-width: 200px;
-	height: 410px;
 	padding-left: 3.3%;
 	padding-right: 3.3%;
 	background-color: #f5f5f5;
