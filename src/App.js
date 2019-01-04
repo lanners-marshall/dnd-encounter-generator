@@ -94,7 +94,6 @@ class App extends React.Component {
               getEnvironment={this.getEnvironment}
               getEncounterDifficulty={this.getEncounterDifficulty}
               getMonsterSize={this.getMonsterSize}
-              getEnvironment={this.getEnvironment}
               getMonsterType={this.getMonsterType}
               getMinChallenge={this.getMinChallenge}
               maxChallenge={this.maxChallenge}
