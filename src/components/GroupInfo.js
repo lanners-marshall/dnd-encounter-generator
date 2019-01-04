@@ -92,12 +92,12 @@ class Players extends React.Component {
 	        options={options}
           className="select"
 	      />
-	      <AddPlayer onClick={this.addPlayer}>add player</AddPlayer>
+	      <AddPlayer onClick={this.addPlayer}>Add Player</AddPlayer>
 	      {bol? (
           <PlayersDiv>
           {this.state.players.map((p, i) => {
             return (
-              <p key={p.id} id={p.id} onClick={this.removePlayer}>level {p.level}</p>
+              <p key={p.id} id={p.id} onClick={this.removePlayer}>Level {p.level}</p>
             )
           })}
           </PlayersDiv>

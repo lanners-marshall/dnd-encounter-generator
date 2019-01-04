@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Banner, GroupAndSearch, Container} from './App_css.js'
+import {Banner, GroupAndSearch, Container, AppContainer} from './App_css.js'
 import Players from './components/GroupInfo';
 import SearchInfo from './components/SearchInfo';
 import MonsterList from './components/monsterList/monsterList';
@@ -73,7 +73,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <AppContainer>
         <Banner>
           <img src={dnd} alt="dungeons and dragons" className="dnd" />
           <h1>Encounter Generator</h1>
@@ -102,7 +102,7 @@ class App extends React.Component {
             environment={this.state.environment}
           />
         </Container>
-      </div>
+      </AppContainer>
     )
   }
 }
