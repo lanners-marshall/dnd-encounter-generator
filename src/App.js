@@ -12,7 +12,6 @@ class App extends React.Component {
     super();
     this.state = {
       players: [],
-      numberOfMonsters: '',
       encounterDifficulty: '',
       monsterSize: '',
       environment: '',
@@ -27,12 +26,6 @@ class App extends React.Component {
   getPlayers = (players) => {
     this.setState({
       players: players,
-    })
-  }
-
-  getNumMonsters = (num) => {
-    this.setState({
-      numberOfMonsters: num,
     })
   }
 
@@ -90,7 +83,6 @@ class App extends React.Component {
           <GroupAndSearch>
             <Players getPlayers={this.getPlayers} removePlayer={this.removePlayer}/>
             <SearchInfo
-              getNumMonsters={this.getNumMonsters}
               getEnvironment={this.getEnvironment}
               getEncounterDifficulty={this.getEncounterDifficulty}
               getMonsterSize={this.getMonsterSize}
@@ -102,7 +94,6 @@ class App extends React.Component {
           </GroupAndSearch>
           <MonsterList 
             players={this.state.players}
-            numberOfMonsters={this.state.numberOfMonsters}
             difficulty={this.state.encounterDifficulty}
             size={this.state.monsterSize}
             type={this.state.monsterType}

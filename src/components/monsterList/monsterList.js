@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import monsters from "../../monsters.js";
+import monsters from "./monsters";
 import "./monsterList.css";
 
 class MonsterList extends Component{
@@ -15,13 +15,17 @@ class MonsterList extends Component{
         console.log(this.props)
     }
 
+    clear = () => {
+        this.setState({
+            monsters: []
+        })
+    }
+
     getXpForFight = () => {
-        //gets us our xp total for allowed for the fight
         let players = this.props.players
         let difficulty = this.props.difficulty
         let num
         let xp_total = 0
-
         if (difficulty === 'easy'){
             num = 0
         } else if (difficulty === 'medium'){
@@ -40,51 +44,73 @@ class MonsterList extends Component{
 
     generateEncounter = () => {
 
-        let xp = this.getXpForFight()
-        let dif = this.props.difficulty
+        let xp_allowed = this.getXpForFight()
         let env = this.props.environment
-        let max = this.props.maxChallenge
-        let min = this.props.minCr
+        let max = this.props.maxChallenge.value
+        let min = this.props.minCr.value
+        let max_string = this.props.maxChallenge.label
+        let min_string = this.props.minCr.label
         let numMon = this.props.numberOfMonsters
         let size = this.props.size
         let type = this.props.type
         let ar = []
 
-        if (this.props.env === 'any'){
-            for (let i in monsters){
-                if (monsters[i].size === size && monsters[i].type === type){
-                    ar.push(monsters[i])
-                }
+        let condition1, condition2, condition3, condition4, condition5
+
+        for (let i in monsters){
+
+            if (env === 'any'){
+                condition1 = true
+            } else {
+                condition1 = monsters[i].environment.has(env)
             }
-        } else {
-            for (let i in monsters){
-                if (monsters[i].envirement.has(env) && monsters[i].size === size && monsters[i].type === type){
-                    ar.push(monsters[i])
-                }
+
+            if (size === 'any') {
+                condition2 = true
+            } else {
+                condition2 = monsters[i].size === size
+            }
+
+            if (type === 'any') {
+                condition3 = true
+            } else {
+                condition3 = monsters[i].type === type
+            }
+
+            if (max_string === 'any') {
+                condition4 = true
+            } else {
+                condition4 = monsters[i].xp <= max
+            }
+
+            if (min_string === 'any') {
+                condition5 = true
+            } else {
+                condition5 = monsters[i].xp >= min
+            }
+
+            if (condition1 && condition2 && condition3 && condition4 && condition5) {
+                ar.push(monsters[i])
             }
         }
 
-        // var rand = myArray[Math.floor(Math.random() * myArray.length)];
-        let num
-        let ar2 = []
 
-        if (ar.length > 0){
-            while (xp > 0) {
-                if (xp < 0) {
+        let ar2 = []
+        let monster
+
+        console.log(ar)
+
+        if (ar.length > 0) {
+            while (true){
+                if (xp_allowed <= 0) {
                     break;
                 }
-                let monster = ar[Math.floor(Math.random() * ar.length)];
+                monster = ar[Math.floor(Math.random() * ar.length)];
                 ar2.push(monster)
-                xp -= monster.xp
+                xp_allowed -= monster.xp
+
             }
         }
-
-/* 
-    I need to loop through an array of objects
-    I need to check each monster and find if it already exsists
-    if that monster already exsists then I add a coutner to that monster object
-    I then display that counter in the browser
-*/
 
         const countMonster = function(monster, ar){
             let counter = 0
@@ -167,16 +193,14 @@ class MonsterList extends Component{
                             <p className="stat">{monster.CHA} ({monster.CHA_mod})</p>
                         </div>
                         </div>
-                        <div className="exp-div1">
                         <div className="exp-div">
-                            <h5>Experience Points: </h5> <span className="monster-title2">{monster.xp} XP</span>
+                            <h5>Experience Points <span className="monster-title2">{monster.xp} XP</span> </h5>
                         </div>
                         <div className="exp-div">
-                            <h5>Challenge Raiting:</h5><span className="monster-title2"> {monster.challenge_rating}</span> 
+                            <h5>Challenge Raiting<span className="monster-title2"> {monster.challenge_rating}</span> </h5>
                         </div>
                         <div className="exp-div">
-                            <h5>Page Number: </h5><span className="monster-title2">{monster.page}</span>
-                        </div>
+                            <h5>Page Number<span className="monster-title2"> {monster.page}</span> </h5>
                         </div>
                         <div className="exp-div">
                             <h5><span className="count">X {monster.count}</span> </h5>

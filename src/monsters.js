@@ -387,7 +387,7 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 19,
       CHA_mod: (+4),
-      xp: 33000,
+      Challenge: 33000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/129/315/315/636252755854649337.jpeg"
     },
     {
@@ -4269,11 +4269,7 @@ const monsters = [
     },
     {
       name: "Hawk",
-      environment: new Set(['any']),
-      size: 'tiny',
-      type: "beast",
-      page:"330",
-      challenge_rating: '0',
+      meta: "unaligned",
       armorClass: 13 ,
       hitPoints: 1,
       Speed: 10,
@@ -4289,16 +4285,12 @@ const monsters = [
       WIS_mod: (+2),
       CHA: 6,
       CHA_mod: (-2),
-      xp: 10 ,
+      // xp: 0 (10 XP),
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/9/900/1000/1000/636334288270143064.jpeg"
     },
     {
-      name:"Hell Hound",
-      environment: new Set(['mountain','underground']),
-      size: 'medium',
-      type: "beast",
-       page:"182",
-      challenge_rating: '3',
+      name:" Hell Hound",
+      meta:"lawful evil",
       armorClass: 15,
       hitPoints: 45 ,
       Speed: 50,
@@ -4314,17 +4306,13 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 6,
       CHA_mod: (-2),
-      xp: 700,
+      Challenge:700,
+      // xp: 3 (700 XP),
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/393/315/315/636252782461361426.jpeg"
     },
     {
       name: "Hezrou",
       meta:  "chaotic evil",
-      environment: new Set(['mountain','underground']),
-      size: 'large',
-      type: "fiend",
-       page:"60",
-      challenge_rating: '8',
       armorClass: 16,
       hitPoints: 136,
       Speed: 30,
@@ -4340,17 +4328,13 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 13,
       CHA_mod: (+1),    
-      xp: 3900,
+      Challenge: 3900,
+      // xp: 8 (3,900 XP),
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/321/315/315/636252775562934524.jpeg"
     },
     {
       name: "Hill Giant",
       meta: "chaotic evil",
-      environment: new Set(['hill']),
-      size: 'huge',
-      type: "giant",
-       page:"155",
-      challenge_rating: '5',
       armorClass: 13,
       hitPoints: 105,
       Speed: 40,
@@ -4366,18 +4350,13 @@ const monsters = [
       WIS_mod: (-1),
       CHA: 6,
       CHA_mod: (-2),
-      xp: 1800,
-      xp: 1800,
+      Challenge: 1800,
+      // xp: 5 (1,800 XP),
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/331/315/315/636252776196140305.jpeg"
     },
     {
       name: "Hippogriff",
       meta:  "unaligned",
-      environment: new Set(['any']),
-      size: 'large',
-      type: "monstrosity",
-       page:"184",
-      challenge_rating: '1',
       armorClass: 11 ,
       hitPoints: 19,
       Speed: 40,
@@ -4393,17 +4372,14 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 8,
       CHA_mod: (-1),
-      xp:200,
+      Challenge:200,
+      Traits: <p><em><strong>Keen Sight.</strong></em> The hippogriff has advantage on Wisdom (Perception) checks that rely on sight.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The hippogriff makes two attacks: one with its beak and one with its claws. </p><p><em><strong>Beak.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 8 (1d10 + 3) piercing damage. </p><p><em><strong>Claws.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 10 (2d6 + 3) slashing damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/335/315/315/636252776578605778.jpeg"
     },
     {
       name: "Hobgoblin",
       meta: "lawful evil",
-           environment: new Set(['desert','forest','grassland','hill','underground']),
-      size: 'medium',
-      type: "humanoid",
-       page:"186",
-      challenge_rating: '1/2',
       armorClass: 18,
       hitPoints: 11,
       Speed: 30,
@@ -4419,17 +4395,15 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 9,
       CHA_mod: (-1),
-      xp: 100,
+     
+      Challenge: 100,
+      Traits: <p><em><strong>Martial Advantage.</strong></em> Once per turn, the hobgoblin can deal an extra 7 (2d6) damage to a creature it hits with a weapon attack if that creature is within 5 feet of an ally of the hobgoblin that isn't incapacitated.</p>,
+      Actions: <p><em><strong>Longsword.</strong></em> <em>Melee Weapon Attack:</em> +3 to hit, reach 5 ft., one target. <em>Hit:</em> 5 (1d8 + 1) slashing damage, or 6 (1d10 + 1) slashing damage if used with two hands. </p><p><em><strong>Longbow.</strong></em> <em>Ranged Weapon Attack:</em> +3 to hit, range 150/600 ft., one target. <em>Hit:</em> 5 (1d8 + 1) piercing damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/389/315/315/636252781431932597.jpeg"
     },
     {
       name: "Homunculus",
       meta:  "neutral",
-           environment: new Set(['any']),
-      size: 'tiny',
-      type: "construct",
-       page:"188",
-      challenge_rating: '0',
       armorClass: 13,
       hitPoints: 5,
       Speed: 20,
@@ -4445,19 +4419,17 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 7,
       CHA_mod: (-2),
-      xp: 10,
+     
+      Challenge: 10,
+      Traits: <p><em><strong>Telepathic Bond.</strong></em> While the homunculus is on the same plane of existence as its master, it can magically convey what it senses to its master, and the two can communicate telepathically.</p>,
+      Actions: <p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one creature. <em>Hit:</em> 1 piercing damage, and the target must succeed on a DC 10 Constitution saving throw or be poisoned for 1 minute. If the saving throw fails by 5 or more, the target is instead poisoned for 5 (1d10) minutes and unconscious while poisoned in this way.</p>,
       img_url:" https://media-waterdeep.cursecdn.com/avatars/thumbnails/18/287/315/315/636379803928245506.jpeg"
     },
     {
       name:" Horned Devil",
       meta:  "lawful evil",
-           environment: new Set(['hill']),
-      size: 'large',
-      type: "fiend",
-       page:"74",
-      challenge_rating: '11',
       armorClass: 18,
-      hitPoints: 148, 
+      hitPoints: 148 
       Speed: 20,
       STR: 22,
       STR_mod: (+6),
@@ -4472,18 +4444,14 @@ const monsters = [
       CHA: 17,
       CHA_mod: (+3),
    
-      xp: 7200,
-      
+      Challenge: 7200,
+      Traits: <p><em><strong>Devil's Sight.</strong></em> Magical darkness doesn't impede the devil's darkvision. </p><p><em><strong>Magic Resistance.</strong></em> The devil has advantage on saving throws against spells and other magical effects.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The devil makes three melee attacks: two with its fork and one with its tail. It can use Hurl Flame in place of any melee attack. </p><p><em><strong>Fork.</strong></em> <em>Melee Weapon Attack:</em> +10 to hit, reach 10 ft., one target. <em>Hit:</em> 15 (2d8 + 6) piercing damage. </p><p><em><strong>Tail.</strong></em> <em>Melee Weapon Attack:</em> +10 to hit, reach 10 ft., one target. <em>Hit:</em> 10 (1d8 + 6) piercing damage. If the target is a creature other than an undead or a construct, it must succeed on a DC 17 Constitution saving throw or lose 10 (3d6) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 10 (3d6). Any creature can take an action to stanch the wound with a successful DC 12 Wisdom (Medicine) check. The wound also closes if the target receives magical healing. </p><p><em><strong>Hurl Flame.</strong></em> Ranged Spell Attack: +7 to hit, range 150 ft., one target. <em>Hit:</em> 14 (4d6) fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/347/315/315/636252777255936976.jpeg"
     },
     {
       name: "Hunter Shark",
       meta: "unaligned",
-           environment: new Set(['aquatic']),
-      size: 'large',
-      type: "beast",
-       page:"330",
-      challenge_rating: '2',
       armorClass: 12,
       hitPoints: 45,
       Speed: 0,
@@ -4500,20 +4468,16 @@ const monsters = [
       CHA: 4,
       CHA_mod: (-3),
     
-      xp:450,
-      
+      Challenge:450,
+      Traits: <p><em><strong>Blood Frenzy.</strong></em> The shark has advantage on melee attack rolls against any creature that doesn't have all its hit points. </p><p><em><strong>Water Breathing.</strong></em> The shark can breathe only underwater.</p>,
+      Actions: <p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +6 to hit, reach 5 ft., one target. <em>Hit:</em> 13 (2d8 + 4) piercing damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Hydra",
       meta: "unaligned",
-           environment: new Set(['swamp']),
-      size: 'huge',
-      type: "monstrosity",
-       page:"190",
-      challenge_rating: '8',
       armorClass: 15,
-      hitPoints: 172,
+      hitPoints: 172
       Speed: 30,
       STR: 20,
       STR_mod: (+5),
@@ -4528,18 +4492,14 @@ const monsters = [
       CHA: 7,
       CHA_mod: (-2),
     
-      xp: 3900,
-    
+      Challenge: 3900,
+      Traits: <p><em><strong>Hold Breath.</strong></em> The hydra can hold its breath for 1 hour. </p><p><em><strong>Multiple Heads.</strong></em> The hydra has five heads. While it has more than one head, the hydra has advantage on saving throws against being blinded, charmed, deafened, frightened, stunned, and knocked unconscious.</p><p>Whenever the hydra takes 25 or more damage in a single turn, one of its heads dies. If all its heads die, the hydra dies.</p><p>At the end of its turn, it grows two heads for each of its heads that died since its last turn, unless it has taken fire damage since its last turn. The hydra regains 10 hit points for each head regrown in this way. </p><p><em><strong>Reactive Heads.</strong></em> For each head the hydra has beyond one, it gets an extra reaction that can be used only for opportunity attacks. </p><p><em><strong>Wakeful.</strong></em> While the hydra sleeps, at least one of its heads is awake.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The hydra makes as many bite attacks as it has heads. </p><p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +8 to hit, reach 10 ft., one target. <em>Hit:</em> 10 (1d10 + 5) piercing damage.</p>,
       img_url:" https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/349/315/315/636252777669218389.jpeg"
     },
     {
       name: "Hyena",
       meta:  "unaligned",
-           environment: new Set(['desert','forest','grassland','hill']),
-      size: 'medium',
-      type: "beast",
-       page:"331",
-      challenge_rating: '0',
       armorClass: 11 ,
       hitPoints: 5,
       Speed: 50,
@@ -4555,19 +4515,17 @@ const monsters = [
       WIS_mod: (+1),
       CHA: 5,
       CHA_mod: (-3),
-      xp:10,
+    
+      Challenge:10,
+      Traits: <p><em><strong>Pack Tactics.</strong></em> The hyena has advantage on an attack roll against a creature if at least one of the hyena's allies is within 5 feet of the creature and the ally isn't incapacitated.</p>,
+      Actions: <p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +2 to hit, reach 5 ft., one target. <em>Hit:</em> 3 (1d6) piercing damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/9/902/1000/1000/636334288674955736.jpeg"
     },
     {
       name:"Ice Devil",
       meta:  "lawful evil",
-           environment: new Set(['any']),
-      size: 'large',
-      type: "fiend",
-      challenge_rating: '14',
-       page:"75",
       armorClass: 18,
-      hitPoints: 180 ,
+      hitPoints: 180 
       Speed: 40,
       STR: 21,
       STR_mod: (+5),
@@ -4582,20 +4540,16 @@ const monsters = [
       CHA: 18,
       CHA_mod: (+4),
      
-      xp: 11500,
-
+      Challenge: 11500,
+      Traits: <p><em><strong>Devil's Sight.</strong></em> Magical darkness doesn't impede the devil's darkvision. </p><p><em><strong>Magic Resistance.</strong></em> The devil has advantage on saving throws against spells and other magical effects.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The devil makes three attacks: one with its bite, one with its claws, and one with its tail. </p><p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +10 to hit, reach 5 ft., one target. <em>Hit:</em> 12 (2d6 + 5) piercing damage plus 10 (3d6) cold damage. </p><p><em><strong>Claws.</strong></em> <em>Melee Weapon Attack:</em> +10 to hit, reach 5 ft., one target. <em>Hit:</em> 10 (2d4 + 5) slashing damage plus 10 (3d6) cold damage. </p><p><em><strong>Tail.</strong></em> <em>Melee Weapon Attack:</em> +10 to hit, reach 10 ft., one target. <em>Hit:</em> 12 (2d6 + 5) bludgeoning damage plus 10 (3d6) cold damage. </p><p><em><strong>Wall of Ice (Recharge 6).</strong></em> The devil magically forms an opaque wall of ice on a solid surface it can see within 60 feet of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter.</p><p>When the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is incapacitated. The creature then makes a DC 17 Dexterity saving throw, taking 35 (10d6) cold damage on a failed save, or half as much damage on a successful one.</p><p>The wall lasts for 1 minute or until the devil is incapacitated or dies. The wall can be damaged and breached; each 10-­foot section has AC 5, 30 hit points, vulnerability to fire damage, and immunity to acid, cold, necrotic, poison, and psychic damage. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a DC 17 Constitution saving throw, taking 17 (5d6) cold damage on a failed save, or half as much damage on a successful one. The frigid air dissipates when the rest of the wall vanishes.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/353/315/315/636252777966974765.jpeg"
     },
     {
       name: "Ice Mephit",
       meta: "neutral evil",
-           environment: new Set(['any']),
-      size: 'small',
-      type: "elemental",
-       page:"215",
-      challenge_rating: '1/2',
       armorClass: 11 ,
-      hitPoints: 21 ,
+      hitPoints: 21 
       Speed: 30,
       STR: 7,
       STR_mod: (-2),
@@ -4610,19 +4564,16 @@ const monsters = [
       CHA: 12,
       CHA_mod: (+1),
     
-      xp:100,
+      Challenge:100,
+      Traits: <p><em><strong>Death Burst.</strong></em> When the mephit dies, it explodes in a burst of jagged ice. Each creature within 5 feet of it must make a DC 10 Dexterity saving throw, taking 4 (1d8) slashing damage on a failed save, or half as much damage on a successful one. </p><p><em><strong>False Appearance.</strong></em> While the mephit remains motionless, it is indistinguishable from an ordinary shard of ice. </p><p><em><strong>Innate Spellcasting.</strong></em>(1/Day). The mephit can innately cast fog cloud, requiring no material components. Its innate spellcasting ability is Charisma.</p>,
+      Actions: <p><em><strong>Claws.</strong></em> <em>Melee Weapon Attack:</em> +3 to hit, reach 5 ft., one creature. <em>Hit:</em> 3 (1d4 + 1) slashing damage plus 2 (1d4) cold damage. </p><p><em><strong>Frost Breath (Recharge 6).</strong></em> The mephit exhales a 15- foot cone of cold air. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 5 (2d4) cold damage on a failed save, or half as much damage on a successful one.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/18/290/315/315/636379804105821214.jpeg"
     },
     {
       name: "Imp",
       meta: "lawful evil",
-           environment: new Set(['hill']),
-      size: 'tiny',
-      type: "fiend",
-       page:"76",
-      challenge_rating: '1',
       armorClass: 13 ,
-      hitPoints: 10 ,
+      hitPoints: 10 
       Speed: 20,
       STR: 6,
       STR_mod: (-2),
@@ -4637,20 +4588,16 @@ const monsters = [
       CHA: 14,
       CHA_mod: (+2),
      
-      xp: 200,
-  
+      Challenge: 200,
+      Traits: <p><em><strong>Shapechanger.</strong></em> The imp can use its action to polymorph into a beast form that resembles a rat (speed 20 ft.), a raven (20 ft., fly 60 ft.), or a spider (20 ft., climb 20 ft.), or back into its true form. Its statistics are the same in each form, except for the speed changes noted. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies. </p><p><em><strong>Devil's Sight.</strong></em> Magical darkness doesn't impede the imp's darkvision. </p><p><em><strong>Magic Resistance.</strong></em> The imp has advantage on saving throws against spells and other magical effects.</p>,
+      Actions: <p><em><strong>Sting (Bite in Beast Form).</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 5 (1d4 + 3) piercing damage, and the target must make on a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one. </p><p><em><strong>Invisibility.</strong></em> The imp magically turns invisible until it attacks or until its concentration ends (as if concentrating on a spell). Any equipment the imp wears or carries is invisible with it.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/361/315/315/636252778560366227.jpeg"
     },
     {
       name: "Invisible Stalker",
       meta: "neutral",
-           environment: new Set(['any']),
-      size: 'medium',
-      type: "elemental",
-       page:"192",
-      challenge_rating: '6',
       armorClass: 14 ,
-      hitPoints: 104 ,
+      hitPoints: 104 
       Speed: 50,
       STR: 16,
       STR_mod: (+3),
@@ -4665,19 +4612,16 @@ const monsters = [
       CHA: 11,
       CHA_mod: (+0),
       
-      xp: 2300,
+      Challenge: 2300,
+      Traits: <p><em><strong>Invisibility.</strong></em> The stalker is invisible. </p><p><em><strong>Faultless Tracker.</strong></em> The stalker is given a quarry by its summoner. The stalker knows the direction and distance to its quarry as long as the two of them are on the same plane of existence. The stalker also knows the location of its summoner.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The stalker makes two slam attacks. </p><p><em><strong>Slam.</strong></em> <em>Melee Weapon Attack:</em> +6 to hit, reach 5 ft., one target. <em>Hit:</em> 10 (2d6 + 3) bludgeoning damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/367/315/315/636252779159282339.jpeg"
     },
     {
       name: "Iron Golem",
       meta:  "unaligned",
-           environment: new Set(['any']),
-      size: 'large',
-      type: "construct",
-      challenge_rating: '5',
-       page:"170",
       armorClass: 20,
-      hitPoints: 210,
+      hitPoints: 210
       Speed: 30,
       STR: 24,
       STR_mod: (+7),
@@ -4692,18 +4636,14 @@ const monsters = [
       CHA: 1,
       CHA_mod: (-5),
     
-      xp: 15000,
-      
+      Challenge: 15000,
+      Traits: <p><em><strong>Fire Absorption.</strong></em> Whenever the golem is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to the fire damage dealt. </p><p><em><strong>Immutable Form.</strong></em> The golem is immune to any spell or effect that would alter its form. </p><p><em><strong>Magic Resistance.</strong></em> The golem has advantage on saving throws against spells and other magical effects. </p><p><em><strong>Magic Weapons.</strong></em> The golem's weapon attacks are magical.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The golem makes two melee attacks. </p><p><em><strong>Slam.</strong></em> <em>Melee Weapon Attack:</em> +13 to hit, reach 5 ft., one target. <em>Hit:</em> 20 (3d8 + 7) bludgeoning damage. </p><p><em><strong>Sword.</strong></em> <em>Melee Weapon Attack:</em> +13 to hit, reach 10 ft., one target. <em>Hit:</em> 23 (3d10 + 7) slashing damage. </p><p><em><strong>Poison Breath (Recharge 6).</strong></em> The golem exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.</p>,
       img_url:" https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/371/315/315/636252779460570049.jpeg"
     },
     {
       name: "Jackal",
       meta: "unaligned",
-           environment: new Set(['desert','grassland']),
-      size: 'small',
-      type: "beast",
-       page:"331",
-      challenge_rating: '0',
       armorClass: 12 ,
       hitPoints: 3,
       Speed: 40,
@@ -4720,20 +4660,16 @@ const monsters = [
       CHA: 6,
       CHA_mod: (-2),
    
-      xp: 10,
-    
+      Challenge: 10,
+      Traits: <p><em><strong>Keen Hearing and Smell.</strong></em> The jackal has advantage on Wisdom (Perception) checks that rely on hearing or smell. </p><p><em><strong>Pack Tactics.</strong></em> The jackal has advantage on an attack roll against a creature if at least one of the jackal's allies is within 5 feet of the creature and the ally isn't incapacitated.</p>,
+      Actions: <p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +1 to hit, reach 5 ft., one target. <em>Hit:</em> 1 (1d4 – 1) piercing damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Killer Whale",
       meta: "unaligned",
-           environment: new Set(['aquatic']),
-      size: 'huge',
-       page:"331",
-      type: "beast",
-      challenge_rating: '5',
       armorClass: 12,
-      hitPoints: 90 ,
+      hitPoints: 90 
       Speed: 0 ,
       STR: 19,
       STR_mod: (+4),
@@ -4748,18 +4684,14 @@ const monsters = [
       CHA: 7,
       CHA_mod: (-2),
    
-      xp:700,
-      
+      Challenge:700,
+      Traits: <p><em><strong>Echolocation.</strong></em> The whale can't use its blindsight while deafened. </p><p><em><strong>Hold Breath.</strong></em> The whale can hold its breath for 30 minutes. </p><p><em><strong>Keen Hearing.</strong></em> The whale has advantage on Wisdom (Perception) checks that rely on hearing.</p>,
+      Actions: <p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +6 to hit, reach 5 ft., one target. <em>Hit:</em> 21 (5d6 + 4) piercing damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Knight",
       meta:  "any",
-           environment: new Set(['hill']),
-      size: 'medium',
-      type: "humanoid",
-       page:"347",
-      challenge_rating: '3',
       armorClass: 18,
       hitPoints: 52 ,
       Speed: 30,
@@ -4776,20 +4708,17 @@ const monsters = [
       CHA: 15,
       CHA_mod: (+2),
       
-      xp: 700,
-      
+      Challenge: 700,
+      Traits: <p><em><strong>Brave.</strong></em> The knight has advantage on saving throws against being frightened.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The knight makes two melee attacks. </p><p><em><strong>Greatsword.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 10 (2d6 + 3) slashing damage. </p><p><em><strong>Heavy Crossbow.</strong></em> <em>Ranged Weapon Attack:</em> +2 to hit, range 100/400 ft., one target. <em>Hit:</em> 5 (1d10) piercing damage. </p><p><em><strong>Leadership (Recharges after a Short or Long Rest).</strong></em> For 1 minute, the knight can utter a special command or warning whenever a nonhostile creature that it can see within 30 feet of it makes an attack roll or a saving throw. The creature can add a d4 to its roll provided it can hear and understand the knight. A creature can benefit from only one Leadership die at a time. This effect ends if the knight is incapacitated.</p>,
+      Reactions: <p><em><strong>Parry.</strong></em> The knight adds 2 to its AC against one melee attack that would hit it. To do so, the knight must see the attacker and be wielding a melee weapon.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/656/humanoid.jpg"
     },
     {
       name: "Kobold",
       meta: "lawful evil",
-           environment: new Set(['hill','arctic','coastal','desert','forest','mountain','swamp','underground','urban']),
-      size: 'small',
-      type: "humanoid",
-       page:"195",
-      challenge_rating: '1/8',
       armorClass: 12 ,
-      hitPoints: 5,
+      hitPoints: 5
       Speed: 30,
       STR: 7,
       STR_mod: (-2),
@@ -4804,18 +4733,14 @@ const monsters = [
       CHA: 8,
       CHA_mod: (-1),
      
-      xp: 25,
-      
+      Challenge: 25,
+      Traits: <p><em><strong>Sunlight Sensitivity.</strong></em> While in sunlight, the kobold has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight. </p><p><em><strong>Pack Tactics.</strong></em> The kobold has advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 feet of the creature and the ally isn't incapacitated.</p>,
+      Actions: <p><em><strong>Dagger.</strong></em> <em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one target. <em>Hit:</em> 4 (1d4 + 2) piercing damage. </p><p><em><strong>Sling.</strong></em> <em>Ranged Weapon Attack:</em> +4 to hit, range 30/120 ft., one target. <em>Hit:</em> 4 (1d4 + 2) bludgeoning damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/379/1000/1000/636252780450300625.jpeg"
     },
     {
       name: "Kraken",
       meta: "chaotic evil",
-           environment: new Set(['aquatic']),
-      size: 'gargantuan',
-      type: "monstrosity",
-       page:"197",
-      challenge_rating: '23',
       armorClass: 18,
       hitPoints: 472,
       Speed: 20,
@@ -4832,20 +4757,17 @@ const monsters = [
       CHA: 20,
       CHA_mod: (+5),
      
-      xp: 50000,
-  
+      Challenge: 50000,
+      Traits: <p><em><strong>Amphibious.</strong></em> The kraken can breathe air and water. </p><p><em><strong>Freedom of Movement.</strong></em> The kraken ignores difficult terrain, and magical effects can't reduce its speed or cause it to be restrained. It can spend 5 feet of movement to escape from nonmagical restraints or being grappled. </p><p><em><strong>Siege Monster.</strong></em> The kraken deals double damage to objects and structures.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The kraken makes three tentacle attacks, each of which it can replace with one use of Fling. </p><p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +17 to hit, reach 5 ft., one target. <em>Hit:</em> 23 (3d8 + 10) piercing damage. If the target is a Large or smaller creature grappled by the kraken, that creature is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the kraken, and it takes 42 (12d6) acid damage at the start of each of the kraken's turns.</p><p>If the kraken takes 50 damage or more on a single turn from a creature inside it, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the kraken. If the kraken dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 15 feet of movement, exiting prone. </p><p><em><strong>Tentacle.</strong></em> <em>Melee Weapon Attack:</em> +17 to hit, reach 30 ft., one target. <em>Hit:</em> 20 (3d6 + 10) bludgeoning damage, and the target is grappled (escape DC 18). Until this grapple ends, the target is restrained. The kraken has ten tentacles, each of which can grapple one target. </p><p><em><strong>Fling.</strong></em> One Large or smaller object held or creature grappled by the kraken is thrown up to 60 feet in a random direction and knocked prone. If a thrown target strikes a solid surface, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked prone. </p><p><em><strong>Lightning Storm.</strong></em> The kraken magically creates three bolts of lightning, each of which can strike a target the kraken can see within 120 feet of it. A target must make a DC 23 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.</p>,
+      Legendary Actions: <p>The kraken can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The kraken regains spent legendary actions at the start of its turn. </p><p><em><strong>Tentacle Attack or Fling.</strong></em> The kraken makes one tentacle attack or uses its Fling. </p><p><em><strong>Lightning Storm (Costs 2 Actions).</strong></em> The kraken uses Lightning Storm. </p><p><em><strong>Ink Cloud (Costs 3 Actions).</strong></em> While underwater, the kraken expels an ink cloud in a 60-foot radius. The cloud spreads around corners, and that area is heavily obscured to creatures other than the kraken. Each creature other than the kraken that ends its turn there must succeed on a DC 23 Constitution saving throw, taking 16 (3d10) poison damage on a failed save, or half as much damage on a successful one. A strong current disperses the cloud, which otherwise disappears at the end of the kraken's next turn.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/381/1000/1000/636252780680163799.jpeg"
     },
     {
       name: "Lamia",
       meta:  "chaotic evil",
-           environment: new Set(['desert']),
-      size: 'large',
-      type: "monstrosity",
-       page:"201",
-      challenge_rating: '4',
       armorClass: 13,
-      hitPoints: 97 ,
+      hitPoints: 97 
       Speed: 30,
       STR: 16,
       STR_mod: (+3),
@@ -4860,18 +4782,14 @@ const monsters = [
       CHA: 16,
       CHA_mod: (+3),
     
-      xp: 1100,
-    
+      Challenge: 1100,
+      Traits: <p><em><strong>Innate Spellcasting.</strong></em> The lamia's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components. </p><p>At will: disguise self (any humanoid form), major image </p><p>3/day each: charm person, mirror image, scrying, suggestion </p><p>1/day: geas</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The lamia makes two attacks: one with its claws and one with its dagger or Intoxicating Touch. </p><p><em><strong>Claws.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 14 (2d10 + 3) slashing damage. Dagger. <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 5 (1d4 + 3) piercing damage. </p><p><em><strong>Intoxicating Touch.</strong></em> Melee Spell Attack: +5 to hit, reach 5 ft., one creature. <em>Hit:</em> The target is magically cursed for 1 hour. Until the curse ends, the target has disadvantage on Wisdom saving throws and all ability checks.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/385/315/315/636252780906064244.jpeg"
     },
     {
       name: "Lemure",
       meta:  "lawful evil",
-           environment: new Set(['any']),
-      size: 'medium',
-      type: "fiend",
-       page:"76",
-      challenge_rating: '0',
       armorClass: 7 ,
       hitPoints: 13 ,
       Speed: 15,
@@ -4888,18 +4806,14 @@ const monsters = [
       CHA: 3,
       CHA_mod: (-4),
    
-      xp: 10,
-      
+      Challenge: 10,
+      Traits: <p><em><strong>Devil's Sight.</strong></em> Magical darkness doesn't impede the lemure's darkvision. </p><p><em><strong>Hellish Rejuvenation.</strong></em> A lemure that dies in the Nine Hells comes back to life with all its hit points in 1d10 days unless it is killed by a good-aligned creature with a bless spell cast on that creature or its remains are sprinkled with holy water.</p>,
+      Actions: <p><em><strong>Fist.</strong></em> <em>Melee Weapon Attack:</em> +3 to hit, reach 5 ft., one target. <em>Hit:</em> 2 (1d4) bludgeoning damage.</p>,
       img_url:" https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/149/1000/1000/636252758704142054.jpeg"
     },
     {
       name: "Lich",
       meta:  "any evil alignment",
-           environment: new Set(['any']),
-      size: 'medium',
-      type: "undead",
-       page:"202",
-      challenge_rating: '21',
       armorClass: 17,
       hitPoints: 135 ,
       Speed: 30,
@@ -4916,18 +4830,15 @@ const monsters = [
       CHA: 16,
       CHA_mod: (+3),
     
-      xp:33000,
-     
+      Challenge:33000,
+      Traits: <p><em><strong>Legendary Resistance (3/Day).</strong></em> If the lich fails a saving throw, it can choose to succeed instead. </p><p><em><strong>Rejuvenation.</strong></em> If it has a phylactery, a destroyed lich gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery. </p><p><em><strong>Spellcasting.</strong></em> The lich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks). The lich has the following wizard spells prepared: </p><p>Cantrips (at will): mage hand, prestidigitation, ray of frost </p><p>1st level (4 slots): detect magic, magic missile, shield, thunderwave </p><p>2nd level (3 slots): acid arrow, detect thoughts, invisibility, mirror image </p><p>3rd level (3 slots): animate dead, counterspell, dispel magic, fireball </p><p>4th level (3 slots): blight, dimension door </p><p>5th level (3 slots): cloudkill, scrying </p><p>6th level (1 slot): disintegrate, globe of invulnerability </p><p>7th level (1 slot): finger of death, plane shift </p><p>8th level (1 slot): dominate monster, power word stun </p><p>9th level (1 slot): power word kill </p><p><em><strong>Turn Resistance.</strong></em> The lich has advantage on saving throws against any effect that turns undead.</p>,
+      Actions: <p><em><strong>Paralyzing Touch.</strong></em> Melee Spell Attack: +12 to hit, reach 5 ft., one creature. <em>Hit:</em> 10 (3d6) cold damage. The target must succeed on a DC 18 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>,
+      Legendary Actions: <p>The lich can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The lich regains spent legendary actions at the start of its turn. </p><p><em><strong>Cantrip.</strong></em> The lich casts a cantrip. </p><p><em><strong>Paralyzing Touch (Costs 2 Actions).</strong></em> The lich uses its Paralyzing Touch. </p><p><em><strong>Frightening Gaze (Costs 2 Actions).</strong></em> The lich fixes its gaze on one creature it can see within 10 feet of it. The target must succeed on a DC 18 Wisdom saving throw against this magic or become frightened for 1 minute. The frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the lich's gaze for the next 24 hours. </p><p><em><strong>Disrupt Life (Costs 3 Actions).</strong></em> Each living creature within 20 feet of the lich must make a DC 18 Constitution saving throw against this magic, taking 21 (6d6) necrotic damage on a failed save, or half as much damage on a successful one.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/165/1000/1000/636252760084366499.jpeg"
     },
     {
       name: "Lion",
       meta:  "unaligned",
-           environment: new Set(['hill','desert','grassland','mountain']),
-      size: 'large',
-      type: "beast",
-       page:"331",
-      challenge_rating: '1',
       armorClass: 12 ,
       hitPoints: 26,
       Speed: 50,
@@ -4944,18 +4855,14 @@ const monsters = [
       CHA: 8,
       CHA_mod: (-1),
   
-      xp: 200,
-      
+      Challenge: 200,
+      Traits: <p><em><strong>Keen Smell.</strong></em> The lion has advantage on Wisdom (Perception) checks that rely on smell. </p><p><em><strong>Pack Tactics</strong></em>: The <span>lion</span> has advantage on an attack roll against a creature if at least one of the <span>lion</span>’s allies is within 5 feet of the creature and the ally isn’t i<span>ncapacitated</span>.</p><p><em><strong>Pounce.</strong></em> If the lion moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the lion can make one bite attack against it as a bonus action. </p><p><em><strong>Running Leap.</strong></em> With a 10-foot running start, the lion can long jump up to 25 feet.</p>,
+      Actions: <p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 7 (1d8 + 3) piercing damage. </p><p><em><strong>Claw.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 6 (1d6 + 3) slashing damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Lizard",
       meta:  "unaligned",
-           environment: new Set(['any']),
-      size: 'tiny',
-      type: "beast",
-       page:"332",
-      challenge_rating: '0',
       armorClass: 10 ,
       hitPoints: 2 ,
       Speed: 20,
@@ -4972,17 +4879,13 @@ const monsters = [
       CHA: 3,
       CHA_mod: (-4),
      
-      xp: 10,
+      Challenge: 10
+      Actions: <p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +0 to hit, reach 5 ft., one target. <em>Hit:</em> 1 piercing damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Lizardfolk",
       meta:  "neutral",
-           environment: new Set(['forest','swamp']),
-      size: 'medium',
-      type: "humanoid",
-       page:"204",
-      challenge_rating: '1/2',
       armorClass: 15,
       hitPoints: 22,
       Speed: 30,
@@ -4999,18 +4902,14 @@ const monsters = [
       CHA: 7,
       CHA_mod: (-2),
      
-      xp: 100,
-      
+      Challenge: 100,
+      Traits: <p><em><strong>Hold Breath.</strong></em> The lizardfolk can hold its breath for 15 minutes.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The lizardfolk makes two melee attacks, each one with a different weapon. </p><p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one target. <em>Hit:</em> 5 (1d6 + 2) piercing damage. </p><p><em><strong>Heavy Club.</strong></em> <em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one target. <em>Hit:</em> 5 (1d6 + 2) bludgeoning damage. </p><p><em><strong>Javelin.</strong></em> <em>Melee or <em>Ranged Weapon Attack:</em></em> +4 to hit, reach 5or range 30/120 ft., one target. <em>Hit:</em> 5 (1d6 + 2) piercing damage. </p><p><em><strong>Spiked Shield.</strong></em> <em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one target. <em>Hit:</em> 5 (1d6 + 2) piercing damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/233/315/315/636252766314905259.jpeg"
     },
     {
       name: "Mage",
       meta: "any",
-           environment: new Set(['urban']),
-      size: 'medium',
-      type: "humanoid",
-       page:"347",
-      challenge_rating: '6',
       armorClass: 12,
       hitPoints: 40 ,
       Speed: 30,
@@ -5027,18 +4926,14 @@ const monsters = [
       CHA: 11,
       CHA_mod: (+0),
       
-      xp: 2300,
-      
+      Challenge: 2300,
+      Traits: <p><em><strong>Spellcasting.</strong></em> The mage is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The mage has the following wizard spells prepared: </p><p>Cantrips (at will): fire bolt, light, mage hand, prestidigitation </p><p>1st level (4 slots): detect magic, mage armor, magic missile, shield </p><p>2nd level (3 slots): misty step, suggestion </p><p>3rd level (3 slots): counterspell, fireball, fly </p><p>4th level (3 slots): greater invisibility, ice storm </p><p>5th level (1 slot): cone of cold</p>,
+      Actions: <p><em><strong>Dagger.</strong></em> <em>Melee or <em>Ranged Weapon Attack:</em></em> +5 to hit, reach 5or range 20/60 ft., one target. <em>Hit:</em> 4 (1d4 + 2) piercing damage.</p>,
       img_url:" https://media-waterdeep.cursecdn.com/attachments/2/656/humanoid.jpg"
     },
     {
       name: "Magma Mephit",
       meta:  "neutral evil",
-           environment: new Set(['underground']),
-      size: 'small',
-      type: "elemental",
-       page:"216",
-      challenge_rating: '1/2',
       armorClass: 11 ,
       hitPoints: 22,
       Speed: 30,
@@ -5055,18 +4950,14 @@ const monsters = [
       CHA: 10,
       CHA_mod: (+0),
      
-      xp: 100,
-     
+      Challenge: 100,
+      Traits: <p><em><strong>Death Burst.</strong></em> When the mephit dies, it explodes in a burst of lava. Each creature within 5 feet of it must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one. </p><p><em><strong>False Appearance.</strong></em> While the mephit remains motionless, it is indistinguishable from an ordinary mound of magma. </p><p><em><strong>Innate Spellcasting.</strong></em>(1/Day). The mephit can innately cast heat metal (spell save DC 10), requiring no material components. Its innate spellcasting ability is Charisma.</p>,
+      Actions: <p><em><strong>Claws.</strong></em> <em>Melee Weapon Attack:</em> +3 to hit, reach 5 ft., one creature. <em>Hit:</em> 3 (1d4 + 1) slashing damage plus 2 (1d4) fire damage. </p><p><em><strong>Fire Breath (Recharge 6).</strong></em> The mephit exhales a 15-foot cone of fire. Each creature in that area must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/18/292/315/315/636379804350894228.jpeg"
     },
     {
       name: "Magmin",
       meta:  "chaotic neutral",
-           environment: new Set(['any']),
-      size: 'small',
-      type: "elemental",
-       page:"212",
-      challenge_rating: '1/2',
       armorClass: 14,
       hitPoints: 9 ,
       Speed: 30,
@@ -5083,18 +4974,14 @@ const monsters = [
       CHA: 10,
       CHA_mod: (+0),
     
-      xp: 100,
-      
+      Challenge: 100,
+      Traits: <p><em><strong>Death Burst.</strong></em> When the magmin dies, it explodes in a burst of fire and magma. Each creature within 10 feet of it must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one. Flammable objects that aren't being worn or carried in that area are ignited. </p><p><em><strong>Ignited Illumination.</strong></em> As a bonus action, the magmin can set itself ablaze or extinguish its flames. While ablaze, the magmin sheds bright light in a 10-foot radius and dim light for an additional 10 feet.</p>,
+      Actions: <p><em><strong>Touch.</strong></em> <em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one target. <em>Hit:</em> 7 (2d6) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 3 (1d6) fire damage at the end of each of its turns.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/183/315/315/636252762034276620.jpeg"
     },
     {
       name: "Mammoth",
       meta: "unaligned",
-           environment: new Set(['arctic']),
-      size: 'huge',
-      type: "beast",
-       page:"332",
-      challenge_rating: '6',
       armorClass: 13,
       hitPoints: 126 ,
       Speed: 40,
@@ -5111,18 +4998,14 @@ const monsters = [
       CHA: 6,
       CHA_mod: (-2),
    
-      xp: 2300,
-      
+      Challenge: 2300,
+      Traits: <p><em><strong>Trampling Charge.</strong></em> If the mammoth moves at least 20 feet straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 18 Strength saving throw or be knocked prone. If the target is prone, the mammoth can make one stomp attack against it as a bonus action.</p>,
+      Actions: <p><em><strong>Gore.</strong></em> <em>Melee Weapon Attack:</em> +10 to hit, reach 10 ft., one target. <em>Hit:</em> 25 (4d8 + 7) piercing damage. </p><p><em><strong>Stomp.</strong></em> <em>Melee Weapon Attack:</em> +10 to hit, reach 5 ft., one prone creature. <em>Hit:</em> 29 (4d10 + 7) bludgeoning damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Manticore",
       meta:" lawful evil",
-           environment: new Set(['hill','arctic','coastal','grassland','mountain']),
-      size: 'large',
-      type: "monstrosity",
-       page:"213",
-      challenge_rating: '3',
       armorClass: 14,
       hitPoints: 68 ,
       Speed: 30,
@@ -5139,18 +5022,14 @@ const monsters = [
       CHA: 8,
       CHA_mod: (-1),
       
-      xp:700,
-      
+      Challenge:700,
+      Traits: <p><em><strong>Tail Spike Regrowth.</strong></em> The manticore has twenty-four tail spikes. Used spikes regrow when the manticore finishes a long rest.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The manticore makes three attacks: one with its bite and two with its claws or three with its tail spikes. </p><p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 7 (1d8 + 3) piercing damage. </p><p><em><strong>Claw.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 6 (1d6 + 3) slashing damage. </p><p><em><strong>Tail Spike.</strong></em> <em>Ranged Weapon Attack:</em> +5 to hit, range 100/200 ft., one target. <em>Hit:</em> 7 (1d8 + 3) piercing damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/187/315/315/636252762623266809.jpeg"
     },
     {
       name: "Marilith",
       meta:  "chaotic evil",
-           environment: new Set(['any']),
-      size: 'large',
-      type: "fiend",
-       page:"61",
-      challenge_rating: '16',
       armorClass: 18,
       hitPoints: 189,
       Speed: 40,
@@ -5167,18 +5046,15 @@ const monsters = [
       CHA: 20,
       CHA_mod: (+5),
      
-      xp: 15000,
-      
+      Challenge: 15000,
+      Traits: <p><em><strong>Magic Resistance.</strong></em> The marilith has advantage on saving throws against spells and other magical effects. </p><p><em><strong>Magic Weapons.</strong></em> The marilith's weapon attacks are magical. </p><p><em><strong>Reactive.</strong></em> The marilith can take one reaction on every turn in a combat.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The marilith makes seven attacks: six with its longswords and one with its tail. </p><p><em><strong>Longsword.</strong></em> <em>Melee Weapon Attack:</em> +9 to hit, reach 5 ft., one target. <em>Hit:</em> 13 (2d8 + 4) slashing damage. </p><p><em><strong>Tail.</strong></em> <em>Melee Weapon Attack:</em> +9 to hit, reach 10 ft., one creature. <em>Hit:</em> 15 (2d10 + 4) bludgeoning damage. If the target is Medium or smaller, it is grappled (escape DC 19). Until this grapple ends, the target is restrained, the marilith can automatically hit the target with its tail, and the marilith can't make tail attacks against other targets. </p><p><em><strong>Teleport.</strong></em> The marilith magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.</p>,
+      Reactions: <p><em><strong>Parry.</strong></em> The marilith adds 5 to its AC against one melee attack that would hit it. To do so, the marilith must see the attacker and be wielding a melee weapon.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/189/315/315/636252763036079032.jpeg"
     },
     {
       name: "Mastiff",
       meta: "unaligned",
-           environment: new Set(['hill','urban','forest']),
-      size: 'medium',
-      type: "beast",
-       page:"332",
-      challenge_rating: '1/8',
       armorClass: 12 ,
       hitPoints: 5 ,
       Speed: 40,
@@ -5195,20 +5071,16 @@ const monsters = [
       CHA: 7,
       CHA_mod: (-2),
     
-      xp:25,
-      
+      Challenge:25,
+      Traits: <p><em><strong>Keen Hearing and Smell.</strong></em> The mastiff has advantage on Wisdom (Perception) checks that rely on hearing or smell.</p>,
+      Actions: <p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +3 to hit, reach 5 ft., one target. <em>Hit:</em> 4 (1d6 + 1) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/191/1000/1000/636252763295291063.jpeg"
     },
     {
       name: "Medusa",
       meta:  "lawful evil",
-           environment: new Set(['desert']),
-      size: 'medium',
-      type: "monstrosity",
-       page:"214",
-      challenge_rating: '6',
       armorClass: 15,
-      hitPoints: 127 ,
+      hitPoints: 127 
       Speed: 30,
       STR: 10,
       STR_mod: (+0),
@@ -5223,18 +5095,14 @@ const monsters = [
       CHA: 15,
       CHA_mod: (+2),
      
-      xp: 2300,
-      
+      Challenge: 2300,
+      Traits: <p><em><strong>Petrifying Gaze.</strong></em> When a creature that can see the medusa's eyes starts its turn within 30 feet of the medusa, the medusa can force it to make a DC 14 Constitution saving throw if the medusa isn't incapacitated and can see the creature. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is restrained. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic.</p><p>Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the medusa until the start of its next turn, when it can avert its eyes again. If the creature looks at the medusa in the meantime, it must immediately make the save.</p><p>If the medusa sees itself reflected on a polished surface within 30 feet of it and in an area of bright light, the medusa is, due to its curse, affected by its own gaze.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The medusa makes either three melee attacks--one with its snake hair and two with its shortsword--or two ranged attacks with its longbow. </p><p><em><strong>Snake Hair.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one creature. <em>Hit:</em> 4 (1d4 + 2) piercing damage plus 14 (4d6) poison damage. </p><p><em><strong>Shortsword.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 5 (1d6 + 2) piercing damage. </p><p><em><strong>Longbow.</strong></em> <em>Ranged Weapon Attack:</em> +5 to hit, range 150/600 ft., one target. <em>Hit:</em> 6 (1d8 + 2) piercing damage plus 7 (2d6) poison damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/580/1000/1000/636376361850900325.jpeg"
     },
     {
       name: "Merfolk",
       meta: "neutral",
-           environment: new Set(['aquatic','coastal']),
-      size: 'medium',
-      type: "humanoid",
-       page:"218",
-      challenge_rating: '1/8',
       armorClass: 11 ,
       hitPoints: 11 ,
       Speed: 10,
@@ -5251,18 +5119,14 @@ const monsters = [
       CHA: 12,
       CHA_mod: (+1),
      
-      xp: 25,
-      
+      Challenge: 25,
+      Traits: <p><em><strong>Amphibious.</strong></em> The merfolk can breathe air and water.</p>,
+      Actions: <p><em><strong>Spear.</strong></em> <em>Melee or <em>Ranged Weapon Attack:</em></em> +2 to hit, reach 5or range 20/60 ft., one target. <em>Hit:</em> 3 (1d6) piercing damage, or 4 (1d8) piercing damage if used with two hands to make a melee attack.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/197/1000/1000/636252763841141413.jpeg"
     },
     {
       name: "Merrow",
       meta: " chaotic evil",
-           environment: new Set(['coastal','aquatic']),
-      size: 'large',
-      type: "monstrosity",
-       page:"219",
-      challenge_rating: '2',
       armorClass: 13,
       hitPoints: 45,
       Speed: 10,
@@ -5279,18 +5143,14 @@ const monsters = [
       CHA: 9,
       CHA_mod: (-1),
       
-      xp:450,
-      
+      Challenge:450,
+      Traits: <p><em><strong>Amphibious.</strong></em> The merrow can breathe air and water.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The merrow makes two attacks: one with its bite and one with its claws or harpoon. </p><p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +6 to hit, reach 5 ft., one target. <em>Hit:</em> 8 (1d8 + 4) piercing damage. </p><p><em><strong>Claws.</strong></em> <em>Melee Weapon Attack:</em> +6 to hit, reach 5 ft., one target. <em>Hit:</em> 9 (2d4 + 4) slashing damage. </p><p><em><strong>Harpoon.</strong></em> <em>Melee or <em>Ranged Weapon Attack:</em></em> +6 to hit, reach 5or range 20/60 ft., one target. <em>Hit:</em> 11 (2d6 + 4) piercing damage. If the target is a Huge or smaller creature, it must succeed on a Strength contest against the merrow or be pulled up to 20 feet toward the merrow.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/203/315/315/636252764097970952.jpeg"
     },
     {
       name: "Mimic",
       meta:  "neutral",
-      environment: new Set(['underground','urban']),
-      size: 'medium',
-      type: "monstrosity",
-       page:"220",
-      challenge_rating: '2',
       armorClass: 12,
       hitPoints: 58,
       Speed: 15,
@@ -5307,17 +5167,14 @@ const monsters = [
       CHA: 8,
       CHA_mod: (-1),
      
-      xp: 450,
+      Challenge: 450,
+      Traits: <p><em><strong>Shapechanger.</strong></em> The mimic can use its action to polymorph into an object or back into its true, amorphous form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies. </p><p><em><strong>Adhesive (Object Form Only).</strong></em> The mimic adheres to anything that touches it. A Huge or smaller creature adhered to the mimic is also grappled by it (escape DC 13). Ability checks made to escape this grapple have disadvantage. </p><p><em><strong>False Appearance (Object Form Only).</strong></em> While the mimic remains motionless, it is indistinguishable from an ordinary object. </p><p><em><strong>Grappler.</strong></em> The mimic has advantage on attack rolls against any creature grappled by it.</p>,
+      Actions: <p><em><strong>Pseudopod.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 7 (1d8 + 3) bludgeoning damage. If the mimic is in object form, the target is subjected to its Adhesive trait. </p><p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 7 (1d8 + 3) piercing damage plus 4 (1d8) acid damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/211/315/315/636252764731637373.jpeg"
     },
     {
       name: "Minotaur",
       meta: "chaotic evil",
-            environment: new Set(['underground']),
-      size: 'large',
-      type: "monstrosity",
-       page:"223",
-      challenge_rating: '3',
       armorClass: 14,
       hitPoints: 76,
       Speed: 40,
@@ -5334,20 +5191,16 @@ const monsters = [
       CHA: 9,
       CHA_mod: (-1),
      
-      xp: 700,
-      
+      Challenge: 700,
+      Traits: <p><em><strong>Charge.</strong></em> If the minotaur moves at least 10 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be pushed up to 10 feet away and knocked prone. </p><p><em><strong>Labyrinthine Recall.</strong></em> The minotaur can perfectly recall any path it has traveled. </p><p><em><strong>Reckless.</strong></em> At the start of its turn, the minotaur can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn.</p>,
+      Actions: <p><em><strong>Greataxe.</strong></em> <em>Melee Weapon Attack:</em> +6 to hit, reach 5 ft., one target. <em>Hit:</em> 17 (2d12 + 4) slashing damage. </p><p><em><strong>Gore.</strong></em> <em>Melee Weapon Attack:</em> +6 to hit, reach 5 ft., one target. <em>Hit:</em> 13 (2d8 + 4) piercing damage.</p>,
       img_url:" https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/217/1000/1000/636252765009181721.jpeg"
     },
     {
       name:" Minotaur Skeleton",
       meta:  "lawful evil",
-            environment: new Set(['underground']),
-      size: 'large',
-      type: "undead",
-       page:"273",
-      challenge_rating: '2',
       armorClass: 12,
-      hitPoints: 67 ,
+      hitPoints: 67 
       Speed: 40,
       STR: 18,
       STR_mod: (+4),
@@ -5362,20 +5215,16 @@ const monsters = [
       CHA: 5,
       CHA_mod: (-3),
      
-      xp: 450,
-    
+      Challenge: 450,
+      Traits: <p><em><strong>Charge.</strong></em> If the skeleton moves at least 10 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be pushed up to 10 feet away and knocked prone.</p>,
+      Actions: <p><em><strong>Greataxe.</strong></em> <em>Melee Weapon Attack:</em> +6 to hit, reach 5 ft., one target. <em>Hit:</em> 17 (2d12 + 4) slashing damage. </p><p><em><strong>Gore.</strong></em> <em>Melee Weapon Attack:</em> +6 to hit, reach 5 ft., one target. <em>Hit:</em> 13 (2d8 + 4) piercing damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/480/1000/1000/636376298435934058.jpeg"
     },
     {
       name: "Mule",
       meta:  "unaligned",
-            environment: new Set(['desert','hill','urban']),
-      size: 'medium',
-      type: "besat",
-       page:"333",
-      challenge_rating: '1/8',
       armorClass: 10 ,
-      hitPoints: 11 ,
+      hitPoints: 11 
       Speed: 40,
       STR: 14,
       STR_mod: (+2),
@@ -5390,18 +5239,14 @@ const monsters = [
       CHA: 5,
       CHA_mod: (-3),
     
-      xp:25,
-     
+      Challenge:25,
+      Traits: <p><em><strong>Beast of Burden.</strong></em> The mule is considered to be a Large animal for the purpose of determining its carrying capacity. </p><p><em><strong>Sure-Footed.</strong></em> The mule has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.</p>,
+      Actions: <p><em><strong>Hooves.</strong></em> <em>Melee Weapon Attack:</em> +2 to hit, reach 5 ft., one target. <em>Hit:</em> 4 (1d4 + 2) bludgeoning damage.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/648/beast.jpg"
     },
     {
       name: "Mummy",
       meta: "lawful evil",
-            environment: new Set(['desert']),
-      size: 'medium',
-      type: "undead",
-       page:"228",
-      challenge_rating: '3',
       armorClass: 11,
       hitPoints: 58,
       Speed: 20,
@@ -5418,20 +5263,15 @@ const monsters = [
       CHA: 12,
       CHA_mod: (+1),
     
-      xp: 700,
-      
+      Challenge: 700,
+      Actions: <p><em><strong>Multiattack.</strong></em> The mummy can use its Dreadful Glare and makes one attack with its rotting fist.</p><p><em><strong>Rotting Fist.</strong></em> <em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 10 (2d6 + 3) bludgeoning damage plus 10 (3d6) necrotic damage. If the target is a creature, it must succeed on a DC 12 Constitution saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 (3d6) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to dust. The curse lasts until removed by the remove curse spell or other magic.</p><p><em><strong>Dreadful Glare.</strong></em> The mummy targets one creature it can see within 60 feet of it. If the target can see the mummy, it must succeed on a DC 11 Wisdom saving throw against this magic or become frightened until the end of the mummy's next turn. If the target fails the saving throw by 5 or more, it is also paralyzed for the same duration. A target that succeeds on the saving throw is immune to the Dreadful Glare of all mummies (but not mummy lords) for the next 24 hours.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/225/1000/1000/636252765553048566.jpeg"
     },
     {
       name: "Mummy Lord",
       meta:  "lawful evil",
-            environment: new Set(['desert']),
-      size: 'medium',
-      type: "undead",
-       page:"229",
-      challenge_rating: '15',
       armorClass: 17,
-      hitPoints: 97 ,
+      hitPoints: 97 
       Speed: 20,
       STR: 18,
       STR_mod: (+4),
@@ -5446,18 +5286,15 @@ const monsters = [
       CHA: 16,
       CHA_mod: (+3),
      
-      xp:13000,
-      
+      Challenge:13000,
+      Traits: <p><em><strong>Magic Resistance.</strong></em> The mummy lord has advantage on saving throws against spells and other magical effects.</p><p><em><strong>Rejuvenation.</strong></em> A destroyed mummy lord gains a new body in 24 hours if its heart is intact, regaining all its hit points and becoming active again. The new body appears within 5 feet of the mummy lord's heart.</p><p><em><strong>Spellcasting.</strong></em> The mummy lord is a 10th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 17, +9 to hit with spell attacks). The mummy lord has the following cleric spells prepared:</p><p>Cantrips (at will): sacred flame, thaumaturgy</p><p>1st level (4 slots): command, guiding bolt, shield of faith</p><p>2nd level (3 slots): hold person, silence, spiritual weapon</p><p>3rd level (3 slots): animate dead, dispel magic</p><p>4th level (3 slots): divination, guardian of faith</p><p>5th level (2 slots): contagion, insect plague</p><p>6th level (1 slot): harm</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The mummy can use its Dreadful Glare and makes one attack with its rotting fist.</p><p><em><strong>Rotting Fist.</strong></em> <em>Melee Weapon Attack:</em> +9 to hit, reach 5 ft., one target. <em>Hit:</em> 14 (3d6 + 4) bludgeoning damage plus 21 (6d6) necrotic damage. If the target is a creature, it must succeed on a DC 16 Constitution saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 (3d6) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to dust. The curse lasts until removed by the remove curse spell or other magic.</p><p><em><strong>Dreadful Glare.</strong></em> The mummy lord targets one creature it can see within 60 feet of it. If the target can see the mummy lord, it must succeed on a DC 16 Wisdom saving throw against this magic or become frightened until the end of the mummy's next turn. If the target fails the saving throw by 5 or more, it is also paralyzed for the same duration. A target that succeeds on the saving throw is immune to the Dreadful Glare of all mummies and mummy lords for the next 24 hours.</p>,
+      Legendary Actions: <p>The mummy lord can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The mummy lord regains spent legendary actions at the start of its turn.</p><p><em><strong>Attack.</strong></em> The mummy lord makes one attack with its rotting fist or uses its Dreadful Glare.</p><p><em><strong>Blinding Dust.</strong></em> Blinding dust and sand swirls magically around the mummy lord. Each creature within 5 feet of the mummy lord must succeed on a DC 16 Constitution saving throw or be blinded until the end of the creature's next turn.</p><p><em><strong>Blasphemous Word (Costs 2 Actions).</strong></em> The mummy lord utters a blasphemous word. Each non-undead creature within 10 feet of the mummy lord that can hear the magical utterance must succeed on a DC 16 Constitution saving throw or be stunned until the end of the mummy lord's next turn.</p><p><em><strong>Channel Negative Energy (Costs 2 Actions).</strong></em> The mummy lord magically unleashes negative energy. Creatures within 60 feet of the mummy lord, including ones behind barriers and around corners, can't regain hit points until the end of the mummy lord's next turn.</p><p><em><strong>Whirlwind of Sand (Costs 2 Actions).</strong></em> The mummy lord magically transforms into a whirlwind of sand, moves up to 60 feet, and reverts to its normal form. While in whirlwind form, the mummy lord is immune to all damage, and it can't be grappled, petrified, knocked prone, restrained, or stunned. Equipment worn or carried by the mummy lord remain in its possession.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/attachments/2/660/undead.jpg"
     },
     {
       name: "Nalfeshnee",
       meta:  "chaotic evil",
-            environment: new Set(['any']),
-      size: 'large',
-      type: "fiend",
-       page:"62",
-      challenge_rating: '13',
       armorClass: 18,
       hitPoints: 184 ,
       Speed: 20 ,
@@ -5474,18 +5311,14 @@ const monsters = [
       CHA: 15,
       CHA_mod: (+2),
     
-      xp: 10000,
-      
+      Challenge: 10000,
+      Traits: <p><em><strong>Magic Resistance.</strong></em> The nalfeshnee has advantage on saving throws against spells and other magical effects.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The nalfeshnee uses Horror Nimbus if it can. It then makes three attacks: one with its bite and two with its claws. </p><p><em><strong>Bite.</strong></em> <em>Melee Weapon Attack:</em> +10 to hit, reach 5 ft., one target. <em>Hit:</em> 32 (5d10 + 5) piercing damage. </p><p><em><strong>Claw.</strong></em> <em>Melee Weapon Attack:</em> +10 to hit, reach 10 ft., one target. <em>Hit:</em> 15 (3d6 + 5) slashing damage. </p><p><em><strong>Horror Nimbus (Recharge 5–6).</strong></em> The nalfeshnee magically emits scintillating, multicolored light. Each creature within 15 feet of the nalfeshnee that can see the light must succeed on a DC 15 Wisdom saving throw or be frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the nalfeshnee's Horror Nimbus for the next 24 hours. </p><p><em><strong>Teleport.</strong></em> The nalfeshnee magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/261/1000/1000/636252768396688147.jpeg"
     },
     {
       name: "Night Hag",
       meta:" neutral evil",
-            environment: new Set(['any']),
-      size: 'medium',
-      type: "fiend",
-       page:"178",
-      challenge_rating: '5',
       armorClass: 17,
       hitPoints: 112 ,
       Speed: 30,
@@ -5502,18 +5335,14 @@ const monsters = [
       CHA: 16,
       CHA_mod: (+3),
    
-      xp:1800,
-     
+      Challenge:1800,
+      Traits: <p><em><strong>Innate Spellcasting.</strong></em> The hag's innate spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). She can innately cast the following spells, requiring no material components: </p><p>At will: detect magic, magic missile </p><p>2/day each: plane shift (self only), ray of enfeeblement, sleep </p><p><em><strong>Magic Resistance.</strong></em> The hag has advantage on saving throws against spells and other magical effects.</p>,
+      Actions: <p><em><strong>Claws.</strong></em>(Hag Form Only). <em>Melee Weapon Attack:</em> +7 to hit, reach 5 ft., one target. <em>Hit:</em> 13 (2d8 + 4) slashing damage. </p><p><em><strong>Change Shape.</strong></em> The hag magically polymorphs into a Small or Medium female humanoid, or back into her true form. Her statistics are the same in each form. Any equipment she is wearing or carrying isn't transformed. She reverts to her true form if she dies. </p><p><em><strong>Etherealness.</strong></em> The hag magically enters the Ethereal Plane from the Material Plane, or vice versa. To do so, the hag must have a heartstone in her possession. </p><p><em><strong>Nightmare Haunting (1/Day).</strong></em> While on the Ethereal Plane, the hag magically touches a sleeping humanoid on the Material Plane. A protection from evil and good spell cast on the target prevents this contact, as does a magic circle. As long as the contact persists, the target has dreadful visions. If these visions last for at least 1 hour, the target gains no benefit from its rest, and its hit point maximum is reduced by 5 (1d10). If this effect reduces the target's hit point maximum to 0, the target dies, and if the target was evil, its soul is trapped in the hag's soul bag. The reduction to the target's hit point maximum lasts until removed by the greater restoration spell or similar magic.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/269/1000/1000/636252769277562895.jpeg"
     },
     {
       name: "Nightmare",
       meta:  "neutral evil",
-            environment: new Set(['any']),
-      size: 'large',
-      type: "fiend",
-       page:"235",
-      challenge_rating: '3',
       armorClass: 13,
       hitPoints: 68 ,
       Speed: 60,
@@ -5530,18 +5359,14 @@ const monsters = [
       CHA: 15,
       CHA_mod: (+2),
     
-      xp:700,
-     
+      Challenge:700,
+      Traits: <p><em><strong>Confer Fire Resistance.</strong></em> The nightmare can grant resistance to fire damage to anyone riding it. </p><p><em><strong>Illumination.</strong></em> The nightmare sheds bright light in a 10-foot radius and dim light for an additional 10 feet.</p>,
+      Actions: <p><em><strong>Hooves.</strong></em> <em>Melee Weapon Attack:</em> +6 to hit, reach 5 ft., one target. <em>Hit:</em> 13 (2d8 + 4) bludgeoning damage plus 7 (2d6) fire damage. </p><p><em><strong>Ethereal Stride.</strong></em> The nightmare and up to three willing creatures within 5 feet of it magically enter the Ethereal Plane from the Material Plane, or vice versa.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/273/315/315/636252769493472144.jpeg"
     },
     {
       name: "Noble",
       meta: "any",
-            environment: new Set(['urban']),
-      size: 'medium',
-      type: "humanoid",
-       page:"348",
-      challenge_rating: '1/8',
       armorClass: 15,
       hitPoints: 9 ,
       Speed: 30,
@@ -5558,18 +5383,14 @@ const monsters = [
       CHA: 16,
       CHA_mod: (+3),
      
-      xp: 25,
-      
+      Challenge: 25,
+      Actions: <p><em><strong>Rapier.</strong></em> <em>Melee Weapon Attack:</em> +3 to hit, reach 5 ft., one target. <em>Hit:</em> 5 (1d8 + 1) piercing damage.</p>,
+      Reactions: <p><em><strong>Parry.</strong></em> The noble adds 2 to its AC against one melee attack that would hit it. To do so, the noble must see the attacker and be wielding a melee weapon.</p>,
       img_url:" https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/277/1000/1000/636252769861281900.jpeg"
     },
     {
       name: "Nothic",
       meta: "neutral evil",
-            environment: new Set(['any']),
-      size: 'medium',
-      type: "abberation",
-       page:"236",
-      challenge_rating: '2',
       armorClass: 15,
       hitPoints: 45,
       Speed: 30,
@@ -5586,13 +5407,14 @@ const monsters = [
       CHA: 8,
       CHA_mod: (-1),
      
-      xp: 450,
-      
+      Challenge: 450,
+      Traits: <p><em><strong>Keen Sight.</strong></em> The nothic has advantage on Wisdom (Perception) checks that rely on sight.</p>,
+      Actions: <p><em><strong>Multiattack.</strong></em> The nothic makes two claw attacks.</p><p><em><strong>Claw.</strong></em> <em>Melee Weapon Attack:</em> +4 to hit, reach 5 ft., one target. <em>Hit:</em> 6 (1d6 + 3) slashing damage.</p><p><em><strong>Rotting Gaze.</strong></em> The nothic targets one creature it can see within 30 feet of it. The target must succeed on a DC 12 Constitution saving throw against this magic or take 10 (3d6) necrotic damage.</p><p><em><strong>Weird Insight.</strong></em> The nothic targets one creature it can see within 30 feet of it. The target must contest its Charisma (Deception) check against the nothic’s Wisdom (Insight) check. If the nothic wins, it magically learns one fact or secret about the target. The target automatically wins if it is immune to being charmed.</p>,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/14/475/1000/1000/636364321398842272.png"
     },
     {
       name: "Ochre Jelly",
-      envirement: new Set(['hill']),
+      environment: new Set(['hill']),
       challenge_rating:"2",
       alignment:  "unaligned",
       size: "large",
@@ -5618,7 +5440,7 @@ const monsters = [
     },
     {
       name: "Octopus",
-      envirement: new Set(['aquatic']),
+      environment: new Set(['aquatic']),
       challenge_rating:"0",
       size: "small",
       type: "beast",
@@ -5640,12 +5462,12 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 4,
       CHA_mod: (-3),
-      xp: 10,
+      Challenge: 10,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/9/921/315/315/636334602449110996.jpeg"
     },
     {
       name: "Ogre",
-      envirement: new Set(['hill', 'arctic', 'coastal', 'desert', 'forest', 'grass land', 'mountain', 'swamp', 'underground']),
+      environment: new Set(['hill', 'arctic', 'coastal', 'desert', 'forest', 'grass land', 'mountain', 'swamp', 'underground']),
       challenge_rating:"2",
       size: "large",
       type: "giant",
@@ -5671,7 +5493,7 @@ const monsters = [
     },
     {
       name: "Ogre Zombie",
-      envirement: new Set(['hill', 'arctic', 'coastal', 'desert', 'forest', 'grass land', 'mountain', 'swamp', 'underground']),
+      environment: new Set(['hill', 'arctic', 'coastal', 'desert', 'forest', 'grass land', 'mountain', 'swamp', 'underground']),
       challenge_rating:"2",
       size: "large",
       type: "undead",
@@ -5697,7 +5519,7 @@ const monsters = [
     },
     {
       name: "Oni",
-      envirement: new Set(['urban', 'forest']),
+      environment: new Set(['urban', 'forest']),
       challenge_rating:"7",
       size: "large",
       xp: 2900,
@@ -5723,7 +5545,7 @@ const monsters = [
     },
     {
       name: "Orc",
-      envirement: new Set(['hill', 'arctic', 'forest', 'grass land', 'mountain', 'swamp', 'underground']),
+      environment: new Set(['hill', 'arctic', 'forest', 'grass land', 'mountain', 'swamp', 'underground']),
       challenge_rating:"1/2",
       xp: 100,
       alignment:  "chaotic evil",
@@ -5749,7 +5571,7 @@ const monsters = [
     },
     {
       name: "Otyugh",
-      envirement: new Set(['underground']),
+      environment: new Set(['underground']),
       challenge_rating:"5",
       xp: 1800,
       size: "large",
@@ -5775,7 +5597,7 @@ const monsters = [
     },
     {
       name: "Owl",
-      envirement: new Set(['arctic', 'forest',]),
+      environment: new Set(['arctic', 'forest',]),
       challenge_rating:"0",
       size: "tiny",
       type: "beast",
@@ -5801,7 +5623,7 @@ const monsters = [
     },
     {
       name: "Owlbear",
-      envirement: new Set(['forest']),
+      environment: new Set(['forest']),
       challenge_rating:"3",
       size: "large",
       type: "monstrosity",
@@ -5827,7 +5649,7 @@ const monsters = [
     },
     {
       name: "Panther",
-      envirement: new Set(['hill', 'forest', 'grass land']),
+      environment: new Set(['hill', 'forest', 'grass land']),
       challenge_rating:"1/4",
       size: "medium",
       type: "beast",
@@ -5853,7 +5675,7 @@ const monsters = [
     },
     {
       name: "Pegasus",
-      envirement: new Set(['hill', 'forest', 'grass land']),
+      environment: new Set(['hill', 'forest', 'grass land']),
       challenge_rating:"2",
       size: "large",
       type: "celestial",
@@ -5879,7 +5701,7 @@ const monsters = [
     },
     {
       name: "Phase Spider",
-      envirement: new Set(['hill', 'desert', 'forest', 'grass land', 'urban', 'underground']),
+      environment: new Set(['hill', 'desert', 'forest', 'grass land', 'urban', 'underground']),
       challenge_rating:"3",
       size: "large",
       type: "monstrosity",
@@ -5905,7 +5727,7 @@ const monsters = [
     },
     {
       name: "Pit Fiend",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"20",
       size: "large",
       type: "fiend",
@@ -5931,7 +5753,7 @@ const monsters = [
     },
     {
       name: "Planetar",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"16",
       size: "large",
       type: "celestial",
@@ -5957,7 +5779,7 @@ const monsters = [
     },
     {
       name: "Plesiosaurus",
-      envirement: new Set(['coastal', 'aquatic']),
+      environment: new Set(['coastal', 'aquatic']),
       challenge_rating:"2",
       size: "large",
       type: "beast",
@@ -5983,7 +5805,7 @@ const monsters = [
     },
     {
       name: "Poisonous Snake",
-      envirement: new Set(['coastal', 'desert', 'forrest', 'grass land', 'hill', 'swamp']),
+      environment: new Set(['coastal', 'desert', 'forrest', 'grass land', 'hill', 'swamp']),
       challenge_rating:"1/8",
       size: "tiny",
       type: "beast",
@@ -6009,7 +5831,7 @@ const monsters = [
     },
     {
       name:" Polar Bear",
-      envirement: new Set(['arctic', 'underground']),
+      environment: new Set(['arctic', 'underground']),
       challenge_rating:"2",
       size: "large",
       type: "beast",
@@ -6035,7 +5857,7 @@ const monsters = [
     },
     {
       name: "Pony",
-      envirement: new Set(['urban']),
+      environment: new Set(['urban']),
       challenge_rating:"1/8",
       size: "medium",
       type: "beast",
@@ -6061,7 +5883,7 @@ const monsters = [
     },
     {
       name: "Priest",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"2",
       size: "medium",
       type: "humanoid",
@@ -6087,7 +5909,7 @@ const monsters = [
     },
     {
       name: "Pseudodragon",
-      envirement: new Set(['coastal', 'desert', 'forrest', 'mountain', 'hill', 'urban']),
+      environment: new Set(['coastal', 'desert', 'forrest', 'mountain', 'hill', 'urban']),
       challenge_rating:"1/4",
       size: "tiny",
       type: "dragon",
@@ -6113,7 +5935,7 @@ const monsters = [
     },
     {
       name: "Pteranodon",
-      envirement: new Set(['coastal', 'grass land', 'mountain']),
+      environment: new Set(['coastal', 'grass land', 'mountain']),
       challenge_rating:"1/4",
       size: "medium",
       type: "beast",
@@ -6139,7 +5961,7 @@ const monsters = [
     },
     {
       name:"Purple Worm",
-      envirement: new Set(['desert', 'underground']),
+      environment: new Set(['desert', 'underground']),
       challenge_rating:"15",
       size: "gargantuan",
       type: "monstrosity",
@@ -6165,7 +5987,7 @@ const monsters = [
     },
     {
       name: "Quasit",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"1",
       size: "tiny",
       type: "fiend",
@@ -6191,7 +6013,7 @@ const monsters = [
     },
     {
       name: "Quipper",
-      envirement: new Set(['aquatic']),
+      environment: new Set(['aquatic']),
       challenge_rating:"0",
       size: "tiny",
       type: "beast",
@@ -6217,7 +6039,7 @@ const monsters = [
     },
     {
       name: "Rakshasa",
-      envirement: new Set(['urban']),
+      environment: new Set(['urban']),
       challenge_rating:"13",
       size: "medium",
       type: "fiend",
@@ -6243,7 +6065,7 @@ const monsters = [
     },
     {
       name: "Rat",
-      envirement: new Set(['urban', 'swamp']),
+      environment: new Set(['urban', 'swamp']),
       challenge_rating:"0",
       size: "tiny",
       type: "beast",
@@ -6269,7 +6091,7 @@ const monsters = [
     },
     {
       name: "Raven",
-      envirement: new Set(['urban', 'hill', 'swamp']),
+      environment: new Set(['urban', 'hill', 'swamp']),
       challenge_rating:"0",
       size: "tiny",
       type: "beast",
@@ -6295,7 +6117,7 @@ const monsters = [
     },
     {
       name: "Red Dragon Wyrmling",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"4",
       size: "medium",
       type: "dragon",
@@ -6321,7 +6143,7 @@ const monsters = [
     },
     {
       name: "Reef Shark",
-      envirement: new Set(['aquatic']),
+      environment: new Set(['aquatic']),
       challenge_rating:"1/2",
       size: "medium",
       type: "beast",
@@ -6347,7 +6169,7 @@ const monsters = [
     },
     {
       name: "Remorhaz",
-      envirement: new Set(['arctic']),
+      environment: new Set(['arctic']),
       challenge_rating:"11",
       size: "huge",
       type: "monstrosity",
@@ -6373,7 +6195,7 @@ const monsters = [
     },
     {
       name: "Rhinoceros",
-      envirement: new Set(['grass land']),
+      environment: new Set(['grass land']),
       challenge_rating:"2",
       size: "large",
       type: "beast",
@@ -6399,7 +6221,7 @@ const monsters = [
     },
     {
       name:" Riding Horse",
-      envirement: new Set(['grass land' ,'urban']),
+      environment: new Set(['grass land' ,'urban']),
       challenge_rating:"1/4",
       size: "large",
       type: "beast",
@@ -6425,7 +6247,7 @@ const monsters = [
     },
     {
       name: "Roc",
-      envirement: new Set(['coastal', 'desert', 'hill', 'mountain', 'arctic']),
+      environment: new Set(['coastal', 'desert', 'hill', 'mountain', 'arctic']),
       challenge_rating:"11",
       size: "gargantuan",
       type: "monstrosity",
@@ -6451,7 +6273,7 @@ const monsters = [
     },
     {
       name: "Roper",
-      envirement: new Set(['underground']),
+      environment: new Set(['underground']),
       challenge_rating:"5",
       size: "large",
       type: "monstrosity",
@@ -6477,7 +6299,7 @@ const monsters = [
     },
     {
       name: "Rug of Smothering",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"2",
       size: "large",
       type: "construct",
@@ -6503,7 +6325,7 @@ const monsters = [
     },
     {
       name: "Rust Monster",
-      envirement: new Set(['underground']),
+      environment: new Set(['underground']),
       challenge_rating:"1/2",
       size: "medium",
       type: "monstrosity",
@@ -6529,7 +6351,7 @@ const monsters = [
     },
     {
       name: "Saber-Toothed Tiger",
-      envirement: new Set(['arctic', 'mountain']),
+      environment: new Set(['arctic', 'mountain']),
       challenge_rating:"2",
       size: "large",
       type: "beast",
@@ -6555,7 +6377,7 @@ const monsters = [
     },
     {
       name: "Sahuagin",
-      envirement: new Set(['aquatic', 'coastal']),
+      environment: new Set(['aquatic', 'coastal']),
       challenge_rating:"1/2",
       size: "medium",
       type: "humanoid",
@@ -6581,7 +6403,7 @@ const monsters = [
     },
     {
       name: "Salamander",
-      envirement: new Set(['underground']),
+      environment: new Set(['underground']),
       challenge_rating:"5",
       size: "large",
       type: "elemental",
@@ -6607,7 +6429,7 @@ const monsters = [
     },
     {
       name: "Satyr",
-      envirement: new Set(['forrest']),
+      environment: new Set(['forrest']),
       challenge_rating:"1/2",
       size: "medium",
       type: "fey",
@@ -6633,7 +6455,7 @@ const monsters = [
     },
     {
       name: "Scorpion",
-      envirement: new Set(['desert']),
+      environment: new Set(['desert']),
       challenge_rating:"0",
       size: "tiny",
       type: "beast",
@@ -6659,7 +6481,7 @@ const monsters = [
     },
     {
       name: "Scout",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"1/2",
       size: "medium",
       type: "humanoid",
@@ -6685,7 +6507,7 @@ const monsters = [
     },
     {
       name: "Sea Hag",
-      envirement: new Set(['coastal', 'aquatic']),
+      environment: new Set(['coastal', 'aquatic']),
       challenge_rating:"2",
       size: "medium",
       type: "fey",
@@ -6711,7 +6533,7 @@ const monsters = [
     },
     {
       name: "Sea Horse",
-      envirement: new Set(['aquatic']),
+      environment: new Set(['aquatic']),
       challenge_rating:"0",
       size: "tiny",
       type: "beast",
@@ -6737,7 +6559,7 @@ const monsters = [
     },
     {
       name: "Shadow",
-      envirement: new Set(['urban', 'underground']),
+      environment: new Set(['urban', 'underground']),
       challenge_rating:"1/2",
       size: "medium",
       type: "undead",
@@ -6763,7 +6585,7 @@ const monsters = [
     },
     {
       name: "Shambling Mound",
-      envirement: new Set(['forrest', 'swamp']),
+      environment: new Set(['forrest', 'swamp']),
       challenge_rating:"5",
       size: "large",
       type: "plant",
@@ -6789,7 +6611,7 @@ const monsters = [
     },
     {
       name: "Shield Guardian",
-      envirement: new Set(['urban']),
+      environment: new Set(['urban']),
       challenge_rating:"7",
       size: "large",
       type: "construct",
@@ -6815,7 +6637,7 @@ const monsters = [
     },
     {
       name: "Shrieker",
-      envirement: new Set(['underground']),
+      environment: new Set(['underground']),
       challenge_rating:"0",
       size: "medium",
       type: "plant",
@@ -6841,7 +6663,7 @@ const monsters = [
     },
     {
       name: "Silver Dragon Wyrmling",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"2",
       size: "medium",
       type: "dragon",
@@ -6867,7 +6689,7 @@ const monsters = [
     },
     {
       name: "Skeleton",
-      envirement: new Set(['urban']),
+      environment: new Set(['urban']),
       challenge_rating:"1/4",
       size: "medium",
       type: "undead",
@@ -6893,7 +6715,7 @@ const monsters = [
     },
     {
       name: "Solar",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"18",
       size: "large",
       type: "celestial",
@@ -6919,7 +6741,7 @@ const monsters = [
     },
     {
       name: "Spectator",
-      envirement: new Set(['underground']),
+      environment: new Set(['underground']),
       challenge_rating:"3",
       size: "medium",
       type: "abberation",
@@ -6945,7 +6767,7 @@ const monsters = [
     },
     {
       name: "Specter",
-      envirement: new Set(['urban', 'underground']),
+      environment: new Set(['urban', 'underground']),
       challenge_rating:"1",
       size: "medium",
       type: "undead",
@@ -6971,7 +6793,7 @@ const monsters = [
     },
     {
       name: "Spider",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"0",
       size: "tiny",
       type: "beast",
@@ -6997,7 +6819,7 @@ const monsters = [
     },
     {
       name: "Spirit Naga",
-      envirement: new Set(['underground']),
+      environment: new Set(['underground']),
       challenge_rating:"8",
       size: "large",
       type: "monstrosity",
@@ -7023,7 +6845,7 @@ const monsters = [
     },
     {
       name: "Sprite",
-      envirement: new Set(['forrest']),
+      environment: new Set(['forrest']),
       challenge_rating:"1/4",
       size: "tiny",
       type: "fey",
@@ -7049,7 +6871,7 @@ const monsters = [
     },
     {
       name: "Spy",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"1",
       size: "medium",
       type: "humanoid",
@@ -7074,7 +6896,7 @@ const monsters = [
     },
     {
       name: "Steam Mephit",
-      envirement: new Set(['aquatic']),
+      environment: new Set(['aquatic']),
       challenge_rating:"1/4",
       size: "small",
       type: "elemental",
@@ -7100,7 +6922,7 @@ const monsters = [
     },
     {
       name: "Stirge",
-      envirement: new Set(['coastal', 'desert', 'forrest', 'grass land', 'hill, mountain', 'swamp', 'underground', 'urban']),
+      environment: new Set(['coastal', 'desert', 'forrest', 'grass land', 'hill, mountain', 'swamp', 'underground', 'urban']),
       challenge_rating:"1/8",
       size: "tiny",
       type: "beast",
@@ -7126,7 +6948,7 @@ const monsters = [
     },
     {
       name: "Stone Giant",
-      envirement: new Set(['hill', 'mountain', 'underground']),
+      environment: new Set(['hill', 'mountain', 'underground']),
       challenge_rating:"7",
       size: "huge",
       type: "giant",
@@ -7152,7 +6974,7 @@ const monsters = [
     },
     {
       name: "Stone Golem",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"10",
       size: "large ",
       type: "construct",
@@ -7178,7 +7000,7 @@ const monsters = [
     },
     {
       name: "Storm Giant",
-      envirement: new Set(['coastal', 'aquatic ']),
+      environment: new Set(['coastal', 'aquatic ']),
       challenge_rating:"13",
       size: "huge",
       type: "giant",
@@ -7204,7 +7026,7 @@ const monsters = [
     },
     {
       name:"Succubus/Incubus",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"4",
       size: "medium",
       type: "fiend",
@@ -7230,7 +7052,7 @@ const monsters = [
     },
     {
       name: "Swarm of Bats",
-      envirement: new Set(['urban', 'mountain', 'hill', 'underground']),
+      environment: new Set(['urban', 'mountain', 'hill', 'underground']),
       challenge_rating:"1/4",
       size: "medium",
       type: "beast",
@@ -7256,7 +7078,7 @@ const monsters = [
     },
     {
       name: "Swarm of Insects",
-      envirement: new Set(['underground', 'desert', 'forrest', 'grass land', 'hill', 'swamp', 'urban']),
+      environment: new Set(['underground', 'desert', 'forrest', 'grass land', 'hill', 'swamp', 'urban']),
       challenge_rating:"1/2",
       size: "medium",
       type: "beast",
@@ -7282,7 +7104,7 @@ const monsters = [
     },
     {
       name: "Swarm of Poisonous Snakes",
-      envirement: new Set(['forrest', 'swamp']),
+      environment: new Set(['forrest', 'swamp']),
       challenge_rating:"2",
       size: "medium",
       type: "beast",
@@ -7308,7 +7130,7 @@ const monsters = [
     },
     {
       name: "Swarm of Quippers",
-      envirement: new Set(['aquatic']),
+      environment: new Set(['aquatic']),
       challenge_rating:"1",
       size: "medium",
       type: "beast",
@@ -7334,7 +7156,7 @@ const monsters = [
     },
     {
       name: "Swarm of Rats",
-      envirement: new Set(['urban', 'swamp']),
+      environment: new Set(['urban', 'swamp']),
       challenge_rating:"1/4",
       size: "medium",
       type: "beast",
@@ -7360,7 +7182,7 @@ const monsters = [
     },
     {
       name: "Swarm of Ravens",
-      envirement: new Set(['urban', 'forrest', 'hill', 'swamp']),
+      environment: new Set(['urban', 'forrest', 'hill', 'swamp']),
       challenge_rating:"1/4",
       size: "medium",
       type: "beast",
@@ -7386,7 +7208,7 @@ const monsters = [
     },
     {
       name: "Tarrasque",
-      envirement: new Set(['urban']),
+      environment: new Set(['urban']),
       challenge_rating:"30",
       size: "gargantuan",
       type: "monstrosity",
@@ -7412,7 +7234,7 @@ const monsters = [
     },
     {
       name: "Thug",
-      envirement: new Set(['urban']),
+      environment: new Set(['urban']),
       challenge_rating:"1/2",
       size: "medium",
       type: "humanoid",
@@ -7438,7 +7260,7 @@ const monsters = [
     },
     {
       name: "Tiger",
-      envirement: new Set(['forrest', 'grass land']),
+      environment: new Set(['forrest', 'grass land']),
       challenge_rating:"1",
       size: "large",
       type: "beast",
@@ -7464,7 +7286,7 @@ const monsters = [
     },
     {
       name: "Treant",
-      envirement: new Set(['forrest']),
+      environment: new Set(['forrest']),
       challenge_rating:"1/8",
       size: "huge",
       type: "plant",
@@ -7490,7 +7312,7 @@ const monsters = [
     },
     {
       name: "Tribal Warrior",
-      envirement: new Set(['coastal', 'desert', 'forrest', 'grass land', 'hill', 'swamp', 'mountain', 'underground']),
+      environment: new Set(['coastal', 'desert', 'forrest', 'grass land', 'hill', 'swamp', 'mountain', 'underground']),
       challenge_rating:"1/8",
       size: "medium",
       type: "humanoid",
@@ -7516,7 +7338,7 @@ const monsters = [
     },
     {
       name: "Triceratops",
-      envirement: new Set(['grass land']),
+      environment: new Set(['grass land']),
       challenge_rating:"5",
       size: "huge",
       type: "beast",
@@ -7542,7 +7364,7 @@ const monsters = [
     },
     {
       name: "Troll",
-      envirement: new Set(['artic', 'forrest', 'hill', 'swamp', 'mountain', 'underground']),
+      environment: new Set(['artic', 'forrest', 'hill', 'swamp', 'mountain', 'underground']),
       challenge_rating:"5",
       size: "large",
       type: "giant",
@@ -7568,7 +7390,7 @@ const monsters = [
     },
     {
       name: "Twig Blight",
-      envirement: new Set(['forrest']),
+      environment: new Set(['forrest']),
       challenge_rating:"1/8",
       size: "small",
       type: "plant",
@@ -7594,7 +7416,7 @@ const monsters = [
     },
     {
       name: "Tyrannosaurus Rex",
-      envirement: new Set(['grass land']),
+      environment: new Set(['grass land']),
       challenge_rating:"8",
       size: "huge",
       type: "beast",
@@ -7620,7 +7442,7 @@ const monsters = [
     },
     {
       name: "Unicorn",
-      envirement: new Set(['forrest']),
+      environment: new Set(['forrest']),
       challenge_rating:"5",
       size: "large",
       type: "celestial",
@@ -7646,7 +7468,7 @@ const monsters = [
     },
     {
       name: "Vampire",
-      envirement: new Set(['urban']),
+      environment: new Set(['urban']),
       challenge_rating:"13",
       size: "medium",
       type: "undead",
@@ -7672,7 +7494,7 @@ const monsters = [
     },
     {
       name: "Vampire Spawn",
-      envirement: new Set(['urban']),
+      environment: new Set(['urban']),
       challenge_rating:"5",
       size: "medium",
       type: "undead",
@@ -7698,7 +7520,7 @@ const monsters = [
     },
     {
       name: "Veteran",
-      envirement: new Set(['urban']),
+      environment: new Set(['urban']),
       challenge_rating:"3",
       size: "medium",
       type: "humanoid",
@@ -7724,7 +7546,7 @@ const monsters = [
     },
     {
       name:"Violet Fungus",
-      envirement: new Set(['underground']),
+      environment: new Set(['underground']),
       challenge_rating:"1/4",
       size: "medium",
       type: "plant",
@@ -7750,7 +7572,7 @@ const monsters = [
     },
     {
       name: "Vrock",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"6",
       size: "large",
       type: "fiend",
@@ -7776,7 +7598,7 @@ const monsters = [
     },
     {
       name: "Vulture",
-      envirement: new Set(['desert', 'grass land', 'hill']),
+      environment: new Set(['desert', 'grass land', 'hill']),
       challenge_rating:"0",
       size: "medium",
       type: "beast",
@@ -7802,7 +7624,7 @@ const monsters = [
     },
     {
       name: "Warhorse",
-      envirement: new Set(['urban']),
+      environment: new Set(['urban']),
       challenge_rating:"1/2",
       size: "large",
       type: "beast",
@@ -7828,7 +7650,7 @@ const monsters = [
     },
     {
       name: "Warhorse Skeleton",
-      envirement: new Set(['urban']),
+      environment: new Set(['urban']),
       challenge_rating:"1/2",
       size: "large",
       type: "beast",
@@ -7854,7 +7676,7 @@ const monsters = [
     },
     {
       name: "Water Elemental",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"5",
       size: "large",
       type: "elemental",
@@ -7880,7 +7702,7 @@ const monsters = [
     },
     {
       name: "Weasel",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"0",
       size: "tiny",
       type: "beast",
@@ -7906,7 +7728,7 @@ const monsters = [
     },
     {
       name: "Werebear",
-      envirement: new Set(['urban', 'forest', 'hill']),
+      environment: new Set(['urban', 'forest', 'hill']),
       challenge_rating:"5",
       size: "medium",
       type: "humanoid",
@@ -7932,7 +7754,7 @@ const monsters = [
     },
     {
       name: "Wereboar",
-      envirement: new Set(['urban', 'forest', 'hill']),
+      environment: new Set(['urban', 'forest', 'hill']),
       challenge_rating:"4",
       size: "medium",
       type: "humanoid",
@@ -7958,7 +7780,7 @@ const monsters = [
     },
     {
       name: "Wererat",
-      envirement: new Set(['urban', 'forest', 'hill']),
+      environment: new Set(['urban', 'forest', 'hill']),
       challenge_rating:"2",
       size: "medium",
       type: "humanoid",
@@ -7984,7 +7806,7 @@ const monsters = [
     },
     {
       name: "Weretiger",
-      envirement: new Set(['urban', 'forest', 'hill']),
+      environment: new Set(['urban', 'forest', 'hill']),
       challenge_rating:"4",
       size: "medium",
       type: "humanoid",
@@ -8010,7 +7832,7 @@ const monsters = [
     },
     {
       name: "Werewolf",
-      envirement: new Set(['urban', 'forest', 'hill']),
+      environment: new Set(['urban', 'forest', 'hill']),
       challenge_rating:"3",
       size: "medium",
       type: "humanoid",
@@ -8036,7 +7858,7 @@ const monsters = [
     },
     {
       name:"White Dragon Wyrmling",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"2",
       size: "medium",
       type: "dragon",
@@ -8062,7 +7884,7 @@ const monsters = [
     },
     {
       name: "Wight",
-      envirement: new Set(['desert', 'swamp', 'underground', 'urban']),
+      environment: new Set(['desert', 'swamp', 'underground', 'urban']),
       challenge_rating:"3",
       size: "medium",
       type: "undead",
@@ -8088,7 +7910,7 @@ const monsters = [
     },
     {
       name: "Will-o'-Wisp",
-      envirement: new Set(['urban', 'forest', 'swamp']),
+      environment: new Set(['urban', 'forest', 'swamp']),
       challenge_rating:"2",
       size: "tiny",
       type: "undead",
@@ -8114,7 +7936,7 @@ const monsters = [
     },
     {
       name: "Winter Wolf",
-      envirement: new Set(['arctic']),
+      environment: new Set(['arctic']),
       challenge_rating:"3",
       size: "large",
       type: "monstrosity",
@@ -8140,7 +7962,7 @@ const monsters = [
     },
     {
       name: "Wolf",
-      envirement: new Set(['urban', 'forest', 'hill']),
+      environment: new Set(['urban', 'forest', 'hill']),
       challenge_rating:"1/4",
       size: "medium",
       type: "beast",
@@ -8166,7 +7988,7 @@ const monsters = [
     },
     {
       name: "Worg",
-      envirement: new Set(['grass land', 'forest', 'hill']),
+      environment: new Set(['grass land', 'forest', 'hill']),
       challenge_rating:"1/2",
       size: "large",
       type: "monstrosity",
@@ -8192,7 +8014,7 @@ const monsters = [
     },
     {
       name: "Wraith",
-      envirement: new Set(['underground']),
+      environment: new Set(['underground']),
       challenge_rating:"5",
       size: "medium",
       type: "undead",
@@ -8218,7 +8040,7 @@ const monsters = [
     },
     {
       name: "Wyvern",
-      envirement: new Set([ 'mountain', 'hill']),
+      environment: new Set([ 'mountain', 'hill']),
       challenge_rating:"6",
       size: "large",
       type: "dragon",
@@ -8244,7 +8066,7 @@ const monsters = [
     },
     {
       name: "Xorn",
-      envirement: new Set(['underground']),
+      environment: new Set(['underground']),
       challenge_rating:"5",
       size: "medium",
       type: "elemental",
@@ -8270,7 +8092,7 @@ const monsters = [
     },
     {
       name: "Yeti",
-      envirement: new Set(['arctic']),
+      environment: new Set(['arctic']),
       challenge_rating:"9",
       size: "large",
       type: "monstrosity",
@@ -8296,7 +8118,7 @@ const monsters = [
     },
     {
       name: "Young Black Dragon",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"7",
       size: "large",
       type: "dragon",
@@ -8322,7 +8144,7 @@ const monsters = [
     },
     {
       name: "Young Blue Dragon",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"9",
       size: "large",
       type: "dragon",
@@ -8348,7 +8170,7 @@ const monsters = [
     },
     {
       name:"Young Brass Dragon",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"6",
       size: "large",
       type: "dragon",
@@ -8374,7 +8196,7 @@ const monsters = [
     },
     {
       name: "Young Bronze Dragon",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"8",
       size: "large",
       type: "dragon",
@@ -8400,7 +8222,7 @@ const monsters = [
     },
     {
       name: "Young Copper Dragon",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"8",
       size: "large",
       type: "dragon",
@@ -8426,7 +8248,7 @@ const monsters = [
     },
     {
       name:"Young Gold Dragon",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"10",
       size: "large",
       type: "dragon",
@@ -8452,7 +8274,7 @@ const monsters = [
     },
     {
       name: "Young Green Dragon",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"8",
       size: "large",
       type: "drgaon",
@@ -8478,7 +8300,7 @@ const monsters = [
     },
     {
       name: "Young Red Dragon",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"10",
       size: "large",
       type: "dragon",
@@ -8504,7 +8326,7 @@ const monsters = [
     },
     {
       name: "Young Silver Dragon",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"9",
       size: "large",
       type: "dragon",
@@ -8530,7 +8352,7 @@ const monsters = [
     },
     {
       name: "Young White Dragon",
-      envirement: new Set(['any']),
+      environment: new Set(['any']),
       challenge_rating:"6",
       size: "large",
       type: "dragon",
@@ -8556,7 +8378,7 @@ const monsters = [
     },
     {
       name: "Zombie",
-      envirement: new Set(['urban']),
+      environment: new Set(['urban']),
       challenge_rating:"1/4",
       size: "medium",
       type: "undead",

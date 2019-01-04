@@ -3,29 +3,6 @@ import {SearchDiv, FlexDiv} from './styles/search_info_css.js'
 import Select from 'react-select';
 import './styles/custom.css'
 
-const options = [
-  { value: 'count1', label: '1' },
-  { value: 'count2', label: '2' },
-  { value: 'count3', label: '3' },
-  { value: 'count4', label: '4' },
-  { value: 'count5', label: '5' },
-  { value: 'count6', label: '6' },
-  { value: 'count7', label: '7' },
-  { value: 'count8', label: '8' },
-  { value: 'count9', label: '9' },
-  { value: 'count10', label: '10' },
-  { value: 'count11', label: '11' },
-  { value: 'count12', label: '12' },
-  { value: 'count13', label: '13' },
-  { value: 'count14', label: '14' },
-  { value: 'count15', label: '15' },
-  { value: 'count16', label: '16' },
-  { value: 'count17', label: '17' },
-  { value: 'count17', label: '18' },
-  { value: 'count18', label: '19' },
-  { value: 'count19', label: '20' },
-];
-
 const options2 = [
   { value: 'easy', label: 'easy' },
   { value: 'medium', label: 'medium' },
@@ -82,39 +59,39 @@ const options5 = [
 
 const options6 = [
 	{ value: 'any', label: 'any' },
-  { value: '1/8', label: '1/8' },
-  { value: '1/4', label: '1/4' },
-  { value: '1/2', label: '1/2' },
-  { value: '1', label: '1' },
-  { value: '2', label: '2' },
-  { value: '3', label: '3' },
-  { value: '4', label: '4' },
-  { value: '5', label: '5' },
-  { value: '6', label: '6' },
-  { value: '7', label: '7' },
-  { value: '8', label: '8' },
-  { value: '9', label: '9' },
-  { value: '10', label: '10' },
-  { value: '11', label: '11' },
-  { value: '12', label: '12' },
-  { value: '13', label: '13' },
-  { value: '14', label: '14' },
-  { value: '15', label: '15' },
-  { value: '16', label: '16' },
-  { value: '17', label: '17' },
-  { value: '18', label: '18' },
-  { value: '19', label: '19' },
-  { value: '20', label: '20' },
-  { value: '21', label: '21' },
-  { value: '22', label: '22' },
-  { value: '23', label: '23' },
-  { value: '24', label: '24' },
-  { value: '25', label: '25' },
-  { value: '26', label: '26' },
-  { value: '27', label: '27' },
-  { value: '28', label: '28' },
-  { value: '29', label: '29' },
-  { value: '30', label: '30' },
+  { value: 25, label: '1/8' },
+  { value: 50, label: '1/4' },
+  { value: 100, label: '1/2' },
+  { value: 200, label: '1' },
+  { value: 450, label: '2' },
+  { value: 700, label: '3' },
+  { value: 1100, label: '4' },
+  { value: 1800, label: '5' },
+  { value: 2300, label: '6' },
+  { value: 2900, label: '7' },
+  { value: 3900, label: '8' },
+  { value: 5000, label: '9' },
+  { value: 5900, label: '10' },
+  { value: 7200, label: '11' },
+  { value: 8400, label: '12' },
+  { value: 10000, label: '13' },
+  { value: 11500, label: '14' },
+  { value: 13000, label: '15' },
+  { value: 15000, label: '16' },
+  { value: 18000, label: '17' },
+  { value: 20000, label: '18' },
+  { value: 22000, label: '19' },
+  { value: 25000, label: '20' },
+  { value: 33000, label: '21' },
+  { value: 41000, label: '22' },
+  { value: 50000, label: '23' },
+  { value: 62000, label: '24' },
+  { value: 75000, label: '25' },
+  { value: 90000, label: '26' },
+  { value: 105000, label: '27' },
+  { value: 120000, label: '28' },
+  { value: 135000, label: '29' },
+  { value: 155000, label: '30' },
 ]
 
 class SearchInfo extends React.Component {
@@ -132,10 +109,6 @@ class SearchInfo extends React.Component {
 	}
 
 	componentDidMount(){}
-
-	handleChange = (selectedOption) => {
-  this.setState({ selectedOption }, () => {this.props.getNumMonsters(selectedOption.label)});
-	}
 
 	handleChange2 = (selectedOption2) => {
 	  this.setState({ selectedOption2 }, () => {this.props.getEncounterDifficulty(selectedOption2.label)});
@@ -158,12 +131,12 @@ class SearchInfo extends React.Component {
 	}
 
 	handleChange6 = (selectedOption6) => {
-	  this.setState({ selectedOption6 }, () => {this.props.getMinChallenge(selectedOption6.label)});
+	  this.setState({ selectedOption6 }, () => {this.props.getMinChallenge(selectedOption6)});
 	  // console.log(`Option selected:`, selectedOption6);
 	}
 
 	handleChange7 = (selectedOption7) => {
-	  this.setState({ selectedOption7 }, () => {this.props.maxChallenge(selectedOption7.label)});
+	  this.setState({ selectedOption7 }, () => {this.props.maxChallenge(selectedOption7)});
 	  // console.log(`Option selected:`, selectedOption7);
 	}
 
@@ -173,15 +146,6 @@ class SearchInfo extends React.Component {
 			<SearchDiv> 
 				<h2>Filter Selection</h2>
 				<FlexDiv>
-					<div>
-						<h3>number of monsters</h3>
-						<Select
-							className="select"
-			        value={this.selectedOption}
-			        onChange={this.handleChange}
-			        options={options}
-			      />
-		      </div>
 		      <div>
 		      	<h3>Encounter Difficulty</h3>
 		      	<Select
