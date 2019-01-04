@@ -34,3 +34,10 @@
 	background-color: white;
 	border-radius: 5px;
 }
+
+@media (max-width: 650px){ 
+	.footer {
+		text-align: center;
+		height: 180px;
+	}
+}

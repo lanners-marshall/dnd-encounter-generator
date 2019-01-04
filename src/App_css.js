@@ -20,6 +20,7 @@ export const Banner = styled.div`
   margin: 0 auto;
 	z-index: 1;
 	display: flex;
+	margin-bottom: 20px
 	align-items: center;
 	> h1 {
 		color: crimson;
@@ -28,7 +29,7 @@ export const Banner = styled.div`
 	@media (max-width: 1375px){
 		margin-bottom: 60px;
 		padding: 0;
-		width: 80%;
+		width: 100%;
 
 	}
 `
