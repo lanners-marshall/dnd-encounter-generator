@@ -3,6 +3,7 @@ import {Banner, GroupAndSearch, Container, AppContainer} from './App_css.js'
 import Players from './components/GroupInfo';
 import SearchInfo from './components/SearchInfo';
 import MonsterList from './components/monsterList/monsterList';
+import XpDisplay from './components/XpDisplay';
 import dnd from './components/images/dnd.png'
 import './components/styles/custom.css'
 
@@ -83,6 +84,7 @@ class App extends React.Component {
         <Container>
           <GroupAndSearch>
             <Players getPlayers={this.getPlayers} removePlayer={this.removePlayer}/>
+            <XpDisplay players={this.state.players}/>
             <SearchInfo
               getEnvironment={this.getEnvironment}
               getEncounterDifficulty={this.getEncounterDifficulty}
@@ -91,7 +93,6 @@ class App extends React.Component {
               getMinChallenge={this.getMinChallenge}
               maxChallenge={this.maxChallenge}
             />
-
           </GroupAndSearch>
           <MonsterList 
             players={this.state.players}

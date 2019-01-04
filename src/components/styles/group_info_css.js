@@ -8,7 +8,6 @@ export const GroupInfo = styled.div`
 	margin-right: 1%;
 	width: 100%;
 	max-width: 200px;
-	height: 430px;
 	padding-left: 3.3%;
 	padding-right: 3.3%;
 	background-image: url(${formBackground});
