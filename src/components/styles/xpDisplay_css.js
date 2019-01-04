@@ -18,5 +18,10 @@ export const XpDiv = styled.div`
 	> h2 {
 		text-align: center;
 		font-size: 3rem;
+		margin-bottom: 30px;
+	}
+	> p {
+		font-size: 2rem;
+		text-align: center;
 	}
 `   
