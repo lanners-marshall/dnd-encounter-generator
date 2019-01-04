@@ -141,7 +141,6 @@ class MonsterList extends Component{
                 <div className="buttons">
                 <button className="sort-button1" onClick={this.generateEncounter}>Generate</button>
                 <button className="sort-button2" onClick={this.clear}>Clear</button>
-                <button onClick={this.logProps}>log props</button>
                 </div>
                 <div className="monster-div">
                     {this.state.monsters.map(monster =>(
