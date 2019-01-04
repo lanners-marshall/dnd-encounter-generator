@@ -4293,7 +4293,7 @@ const monsters = [
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/9/900/1000/1000/636334288270143064.jpeg"
     },
     {
-      name:" Hell Hound",
+      name:"Hell Hound",
       environment: new Set(['mountain','underground']),
       size: 'medium',
       type: "beast",
