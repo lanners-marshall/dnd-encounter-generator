@@ -46,6 +46,9 @@ class Players extends React.Component {
   }
 
   addPlayer = () => {
+    if (this.state.players.length === 15){
+      return
+    }
   	if (this.state.selectedOption.label != null){
 	  	let player = {level: this.state.selectedOption.label, id: Date.now(), xp_range: this.state.selectedOption.value}
 	  	this.setState({
