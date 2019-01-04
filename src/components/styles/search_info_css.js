@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import formBackground from './formBackground.jpg'
 export const SearchDiv = styled.div`
 	1px solid black;
 	padding: 10px;
@@ -7,8 +7,14 @@ export const SearchDiv = styled.div`
 	margin: 3% auto;
 	margin-left: 2%
 	padding: 2%;
+<<<<<<< HEAD
 	background-color: #f5f5f5;
 
+=======
+	padding-right: 8%;
+	background-image: url(${formBackground});
+	background-size:100%;
+>>>>>>> 7c3d60b7993066ba93c6f2beb5864541fec98d80
 	@media (max-width: 1375px){
 		margin-left: 0;
 		margin-right: 1%;
@@ -27,7 +33,7 @@ export const SearchDiv = styled.div`
 		
 	}
 	> div > div > h3 {
-		font-size: 1.6rem;
+		font-size: 2rem;
 		margin-top: 15px;
 	}
 `
