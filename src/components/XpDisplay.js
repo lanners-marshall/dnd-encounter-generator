@@ -34,7 +34,7 @@ class XpDisplay extends React.Component {
 			<XpDiv>
 				<h2>XP</h2>
 				<p>Easy: {easy}</p>
-				<p>Medium: {mid}</p>
+				<p>Med: {mid}</p>
 				<p>Hard: {hard}</p>
 				<p>Deadly: {deadly}</p>
 			</XpDiv>

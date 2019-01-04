@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "staging": "dnd-encounter-gen",
+    "default": "dnd-encounter-gen"
+  }
+}
