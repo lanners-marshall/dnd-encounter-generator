@@ -45,60 +45,64 @@ class MonsterList extends Component{
     generateEncounter = () => {
 
         let xp_allowed = this.getXpForFight()
+        console.log(xp_allowed)
         let env = this.props.environment
         let max = this.props.maxChallenge.value
         let min = this.props.minCr.value
         let max_string = this.props.maxChallenge.label
         let min_string = this.props.minCr.label
-        let numMon = this.props.numberOfMonsters
         let size = this.props.size
         let type = this.props.type
         let ar = []
 
-        let condition1, condition2, condition3, condition4, condition5
+        let condition1, condition2, condition3, condition4, condition5, condition6
 
         for (let i in monsters){
 
-            if (env === 'any'){
+            if (env === 'any' || env === ''){
                 condition1 = true
             } else {
                 condition1 = monsters[i].environment.has(env)
             }
 
-            if (size === 'any') {
+            if (size === 'any' || size === '') {
                 condition2 = true
             } else {
                 condition2 = monsters[i].size === size
             }
 
-            if (type === 'any') {
+            if (type === 'any' || type === '') {
                 condition3 = true
             } else {
                 condition3 = monsters[i].type === type
             }
 
-            if (max_string === 'any') {
+            if (max_string === 'any' || max_string === undefined) {
                 condition4 = true
             } else {
                 condition4 = monsters[i].xp <= max
             }
 
-            if (min_string === 'any') {
+            if (min_string === 'any' || min_string === undefined) {
                 condition5 = true
             } else {
                 condition5 = monsters[i].xp >= min
             }
 
-            if (condition1 && condition2 && condition3 && condition4 && condition5) {
+            if (monsters[i].xp > xp_allowed) {
+                condition6 = false
+            } else {
+                condition6 = true
+            }
+
+            if (condition1 && condition2 && condition3 && condition4 && condition5 && condition6) {
                 ar.push(monsters[i])
             }
         }
 
 
         let ar2 = []
-        let monster
-
-        console.log(ar)
+        let monster, bol
 
         if (ar.length > 0) {
             while (true){
@@ -106,9 +110,23 @@ class MonsterList extends Component{
                     break;
                 }
                 monster = ar[Math.floor(Math.random() * ar.length)];
+
+                if (xp_allowed - monster.xp < 0) {
+                    bol = false
+                    for (let i in ar){
+                        if (xp_allowed - ar[i].xp >= 0){
+                            monster = ar[i]
+                            bol = true
+                            break;
+                        }
+                    }
+                }
+                if (bol === false){
+                    break
+                }
+
                 ar2.push(monster)
                 xp_allowed -= monster.xp
-
             }
         }
 
@@ -136,6 +154,7 @@ class MonsterList extends Component{
     }
 
     render(){
+
         return(
             <div>
                 <div className="buttons">

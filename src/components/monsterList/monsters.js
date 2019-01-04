@@ -1272,7 +1272,7 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 13,
       CHA_mod: (+1),
-      xp: 2,
+      xp: 450,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/16/496/1000/1000/636376308217017511.jpeg"
     },
     {
