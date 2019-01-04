@@ -7,6 +7,7 @@ import dnd from './components/images/dnd.png'
 import './components/styles/custom.css'
 
 
+
 class App extends React.Component {
   constructor(){
     super();
@@ -102,6 +103,9 @@ class App extends React.Component {
             environment={this.state.environment}
           />
         </Container>
+        <div className='footer'>This App was created by Marshall Lanners,
+         Mark Stesney, and Joseph Hayden.
+        </div>
       </AppContainer>
     )
   }
