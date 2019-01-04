@@ -9,7 +9,7 @@ export const SearchDiv = styled.div`
 	padding: 2%;
 	padding-right: 8%;
 	background-image: url(${formBackground});
-	background-size:100%;
+	background-size:cover;
 	@media (max-width: 1375px){
 		margin-left: 0;
 		margin-right: 1%;

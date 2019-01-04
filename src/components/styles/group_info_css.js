@@ -11,7 +11,7 @@ export const GroupInfo = styled.div`
 	padding-left: 3.3%;
 	padding-right: 3.3%;
 	background-image: url(${formBackground});
-	background-size:100%;
+	background-size:cover%;
 	@media (max-width: 1375px){ 
 		width: 95%;
 		margin: 0;
