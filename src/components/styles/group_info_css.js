@@ -45,7 +45,6 @@ export const PlayersDiv = styled.div`
 	> p {
 		margin-left: 1%;
 		font-size: 1.6rem;
-    padding: 1%;
     border-radius: 4px;
     margin-bottom; 10px;
 	  &:hover {
