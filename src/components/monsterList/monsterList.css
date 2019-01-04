@@ -28,11 +28,22 @@
     flex-direction: column;
     width: 300px;
   }
+  .exp-div1{
+    margin: auto;
+     width: 70%;
+  }
   .exp-div{
-      margin-bottom: 10px;
+      padding-bottom: 0px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
   }
   .exp-div h5{
+      justify-self: center;
       font-size: 1.55rem;
+      text-align: left;
+     
   }
   .stat-title{
     font-size: 1.15rem;

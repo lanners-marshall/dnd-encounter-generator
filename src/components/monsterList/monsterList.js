@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import monsters from "./monsters";
+import monsters from "../../monsters.js";
 import "./monsterList.css";
 
 class MonsterList extends Component{
@@ -167,14 +167,16 @@ class MonsterList extends Component{
                             <p className="stat">{monster.CHA} ({monster.CHA_mod})</p>
                         </div>
                         </div>
+                        <div className="exp-div1">
                         <div className="exp-div">
-                            <h5>Experience Points <span className="monster-title2">{monster.xp} XP</span> </h5>
+                            <h5>Experience Points: </h5> <span className="monster-title2">{monster.xp} XP</span>
                         </div>
                         <div className="exp-div">
-                            <h5>Challenge Raiting<span className="monster-title2"> {monster.challenge_rating}</span> </h5>
+                            <h5>Challenge Raiting:</h5><span className="monster-title2"> {monster.challenge_rating}</span> 
                         </div>
                         <div className="exp-div">
-                            <h5>Page Number<span className="monster-title2"> {monster.page}</span> </h5>
+                            <h5>Page Number: </h5><span className="monster-title2">{monster.page}</span>
+                        </div>
                         </div>
                         <div className="exp-div">
                             <h5><span className="count">X {monster.count}</span> </h5>
