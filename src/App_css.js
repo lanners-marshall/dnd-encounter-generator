@@ -1,50 +1,38 @@
 import styled from 'styled-components'
-import background from './paper.jpg'
-import headerBackground from './header.jpg'
 
-export const AppContainer = styled.div`
-background-image: url(${background});
-background-size: contain;
-padding-top: 60px;
-}
-`
 export const Banner = styled.div`
-	border: 1px solid black;
-	box-shadow: 5px 10px 8px 10px black;
-	height: 250px;
-	background-image: url(${headerBackground});
-	background-size: 100% 100%;
+	height: 60px;
+	background-color: #3a4253;
+	border-bottom: 2px solid #D1AE78;
+	box-shadow: 1px 1px 5px 1px black;
+	position: fixed;
 	top: 0;
 	width: 100%;
-  max-width: 1150px
-  margin: 0 auto;
 	z-index: 1;
 	display: flex;
-	margin-bottom: 20px
 	align-items: center;
 	> h1 {
-		color: crimson;
-		font-size: 4rem;
-	}
-	@media (max-width: 1375px){
-		margin-bottom: 60px;
-		padding: 0;
-		width: 100%;
-
+		color: white;
+		margin-left: 20px;
+		font-size: 2rem;
 	}
 `
 
 export const GroupAndSearch = styled.div`
 	display: flex;
-	margin-top: 20px;
-	width: 100%;
-  max-width: 1150px
-  margin: 0 auto;
+	padding: 10px;
+	justify-content: center;
 	@media (max-width: 1375px){
-		flex-direction: column;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 `
 
 export const Container = styled.div`
-	margin: 0 2%;
+	padding-top: 100px;
+	background-color: #272d39;
+	
+	width: 100%;
+	height: 100%;
+	min-height: 1000px;
 `

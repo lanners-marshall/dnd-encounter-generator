@@ -2,16 +2,23 @@
     margin-top: 20px;
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+    max-width: 1405px;
+
+    margin: auto;
     flex-wrap:wrap;
     color:white;
-    padding-bottom: 100px;
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .monster-div h5{
+    font-family: Arial, Helvetica, sans-serif;
   }
   .monster-title{
     color: #D1AE78;
     border-bottom: 1px solid rgb(46, 46, 46);
     font-size: 1.8rem;
-    padding: 15px;
+    padding: 10px;
   }
   .monster-title2{
     color: #D1AE78;
@@ -20,17 +27,31 @@
     margin-bottom: 10px;
   }
   .monster-card{
-    background-color: rgb(19, 19, 19);
+    box-shadow: 1px 1px 5px 1px rgb(29, 29, 29);
+    background-color: #3a4253;
     border: 2px solid #D1AE78;
     text-align: center;
+    padding-bottom: 5px;
     margin: 10px;
     display: flex;
     flex-direction: column;
     width: 300px;
   }
+  .monster-card h1{
+    color: #D1AE78;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+    .monster-card h5{
+    color: white;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
   .exp-div1{
+    border-top: 1px solid rgb(46, 46, 46);
+    padding-top: 10px;
     margin: auto;
-     width: 70%;
+    width: 70%;
   }
   .exp-div{
       padding-bottom: 0px;
@@ -45,12 +66,18 @@
       text-align: left;
      
   }
+  .count{
+    margin: auto;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+  }
   .stat-title{
     font-size: 1.15rem;
     margin-bottom: 0px;
   }
   .stat{
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(151, 69, 69);
     box-shadow: inset 1px 1px 1px black;
     border: 2px solid #D1AE78;
     padding: 5px;
@@ -82,21 +109,117 @@
   }
   .buttons{
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1312px;
-    margin: 0 auto;
-    padding-bottom: 30px;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-evenly;
+    width: 250px;
+    margin-top: 20px;
+  }
+  .sort-button{
+    width: 100px;
+    justify-self: center;
+    align-self: center;
   }
 
   .count {
+    font-size: 2.5rem;
+    color: #e24e53;
+  }
+  .breakdown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 30px;
+  }
+  .breakdown{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color:#3a4253;
+    border:solid #D1AE78 2px;
+    /* max-width: 875px; */
+    max-width: 1320px;
+    width: 95%;
+  box-shadow: 1px 1px 1px black;
+  }
+  .monster-title5 {
+    font-size: 2.1rem;
+    color: rgb(216, 68, 68);
+  }
+  .breakdown h1{
     font-size: 2rem;
-    color: red;
+    color: white;
+  }
+  .breakdown h5{
+    margin-top: 5px;
+    font-size: 2rem;
+    color: white;
+  }
+  .break-div{
+    margin-top: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 700px;
+    justify-content: center;
+    align-content: center;
+    border-top: 2px solid #D1AE78;
+  }
+  .break-stats{
+    padding-top:5px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .break-stats h3{
+    color: white;
+    font-size: 1.3rem;
+  }
+    .break-stats h4{
+    color: rgb(218, 188, 22);
+    font-size: 2rem;
   }
   @media (max-width: 1375px){ 
     .buttons {
       margin-top: 30px;
     }
+      .breakdown{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color:#3a4253;
+    border:solid #D1AE78 2px;
+    max-width: 875px;
+    width: 95%;
   }
+  }
+  	@media (max-width: 941px){
+	
+    .breakdown{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color:#3a4253;
+    border:solid #D1AE78 2px;
+    max-width: 422px;
+    width: 90%;
+  }
+    .break-div{
+    margin-top: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 95%;
+    justify-content: center;
+    align-content: center;
+    border-top: 2px solid #D1AE78;
+  }
+	}
   
 
