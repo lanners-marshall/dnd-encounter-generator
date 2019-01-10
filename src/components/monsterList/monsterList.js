@@ -52,11 +52,11 @@ class MonsterList extends Component{
 
     generateEncounter = () => {
         let xp_allowed = this.getXpForFight()
-        let xpPer = Math.round(xp_allowed / this.props.players.length);
+     
         if (xp_allowed === false){
             return
         }
-
+        let monXp = 0;
         let env = this.props.environment
         let max = this.props.maxChallenge.value
         let min = this.props.minCr.value
@@ -137,8 +137,10 @@ class MonsterList extends Component{
 
                 ar2.push(monster)
                 xp_allowed -= monster.xp
+                monXp += monster.xp
             }
         }
+           let xpPer = Math.round(monXp / this.props.players.length);
         const countMonster = function(monster, ar){
             let counter = 0
             for (let i in ar){
@@ -158,7 +160,7 @@ class MonsterList extends Component{
             players: this.props.players.length,
             diff: this.props.difficulty,
             xpPer: xpPer,
-            xpTotal: this.getXpForFight()
+            xpTotal: monXp
         })
     }
 
