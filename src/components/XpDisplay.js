@@ -33,10 +33,21 @@ class XpDisplay extends React.Component {
 		return (
 			<XpDiv>
 				<h2>XP</h2>
-				<p>Easy: {easy}</p>
-				<p>Med: {mid}</p>
-				<p>Hard: {hard}</p>
-				<p>Deadly: {deadly}</p>
+				<div className="exp-div2">
+                        <div className="exp-div3">
+                            <h5>Easy:</h5><span className="monster-title4"> {easy}</span>
+                        </div>
+                        <div className="exp-div3">
+                            <h5>Medium:</h5><span className="monster-title4"> {mid}</span>
+                        </div>
+                        <div className="exp-div3">
+                            <h5>Hard:</h5><span className="monster-title4"> {hard}</span>
+                        </div>
+						<div className="exp-div3">
+                            <h5>Deadly:</h5><span className="monster-title4"> {deadly}</span>
+                        </div>
+              
+                        </div>
 			</XpDiv>
 		)
 	}

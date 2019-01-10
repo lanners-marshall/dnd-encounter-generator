@@ -1,23 +1,28 @@
 import React, { Component } from "react";
-import monsters from "./monsters";
+import monsters from "../monsters";
 import "./monsterList.css";
 
 class MonsterList extends Component{
     constructor(props){
         super(props);
         this.state = {
-            monsters: []
+            monsters: [],
+            monsterNum: "",
+            players: "",
+            diff: "",
+            xpTotal: "",
+            xpPer: ""
         };
-    }
-    componentDidMount () {}  
-
-    logProps = () => {
-        console.log(this.props)
     }
 
     clear = () => {
         this.setState({
-            monsters: []
+            monsters: [],
+            monsterNum: "",
+            players: "",
+            diff: "",
+            xpTotal: "",
+            xpPer: ""
         })
     }
 
@@ -47,12 +52,11 @@ class MonsterList extends Component{
 
     generateEncounter = () => {
         let xp_allowed = this.getXpForFight()
-
+        let xpPer = Math.round(xp_allowed / this.props.players.length);
         if (xp_allowed === false){
             return
         }
 
-        console.log(xp_allowed)
         let env = this.props.environment
         let max = this.props.maxChallenge.value
         let min = this.props.minCr.value
@@ -107,7 +111,6 @@ class MonsterList extends Component{
             }
         }
 
-
         let ar2 = []
         let monster, bol
 
@@ -136,7 +139,6 @@ class MonsterList extends Component{
                 xp_allowed -= monster.xp
             }
         }
-
         const countMonster = function(monster, ar){
             let counter = 0
             for (let i in ar){
@@ -146,35 +148,52 @@ class MonsterList extends Component{
             }
             monster.count = counter
         }
-
         for (let i in ar2){
             countMonster(ar2[i], ar2)
         }
-
         let returnVal = [...new Set(ar2)]
-
-        console.log(returnVal)
-
         this.setState({
-            monsters: returnVal
+            monsters: returnVal,
+            monsterNum: ar2.length,
+            players: this.props.players.length,
+            diff: this.props.difficulty,
+            xpPer: xpPer,
+            xpTotal: this.getXpForFight()
         })
     }
 
     render(){
-
         return(
             <div>
+                        <div className="breakdown">
+                        <h5>Difficulty: <span className="monster-title5">{this.state.diff}</span></h5>
+                        <div className="break-div">
+                        <div className="break-stats">
+                        <h3>Total Players:</h3>
+                        <h3>Exp Per Player:</h3>
+                        <h3>Encounter Exp:</h3>
+                        <h3>Total Monsters: </h3>
+                            </div>
+                        <div className="break-stats">
+                           <h4>{this.state.players}</h4>
+                        <h4>{this.state.xpPer}</h4>
+                        <h4>{this.state.xpTotal}</h4>
+                        <h4>{this.state.monsterNum}</h4>
+                            </div>
+                        </div>
+                        </div>
                 <div className="buttons">
-                <button className="sort-button1" onClick={this.generateEncounter}>Generate</button>
-                <button className="sort-button2" onClick={this.clear}>Clear</button>
+                <button className="sort-button" onClick={this.generateEncounter}>Generate</button>
+                <button className="sort-button" onClick={this.clear}>Clear</button>
                 </div>
                 <div className="monster-div">
                     {this.state.monsters.map(monster =>(
-                        <div className="monster-card">
+                        <div data-aos="flip-right" className="monster-card">
                         <img src={monster.img_url} className="monster-pic" alt="monsterPic"></img>
                         <div className="monster-title">
                         <h1>{monster.name}</h1>
-                        <p>{monster.meta}</p>
+                        <h5>{monster.type} ({monster.size})</h5>
+                         <span className="count">x{monster.count}</span> 
                         </div>
                         <div className="monster-info">
                         <div className="monster-stats">
@@ -218,17 +237,18 @@ class MonsterList extends Component{
                             <p className="stat">{monster.CHA} ({monster.CHA_mod})</p>
                         </div>
                         </div>
+                        <div className="exp-div1">
                         <div className="exp-div">
-                            <h5>Experience Points <span className="monster-title2">{monster.xp} XP</span> </h5>
+                            <h5>Experience Points  </h5><span className="monster-title2">{monster.xp} XP</span>
                         </div>
                         <div className="exp-div">
-                            <h5>Challenge Raiting<span className="monster-title2"> {monster.challenge_rating}</span> </h5>
+                            <h5>Challenge Raiting </h5><span className="monster-title2"> {monster.challenge_rating}</span>
                         </div>
                         <div className="exp-div">
-                            <h5>Page Number<span className="monster-title2"> {monster.page}</span> </h5>
+                            <h5>Page Number </h5><span className="monster-title2"> {monster.page}</span>
                         </div>
-                        <div className="exp-div">
-                            <h5><span className="count">X {monster.count}</span> </h5>
+                       
+                       
                         </div>
                         </div>
                     ))}

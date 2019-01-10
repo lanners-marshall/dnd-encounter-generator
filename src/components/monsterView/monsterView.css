@@ -1,0 +1,102 @@
+.monview{
+margin-top: -20px;
+}
+  .monster-card1{
+    box-shadow: 1px 1px 5px 1px rgb(29, 29, 29);
+    background-color: #3a4253;
+    border: 2px solid #D1AE78;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+    .monster-pic1{
+    margin:auto;
+    width: 232px;
+    height: 232px;
+    padding-top: 1px;
+    padding-left: 1px;
+  }
+  .monster-div1{
+    margin-top: 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+    flex-wrap:wrap;
+    color:white;
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .select{
+      margin-right: 5px;
+  }
+  .select-mon h3{
+      color: white;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 1.5rem;
+      text-align: center;
+  }
+    .monster-title01{
+    color: #D1AE78;
+    border-bottom: 1px solid rgb(46, 46, 46);
+    font-size: 1.8rem;
+    padding: 10px;
+  }
+.exp-div5{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+   .exp-div6{
+    width: 100%;
+      padding-bottom: 0px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+  }
+   .exp-div6 h5{
+      justify-self: center;
+      font-size: 1.55rem;
+      text-align: left;
+      margin-right: 10px;
+  }
+  .sort-button{
+	text-align: center;
+	color: white;
+    background-color: rgb(151, 69, 69);
+    box-shadow: inset 1px 1px 1px black;
+    border: 2px solid #D1AE78;
+    padding: 10px;
+    font-size: 1.6rem;
+    border-radius: 3px;
+  }
+  .total-mon{
+      display: flex;
+      justify-content: space-evenly;
+      width: 120px;
+      margin: auto;
+      color: white;
+      margin-top: 10px;
+      font-size: 2.5rem;
+  }
+  .sort-button:hover {
+      background-color: rgb(37, 37, 37);
+      cursor: pointer;
+  }
+@media (max-width: 800px){
+            .monster-card1{
+                transform: scale(0.8);
+                margin: 1px 10px 1px 10px;
+  }
+}
+@media (max-width: 625px){
+            .monster-card1{
+                transform: scale(0.5);
+                margin: -50px 10px -50px 10px;
+  }
+      }

@@ -1,7 +1,8 @@
 import React from 'react';
 import Select from 'react-select';
-import './styles/custom.css'
-import {Banner, GroupInfo, AddPlayer, PlayersDiv} from './styles/group_info_css.js'
+import './styles/custom.css';
+import sword from "./images/sword.png" 
+import {GroupInfo, AddPlayer, PlayersDiv} from './styles/group_info_css.js'
 
 
 // value:
@@ -88,7 +89,7 @@ class Players extends React.Component {
 
 		return (
       <GroupInfo>
-        <h2>Form Group</h2>
+        <h2>Create Party</h2>
 	       <Select
 	        value={selectedOption}
 	        onChange={this.handleChange}
@@ -100,7 +101,7 @@ class Players extends React.Component {
           <PlayersDiv>
           {this.state.players.map((p, i) => {
             return (
-              <p key={p.id} id={p.id} onClick={this.removePlayer}>Level {p.level}</p>
+              <p className="player" key={p.id} id={p.id} onClick={this.removePlayer}><img className="sword" src={sword} alt="sword"/>  Level: <span className="monster-title3">{p.level}</span></p>
             )
           })}
           </PlayersDiv>
