@@ -42,7 +42,9 @@ export const PlayersDiv = styled.div`
 	justify-content: center;
 	display:flex;
 	flex-wrap: wrap;
-	overflow: scroll;
+		overflow-x: hidden;
+	overflow-y: hidden;
+	// overflow: scroll;
 	> p {
 		margin-left: 1%;
 		font-size: 1.6rem;
