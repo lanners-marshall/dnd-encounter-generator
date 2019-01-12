@@ -2528,7 +2528,7 @@ const monsters = [
     {
       name: "Earth Elemental",
       environment: new Set(['coast']),
-      size: 'small',
+      size: 'large',
       type: "elemental",
       challenge_rating: '5',
       page: '124',
