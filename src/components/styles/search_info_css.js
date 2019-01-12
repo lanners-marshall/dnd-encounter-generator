@@ -1,44 +1,55 @@
 import styled from 'styled-components'
-import formBackground from './formBackground.jpg'
+
 export const SearchDiv = styled.div`
-	1px solid black;
-	padding: 10px;
-	box-shadow: 2.5px 5px 4px 5px black;
-	margin: 3% auto;
-	margin-left: 2%
-	padding: 2%;
-	background-image: url(${formBackground});
-	background-size:100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	box-shadow: 1px 1px 1px #222222;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	border:solid #D1AE78 2px;
+	background-color:#3a4253;
+	border:solid #D1AE78 2px;
+	margin-left: 10px;
+
+	margin-bottom: 10px;
+	padding: 20px;
 	@media (max-width: 1375px){
-		margin-left: 0;
-		margin-right: 1%;
-		padding: 5%;
-		margin: 30px 0;
+		width: 855px;
+		margin: auto;
+		padding: 20px;
+	}
+	@media (max-width: 941px){
+		width: 400px;
 	}
 	> h2 {
-		font-size: 4rem;
+		color: white;
+		font-size: 2.5rem;
 		margin-bottom: 10px;
 		text-align: center;
 	}
 	> div > div {
-		> h3{
-			margin-bottom: 5%;
-		}
-		margin: 10px 1%;
-		
+		padding: 10px;
+		margin: 10px;
 	}
 	> div > div > h3 {
-		font-size: 2rem;
+		font-size: 1.55rem;
+		text-align: center;
 		margin-top: 15px;
+		padding-bottom: 5px;
+		color: white;
 	}
 `
 
 export const FlexDiv = styled.div`
 	display:flex;
+	justify-self: center;
+	align-self: center;
+	justify-content: center;
 	flex-wrap: wrap;
-	justify-content: space-around;
-	@media (max-width: 1375px){
-		justify-content:center;
-	}
+	max-width: 700px;
+	width: 100%;
+ 	margin: auto;
 `
 

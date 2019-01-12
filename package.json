@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "aos": "^2.3.4",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.2",
     "react-select": "^2.2.0",
     "styled-components": "^4.1.3"

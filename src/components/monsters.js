@@ -368,7 +368,6 @@ const monsters = [
       environment: new Set(['swamp']),
       size: 'gargantuan',
       type: "dragon",
-      xp: 1800,
       challenge_rating: '21',
       page: '87',
       alignment: "chaotic evil",
@@ -492,7 +491,6 @@ const monsters = [
       WIS_mod: (+3),
       CHA: 19,
       CHA_mod: (+4),
-      xp: 33000,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/137/1000/1000/636252756714896878.jpeg"
     },
     {
@@ -1518,7 +1516,6 @@ const monsters = [
       page: '33',
       alignment: "chaotic evil",
       armorClass: 11,
-      armorClass: 16,
       hitPoints: 27,
       Speed: 30,
       STR: 15,
@@ -4367,7 +4364,6 @@ const monsters = [
       CHA: 6,
       CHA_mod: (-2),
       xp: 1800,
-      xp: 1800,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/331/315/315/636252776196140305.jpeg"
     },
     {
@@ -5640,7 +5636,6 @@ const monsters = [
       WIS_mod: (+0),
       CHA: 4,
       CHA_mod: (-3),
-      xp: 10,
       img_url: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/9/921/315/315/636334602449110996.jpeg"
     },
     {

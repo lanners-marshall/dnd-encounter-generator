@@ -26,31 +26,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-button {
-	font-family: 'Charm', cursive;
-	height: 40px;
-	width: 150px;
-	background-color: black;
-	border-radius: 8px;
-	border: none;
-	color: crimson;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 0 auto;
-	margin-bottom: 2%;
-	-webkit-transition-duration: 0.4s; /* Safari */
-  	transition-duration: 0.4s;
-  	cursor: pointer;
-}
-
-button:hover {
-	background-color:crimson;
-	color:black;
-	box-shadow: 5px 5px 5px 0px black;
-  }
-
 ol, ul {
 	
 }
@@ -74,15 +49,11 @@ table {
 }
 
 html, body {
-	font-family: 'Charm', cursive;
-	font-weight: bold;
-	color: crimson;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: 'Charm', cursive;
-	font-weight: bold;
-	color: crimson;
+  font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -102,6 +73,59 @@ p {
 	line-height: 1.5;
 	font-family: 'Lato', sans-serif;
 }
+.player{
+	display: flex;
+	justify-content: space-between;
 
+	align-items: center;
+	color: white;
+    background-color: rgb(151, 69, 69);
+    box-shadow: inset 1px 1px 1px black;
+    border: 2px solid #D1AE78;
+    padding: 5px;
+    margin-right: 2px;
+    width: 72px;
+    font-size: 1.5rem;
+}
+  .exp-div2{
+    border-top: 1px solid rgb(99, 99, 99);
+    padding-top: 10px;
+    margin: auto;
+	justify-content: space-between;
+	align-content: space-between;
+    width: 70%;
+  }
+  .exp-div3{
+      padding-bottom: 15px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+  }
+  .exp-div3 h5{
+      justify-self: center;
+      font-size: 2rem;
+      text-align: left;
+     
+  }
+   .monster-title4{
+    color: rgb(218, 188, 22);
+	margin-bottom: -1px;
+	margin-left: 2px;
+    font-size: 2rem;
+  }
+  .monster-title3{
+    color: #D1AE78;
+	margin-bottom: -1px;
+	margin-left: 2px;
+    font-size: 1.55rem;
+  }
 
-
+.sword{
+	height:18px;
+	width: 18px;
+}
+.app-container{
+	background-color: #3a4253;
+	height: 100vh;
+}

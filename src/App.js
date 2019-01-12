@@ -1,118 +1,31 @@
-import React, { Component } from 'react';
-import {Banner, GroupAndSearch, Container, AppContainer} from './App_css.js'
-import Players from './components/GroupInfo';
-import SearchInfo from './components/SearchInfo';
-import MonsterList from './components/monsterList/monsterList';
-import XpDisplay from './components/XpDisplay';
-import dnd from './components/images/dnd.png'
-import './components/styles/custom.css'
-
+import React from 'react';
+import { Route } from "react-router-dom";
+import {Container} from './App_css.js'
+import MonsterView from "./components/monsterView/monsterView.js"
+import Footer from "./components/footer/footer.js";
+import Nav from './components/nav/nav.js';
+import GenGroup from "./components/genGroup/genGroup.js";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import './components/styles/custom.css';
 
 
 class App extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-      players: [],
-      encounterDifficulty: '',
-      monsterSize: '',
-      environment: '',
-      monsterType: '',
-      minChallenge: '',
-      maxChallenge: ''
-    };
-  }
-
-  componentDidMount(){}
-
-  getPlayers = (players) => {
-    this.setState({
-      players: players,
+    componentDidMount(){
+    AOS.init({
+      duration : 800
     })
   }
-
-  getEncounterDifficulty = (difficulty) => {
-    this.setState({
-      encounterDifficulty: difficulty,
-    })
-  }
-
-  getMonsterSize = (size) => {
-    this.setState({
-      monsterSize: size,
-    })
-  }
-
-  getEnvironment = (environment) => {
-    this.setState({
-      environment: environment,
-    })
-  }
-
-  getMonsterType = (type) => {
-    this.setState({
-      monsterType: type,
-    })
-  }
-
-  getMinChallenge = (min) => {
-    this.setState({
-      minChallenge: min,
-    })
-  }
-
-  maxChallenge = (max) => {
-    this.setState({
-      maxChallenge: max,
-    })
-  }
-
-  removePlayer = (filtered) => {
-    this.setState({
-      players: filtered,
-    })
-  }
-
   render() {
     return (
-      <AppContainer>
-        <Banner>
-          <img src={dnd} alt="dungeons and dragons" className="dnd" />
-          <h1>Encounter Generator</h1>
-        </Banner>
-
+      <div>
         <Container>
-          <GroupAndSearch>
-            <Players getPlayers={this.getPlayers} removePlayer={this.removePlayer}/>
-            <XpDisplay players={this.state.players}/>
-            <SearchInfo
-              getEnvironment={this.getEnvironment}
-              getEncounterDifficulty={this.getEncounterDifficulty}
-              getMonsterSize={this.getMonsterSize}
-              getMonsterType={this.getMonsterType}
-              getMinChallenge={this.getMinChallenge}
-              maxChallenge={this.maxChallenge}
-            />
-          </GroupAndSearch>
-          <MonsterList 
-            players={this.state.players}
-            difficulty={this.state.encounterDifficulty}
-            size={this.state.monsterSize}
-            type={this.state.monsterType}
-            minCr={this.state.minChallenge}
-            maxChallenge={this.state.maxChallenge}
-            environment={this.state.environment}
-          />
-        </Container>
-        <div className='footer'>
-        <p className="footer-p">
-          This App was created by <a href="https://github.com/lanners-marshall" className="footer-a">Marshall Lanners</a>,
-           <a href="https://github.com/markstez05" className="footer-a"> Mark Stesney</a>
-           , and <a href="https://github.com/JHaydenDev" className="footer-a">Joseph Hayden</a>.
-           <br /> It can be be viewed <a href="https://github.com/lanners-marshall/dnd-encounter-generator" className="footer-a">here</a>.
-         </p>
+        <Route path='/' component={Nav} />
+         <Route exact path='/' component={GenGroup} />
+         <Route exact path='/compendium' component={MonsterView} />
+          </Container>
+        <Route path='/' component={Footer} />
         </div>
-      </AppContainer>
     )
   }
 }
