@@ -28,7 +28,7 @@
   }
   .monster-card{
     box-shadow: 1px 1px 5px 1px rgb(29, 29, 29);
-    background-color: #3a4253;
+   
     border: 2px solid #D1AE78;
     text-align: center;
     padding-bottom: 5px;
@@ -74,7 +74,9 @@
   }
   .stat-title{
     font-size: 1.15rem;
+    font-weight: bold;
     margin-bottom: 0px;
+    color:white;
   }
   .stat{
     background-color: rgb(151, 69, 69);
