@@ -1,13 +1,19 @@
 .monview {
   margin-top: -20px;
 }
-
+.card-contain{
+  display: flex;
+  flex-direction: column;
+  /* height: 100px; */
+}
 .monster-card1 {
-  box-shadow: 1px 1px 10px 5px rgb(29, 29, 29);
-  background-color: #161618;
-  border: 2px solid #D1AE78;
+  /* box-shadow: 1px 1px 10px 5px rgb(29, 29, 29); */
+  background-color: #16161800;
+  /* border: 2px solid #D1AE78; */
   text-align: center;
-  margin: 10px;
+  margin: 0px;
+  width: 100%;
+  justify-content: space-evenly;
   display: flex;
   flex-direction: row;
 }
@@ -28,7 +34,6 @@
   align-items: center;
   flex-direction: row;
 }
-
 .monster-card2 p {
   width: 230px;
   font-size: 1.8rem;
@@ -40,10 +45,9 @@
 
 .monster-pic1 {
   margin: auto;
-  border-right: 2px solid #D1AE78;
-  width: 232px;
-  height: 232px;
-  padding: 1px;
+  width: 250px;
+  height: 250px;
+  padding: 0px;
 }
 
 .monster-pic2 {
@@ -66,28 +70,41 @@
 }
 .monster-div1 {
   margin: auto;
-  top: 0;
+  /* top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: fixed;
-  z-index: 200;
-  margin-top: 20px;
-  height: 258px;
+  z-index: 200; */
+  margin-top: 0px;
+  height: 250px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: space-between;
   margin: auto;
   flex-wrap: wrap;
   color: white;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .monster-div1:hover {
   cursor: pointer;
 }
-
+  .stat-title1{
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color:#55150F;
+  }
+.toggle1{
+  position: relative;
+  transition: all ease-in-out .2s;
+  margin-top: 5px;
+  display: none;
+  background-image: url("../images/paper.jpg");
+  background-size: 100% 800px;
+}
 .monster-div2 {
   max-width: 1400px;
   padding-top: 20px;
@@ -142,8 +159,11 @@
   padding: 10px;
 }
 .monster-title01 h1 {
-
+text-shadow: 1px 1px 1px #000000;
   padding-bottom: 2px;
+  font-size: 2.2rem;
+  width: 215px;
+  margin-left: -15px;
 }
 .monster-title01 h5 {
   width: 200px;
@@ -156,7 +176,7 @@
   align-items: center;
   align-content: center;
   margin-bottom: -3px;
-  color: white;
+  color: rgb(12, 12, 12);
 }
 .exp-div5 {
   width: 200px;
@@ -165,8 +185,10 @@
   padding-right: 20px;
   padding-left: 20px;
 }
-.monster-title2{
-  color: white;
+.monster-title02{
+  color: #55150F;
+  font-size: 1.55rem;
+   font-weight: 200;
 }
 .exp-div6 {
   width: 100%;
@@ -178,8 +200,9 @@
 }
 
 .exp-div6 h5 {
-    color: #D1AE78;
+    color: #55150F;
   justify-self: center;
+  font-weight: bold;
   font-size: 1.55rem;
   text-align: left;
   margin-right: 10px;
@@ -259,16 +282,24 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 880px) {
   .monster-card1 {
-    box-shadow: 1px 1px 15px 5px rgb(29, 29, 29);
-    background-color: #161618;
+    box-shadow: 1px 1px 10px 2px rgb(29, 29, 29);
+    background-color: #16161834;
     border: 2px solid #D1AE78;
     text-align: center;
-    margin: 10px;
+    margin: 5px;
+    width: 295px;
     display: flex;
     flex-direction: column;
   }
+  .monster-title01 h1 {
+text-shadow: 1px 1px 1px #000000;
+  padding-bottom: 2px;
+  font-size: 2.2rem;
+  width:initial;
+  margin-left: 0px;
+}
 .monster-title01 h5 {
   width: 238px;
   margin-left: -10px;
@@ -284,13 +315,13 @@
 }
   .monster-div1 {
     margin: auto;
-    top: 0;
+    /* top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: fixed;
     z-index: 200;
-    margin-top: 20px;
+    margin-top: 20px; */
     height: 650px;
     display: flex;
     flex-direction: row;
@@ -323,6 +354,7 @@
   }
 
   .monster-pic1 {
+     border-bottom: 2px solid #D1AE78;
     margin: auto;
     border-right: none;
     width: 290px;

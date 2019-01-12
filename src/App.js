@@ -12,6 +12,7 @@ import './components/styles/custom.css';
 
 class App extends React.Component {
     componentDidMount(){
+    window.scrollTo(0, 0);      
     AOS.init({
       duration : 800
     })
