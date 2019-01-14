@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import monsters from "../monsters.js";
 import {FlexDiv} from '../styles/search_info_css.js'
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import Select from 'react-select';
 import "./monsterView.css";
 
@@ -102,7 +102,7 @@ class MonsterView extends Component {
             expBut: false,
             crBut: false,
             totalDiv: null,
-            monModal: null,
+            monModal: false,
             statDiv: null
         };
     }
@@ -317,6 +317,22 @@ class MonsterView extends Component {
            }
        })
     }
+        abilHide = name => {
+        this.state.monsters.filter(monster => {
+           if(monster.name === name){
+               document.getElementById(`${monster.name}1`).style.display = "none";
+               document.getElementById(`${monster.name}2`).style.display = "flex";
+           }
+                  })
+           }
+       abilShow = name => {
+                 this.state.monsters.filter(monster => {
+           if(monster.name === name){
+           document.getElementById(`${monster.name}2`).style.display = "none";
+            document.getElementById(`${monster.name}1`).style.display = "flex";
+           }
+                 })
+           }
     capitalize = (str) => 
     str.charAt(0).toUpperCase() + str.slice(1);
 
@@ -462,18 +478,44 @@ class MonsterView extends Component {
                         
                         
                         <div data-aos="flip-left" id={monster.name} className="toggle1">
+                        <div className="abilities" id={(`${monster.name}1`)}>
                         <div 
                         onClick={() => {
                          this.toggleHide(monster.name);
+                           this.abilHide(monster.name);
                          }}
-                        className="monster-div1">
-                        <div className="monster-card1">
+                        id="abilities"
+                        className="ability-div">
+                        <div className="ability">
+                         <h1>Actions</h1>   
+                        <p className="stat-title1" dangerouslySetInnerHTML={{__html: monster.Actions}}/>
+                        </div>
+                        <div className="ability2">
+                        <h1>Lengendary Actions</h1>
+                        <p className="stat-title1" dangerouslySetInnerHTML={{__html: monster.Legendary_actions}}/>
+                        </div>
+                        </div>
+                        <FaAngleRight 
+                        className="arrowright"
+                            onClick={() => {
+                         this.abilHide(monster.name);
+                         }}
+                        />
+                        </div>
+                        <div className="monster-div1">
+                        <div data-aos="flip-left" id={(`${monster.name}2`)}
+                        onClick={() => {
+                         this.toggleHide(monster.name);
+                        
+                         }}
+                         className="monster-card1">
                       <div>
-                        <img src={monster.img_url} className="monster-pic1" alt="monsterPic"></img>
+                         <img src={monster.img_url} className="monster-pic1" alt="monsterPic"></img>
                        </div>
-                        <div className="exp-div5">
-                        <div className="monster-title01">
-                        <h1
+
+                        <div className="other-skills">
+                         <div className="monster-title01">
+                        <h2
                        style = {{ color: 
                        monster.type === "aberration"  ? "teal" :
                        monster.type === "beast" ? "chocolate" :
@@ -491,30 +533,48 @@ class MonsterView extends Component {
                        monster.type === "dragon" ? "gold" : "white"
                         }
                        }
-                        >{monster.name}</h1>
-                        <h5>{monster.type} <span style={{ color: "Gray"}}>|</span> ({monster.size})</h5>
+                        >{monster.name}</h2>
+                        <p>{monster.type} | ({monster.size})</p>
                         </div>
-                        <div className="exp-div6">
-                            <h5>Page Number: </h5><span className="monster-title02"> {monster.page}</span>
+                        <div className="skill-div">
+                        <div className="skill-set">
+                            <div className="skill">
+                            <p className="skill-name">Skills</p>
+                            <p className="skill-name1">{monster.Skills}</p>
+                            </div>
+                               <div className="skill">
+                            <p className="skill-name">Senses</p>
+                            <p className="skill-name1">{monster.Senses}</p>
+                            </div>
+                         <div className="skill">
+                            <p className="skill-name">Languages</p>
+                            <p className="skill-name1">{monster.Languages}</p>
+                            </div>
                         </div>
-                        <div className="exp-div6">
-                            <h5>Challenge Raiting: </h5><span className="monster-title02"> {monster.challenge_rating}</span>
+                           <div className="skill-set2">
+                           <div className="skill">
+                            <p className="skill-name">Page</p>
+                            <p className="skill-name1">{monster.page}</p>
+                            </div>
+                                  <div className="skill">
+                            <p className="skill-name">Challenge Rating</p>
+                            <p className="skill-name1">{monster.challenge_rating}</p>
+                            </div>
+                                  <div className="skill">
+                            <p className="skill-name">Exp Points</p>
+                            <p className="skill-name1">{monster.xp}</p>
+                            </div>
                         </div>
-                        <div className="exp-div6">
-                            <h5>Exp Points:  </h5><span className="monster-title02">{monster.xp} XP</span>
-                        </div>
-                            <div className="exp-div6">
-                            <h5>Alignment:  </h5><span className="monster-title02">{monster.alignment}</span>
                         </div>
                         </div>
                         <div className="monster-info1">
                         <div className="monster-info">
                         <div className="monster-stats">
-                            <p className="stat-title1">ARMOR CLASS</p>
+                            <p className="stat-title1">AC</p>
                             <p className="stat">{monster.armorClass}</p>
                         </div>
                         <div className="monster-stats">
-                            <p className="stat-title1">HIT POINTS</p>
+                            <p className="stat-title1">HP</p>
                             <p className="stat">{monster.hitPoints}</p>
                         </div>
                         <div className="monster-stats">
@@ -550,9 +610,14 @@ class MonsterView extends Component {
                             <p className="stat">{monster.CHA} ({monster.CHA_mod})</p>
                         </div>
                         </div>
-                        
                         </div>
                         </div>
+                                <FaAngleRight 
+                                className="arrowright"
+                            onClick={() => {
+                         this.abilShow(monster.name);
+                         }}
+                        />
                         </div>
                         </div>
                         </div>
