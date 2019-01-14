@@ -1,21 +1,36 @@
 .monview {
   margin-top: -20px;
+  margin: auto;
+  max-width: 1220px;
 }
 .card-contain{
   display: flex;
   flex-direction: column;
   /* height: 100px; */
 }
-.monster-card1 {
-  /* box-shadow: 1px 1px 10px 5px rgb(29, 29, 29); */
-  background-color: #16161800;
-  /* border: 2px solid #D1AE78; */
-  text-align: center;
-  margin: 0px;
-  width: 100%;
-  justify-content: space-evenly;
+.monster-div1 {
+  margin: auto;
+  margin-top: 0px;
+  height: 250px;
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content:space-between;
+  margin: auto;
+  flex-wrap: wrap;
+  color: white;
+}
+.monster-card1 {
+  margin: 0px;
+  padding-right: 5px;
+  width: 100%;
+  max-width: 1050px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+.monster-card1:hover{
+  cursor: pointer;
 }
 .arrowdown{
   color: white;
@@ -38,16 +53,20 @@
   width: 230px;
   font-size: 1.8rem;
 }
-
 .monster-card2:hover {
+    box-shadow: inset 1px 1px 5px 1px rgba(22, 22, 22, 0.993);
   cursor: pointer;
+  background-color: #934446;
 }
 
+
 .monster-pic1 {
+      box-shadow: 1px 1px 5px 1px rgba(22, 22, 22, 0.993);
   margin: auto;
-  width: 250px;
-  height: 250px;
-  padding: 0px;
+  border-right: 2px solid #D1AE78;
+  width: 247px;
+  height: 247px;
+  padding: 1px;
 }
 
 .monster-pic2 {
@@ -68,38 +87,74 @@
 .cr2{
   display: none;
 }
-.monster-div1 {
-  margin: auto;
-  /* top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: fixed;
-  z-index: 200; */
-  margin-top: 0px;
-  height: 250px;
-  display: flex;
+
+.abilities{
+  display: none;
   flex-direction: row;
-  width: 100%;
   justify-content: space-between;
-  margin: auto;
-  flex-wrap: wrap;
-  color: white;
-  padding-bottom: 0px;
-  font-family: Arial, Helvetica, sans-serif;
+  height: 246px;
 }
-.monster-div1:hover {
+
+.ability-div{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 97%;
+  padding: 10px;
+}
+.ability-div h1{
+  font-size: 2rem;
+  color: #55150F;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #55150f;
+}
+.ability-div p{
+  color: rgb(15, 15, 15);
+  font-size: 1.5rem;
+  max-width: 650px;
+  padding-bottom: 3px;
+}
+.ability-div strong{
+  color: rgb(85, 22, 22);
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-decoration: underline;
+  display: table;
+}
+.ability{
+  width: 60%;
+  padding-right: 10px;
+  overflow: scroll;
+  overflow-x:hidden;
+  overflow-y: auto;
+}
+.ability2{
+  /* width: 600px; */
+  width: 45%;
+  margin-left: 10px;
+   padding-right: 10px;
+  overflow: scroll;
+  overflow-x:hidden;
+  overflow-y: auto;
+}
+.arrowright{
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  z-index: 20;
+  color: rgb(247, 247, 247);
+}
+.arrowright:hover{
   cursor: pointer;
+  color: #55150f;
 }
-  .stat-title1{
-    font-size: 1.15rem;
-    font-weight: bold;
-    margin-bottom: 0px;
-    color:#55150F;
-  }
 .toggle1{
+    border: 2px solid #D1AE78;
+  box-shadow: inset 1px 1px 10px 3px rgb(29, 29, 29);
+  max-height: 250px;
   position: relative;
-  transition: all ease-in-out .2s;
+  transition: all ease-in-out 1.2s;
   margin-top: 5px;
   display: none;
   background-image: url("../images/paper.jpg");
@@ -123,8 +178,6 @@
   border: 2px solid #D1AE78;
   width: 99.8%;
   background-color: black;
-  /* padding-right: 30px;
-    padding-left: 30px; */
   display: flex;
   justify-content: space-around;
 }
@@ -134,7 +187,6 @@
   margin-right: 45px;
   font-size: 2rem;
   text-align: center;
-  /* width: 200px; */
 }
 
 .mon-div-stats:hover p {
@@ -153,61 +205,93 @@
   text-align: center;
 }
 
-.monster-title01 {
-  color: #D1AE78;
-  font-size: 1.8rem;
-  padding: 10px;
-}
-.monster-title01 h1 {
-text-shadow: 1px 1px 1px #000000;
-  padding-bottom: 2px;
-  font-size: 2.2rem;
-  width: 215px;
-  margin-left: -15px;
-}
-.monster-title01 h5 {
-  width: 200px;
-  margin-left: -10px;
-  border-bottom: 1px solid gray;
-  border-top: 1px solid gray;
-  display: flex;
-  padding: 5px;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  margin-bottom: -3px;
-  color: rgb(12, 12, 12);
-}
-.exp-div5 {
-  width: 200px;
+.other-skills{
+  width: 100%;
+  height: 235px;
+  max-width: 450px;
+ align-self: flex-end;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  padding-right: 20px;
-  padding-left: 20px;
+  justify-content: space-between;
+   padding: 5px;
+   margin-right: 5px;
 }
-.monster-title02{
-  color: #55150F;
-  font-size: 1.55rem;
-   font-weight: 200;
-}
-.exp-div6 {
+.monster-title01 {
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding-bottom: 0px;
-  margin: auto;
+}
+.monster-title01 h2 {
+  border-bottom: 2px solid #55150f;
+  text-shadow: 1px 1px 1px #000000;
+  padding-bottom: 2px;
+  font-size: 2.4rem;
+}
+.monster-title01 p {
+  color: rgb(0, 0, 0);
+  margin-top: -5px;
+  margin-bottom: 5px;
+  justify-self: flex-start;
+  align-self: flex-start;
+  font-size: 2rem;
+}
+.skill-div{
   display: flex;
   justify-content: space-between;
-  text-align: left;
+  height: 100%;
+  /* border: 1px solid green; */
 }
+.skill-set{
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-.exp-div6 h5 {
-    color: #55150F;
-  justify-self: center;
+}
+.skill-set2{
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.skill{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.skill-name{
+  text-decoration: underline;
+ color: #55150f;
+ font-weight: bold;
+ font-size: 1.8rem;
+}
+.skill-name1{
+  color: black;
+  font-size: 1.5rem;
   font-weight: bold;
-  font-size: 1.55rem;
-  text-align: left;
-  margin-right: 10px;
 }
-
+.monster-info1{
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+  text-align: center;
+  max-width: 275px;
+  height: 90%;
+}
+.stat-title1{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color:black;
+}
+.stat{
+  color:white;
+  font-size: 1.5rem;
+  background-color: #55150F;
+}
 .sort-button {
   text-align: center;
   color: white;
@@ -284,9 +368,9 @@ text-shadow: 1px 1px 1px #000000;
 
 @media (max-width: 880px) {
   .monster-card1 {
-    box-shadow: 1px 1px 10px 2px rgb(29, 29, 29);
-    background-color: #16161834;
-    border: 2px solid #D1AE78;
+    box-shadow: none;
+    background-color: #16161800;
+    border: none;
     text-align: center;
     margin: 5px;
     width: 295px;
@@ -315,13 +399,6 @@ text-shadow: 1px 1px 1px #000000;
 }
   .monster-div1 {
     margin: auto;
-    /* top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: fixed;
-    z-index: 200;
-    margin-top: 20px; */
     height: 650px;
     display: flex;
     flex-direction: row;
@@ -354,7 +431,7 @@ text-shadow: 1px 1px 1px #000000;
   }
 
   .monster-pic1 {
-     border-bottom: 2px solid #D1AE78;
+     /* border-bottom: 2px solid #D1AE78; */
     margin: auto;
     border-right: none;
     width: 290px;
@@ -384,4 +461,25 @@ text-shadow: 1px 1px 1px #000000;
     width: 75px;
     font-size: 1rem;
   }
+}
+
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: rgba(245, 245, 245, 0.205);
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: rgba(245, 245, 245, 0);
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
 }
