@@ -24,13 +24,10 @@
   margin: 0px;
   padding-right: 5px;
   width: 100%;
-  max-width: 1050px;
+  max-width: 1040px;
   justify-content: space-between;
   display: flex;
   flex-direction: row;
-}
-.monster-card1:hover{
-  cursor: pointer;
 }
 .arrowdown{
   color: white;
@@ -138,17 +135,7 @@
   overflow-x:hidden;
   overflow-y: auto;
 }
-.arrowright{
-  width: 30px;
-  height: 30px;
-  align-self: center;
-  z-index: 20;
-  color: rgb(247, 247, 247);
-}
-.arrowright:hover{
-  cursor: pointer;
-  color: #55150f;
-}
+
 .toggle1{
     border: 2px solid #D1AE78;
   box-shadow: inset 1px 1px 10px 3px rgb(29, 29, 29);
@@ -232,7 +219,7 @@
 .monster-title01 p {
   color: rgb(0, 0, 0);
   margin-top: -5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   justify-self: flex-start;
   align-self: flex-start;
   font-size: 2rem;
@@ -245,25 +232,34 @@
 }
 .skill-set{
   width: 48%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
+  overflow-y:auto;
+  overflow-x:hidden;
 }
 .skill-set2{
-  width: 48%;
+  width: 48%; 
+  padding-left: 5px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+.skill-set3{
+  width: 48%; 
+    padding-left: 4px;
+  height: 100%;
+  overflow-y:auto;
+  overflow-x:hidden;
 }
 .skill{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  padding-bottom: 5px;
 }
 .skill-name{
-  text-decoration: underline;
+ text-decoration: underline;
  color: #55150f;
  font-weight: bold;
  font-size: 1.8rem;
@@ -317,7 +313,37 @@
   background-color: rgb(37, 37, 37);
   cursor: pointer;
 }
-
+.icons{
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.arrowright{
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  z-index: 20;
+  color: #55150f;
+}
+.arrowright:hover{
+  cursor: pointer;
+  color: black;
+}
+.close{
+  color: black;
+  padding: 5px;
+  font-size:2rem;
+}
+.close:hover{
+  cursor: pointer;
+  color: #55150f;
+}
+.arrowed{
+  color: rgba(255, 255, 255, 0);
+}
 @media (max-width: 1200px) {
   .mon-div-stats p {
     margin-left: 15px;
