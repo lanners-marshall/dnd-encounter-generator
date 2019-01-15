@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import monsters from "../monsters.js";
 import {FlexDiv} from '../styles/search_info_css.js'
-import { FaAngleDown, FaAngleRight } from "react-icons/fa";
+import { FaAngleDown, FaAngleRight, FaAngleLeft, FaTimes } from "react-icons/fa";
 import Select from 'react-select';
 import "./monsterView.css";
 
@@ -103,12 +103,15 @@ class MonsterView extends Component {
             crBut: false,
             totalDiv: null,
             monModal: false,
-            statDiv: null
+            statDiv: null,
+            dmg: ""
         };
     }
     componentDidMount() {
         window.scrollTo(0, 0);
     }
+
+    //input change handlers
 	handleChange3 = (size) => {
 	  this.setState({ size });
 	}
@@ -122,13 +125,13 @@ class MonsterView extends Component {
 	  this.setState({ challenge });
 	}
 
+    //generates list based on selected fields
     genMon = () => {
         let env = this.state.env.value;
         let size = this.state.size.value;
         let type = this.state.type.value;
         let cr = this.state.challenge.value;
         let ar = []
-
         let condition1, condition2, condition3, condition4
       
         for (let i in monsters){
@@ -173,6 +176,7 @@ class MonsterView extends Component {
            })
         }
     }
+    //clears list
     clear = () => {
         this.setState({
             monsters: [],
@@ -181,6 +185,8 @@ class MonsterView extends Component {
             statDiv: null
         });
     }
+
+    //sorts list by field
     typeSort = () => {
         this.state.monsters.sort(function (a, b) {
             if (a.type < b.type) {
@@ -278,7 +284,6 @@ class MonsterView extends Component {
             crBut: true,
         })
     };
-
     pageSort = () => {
         this.state.monsters.sort(function (a, b) {
             return a.page - b.page;
@@ -293,6 +298,8 @@ class MonsterView extends Component {
             crBut: false,
         })
     };
+
+
     onMonClick = name => {
         this.state.monsters.filter(monster => {
             if (monster.name === name) {
@@ -303,6 +310,41 @@ class MonsterView extends Component {
         });
     };
 
+    //fills stat to none if field does not exist
+    statFill = (monster) => {
+        let dmg = monster.damage_immune;
+            if(!monster.hasOwnProperty('damage_immune')){
+            document.getElementById(`${monster.name}3`).innerHTML = "(none)";
+           } else if(monster.hasOwnProperty('damage_immune')){
+         document.getElementById(`${monster.name}3`).innerHTML = dmg;
+           }
+    }
+        statFill1 = (monster) => {
+        let cnd = monster.condition_immune;
+            if(!monster.hasOwnProperty('condition_immune')){
+            document.getElementById(`${monster.name}5`).innerHTML = "(none)";
+           } else if(monster.hasOwnProperty('condition_immune')){
+         document.getElementById(`${monster.name}5`).innerHTML = cnd;
+           }
+    }
+        statFill2 = (monster) => {
+        let dmgres = monster.damage_resist;
+            if(!monster.hasOwnProperty('damage_resist')){
+            document.getElementById(`${monster.name}4`).innerHTML = "(none)";
+           } else if(monster.hasOwnProperty('damage_resist')){
+         document.getElementById(`${monster.name}4`).innerHTML = dmgres;
+           }
+    }
+            statFill3 = (monster) => {
+        let skill = monster.Skills;
+            if(!monster.hasOwnProperty('Skills')){
+            document.getElementById(`${monster.name}6`).innerHTML = "(none)";
+           } else if(monster.hasOwnProperty('Skills')){
+         document.getElementById(`${monster.name}6`).innerHTML = skill;
+           }
+    }
+
+    //toggle hide and show monster stats when clicked
     toggleHide = name => {
        this.state.monsters.filter(monster => {
            if(monster.name === name){
@@ -317,6 +359,7 @@ class MonsterView extends Component {
            }
        })
     }
+    //toggles ability page
         abilHide = name => {
         this.state.monsters.filter(monster => {
            if(monster.name === name){
@@ -333,11 +376,12 @@ class MonsterView extends Component {
            }
                  })
            }
+
+      //capitalizes first letter from lowercase    
     capitalize = (str) => 
     str.charAt(0).toUpperCase() + str.slice(1);
 
     render(){
-        console.log("monsters",this.state.monsters)
     let totalDiv = null;
     let statDiv = null;
     if (this.state.totalDiv === true) {
@@ -443,6 +487,10 @@ class MonsterView extends Component {
                         <div
                         onClick={() => {
                          this.toggleShow(monster.name);
+                         this.statFill(monster);
+                         this.statFill1(monster);
+                         this.statFill2(monster);
+                         this.statFill3(monster);
                          }}
                         data-aos="flip-down" 
                         className="monster-card2"
@@ -480,13 +528,13 @@ class MonsterView extends Component {
                         <div data-aos="flip-left" id={monster.name} className="toggle1">
                         <div className="abilities" id={(`${monster.name}1`)}>
                         <div 
-                        onClick={() => {
-                         this.toggleHide(monster.name);
-                           this.abilHide(monster.name);
-                         }}
                         id="abilities"
                         className="ability-div">
-                        <div className="ability">
+                             <div className="ability2">
+                        <h1>Traits</h1>
+                        <p className="stat-title1" dangerouslySetInnerHTML={{__html: monster.Traits}}/>
+                        </div>
+                        <div className="ability2">
                          <h1>Actions</h1>   
                         <p className="stat-title1" dangerouslySetInnerHTML={{__html: monster.Actions}}/>
                         </div>
@@ -495,19 +543,29 @@ class MonsterView extends Component {
                         <p className="stat-title1" dangerouslySetInnerHTML={{__html: monster.Legendary_actions}}/>
                         </div>
                         </div>
-                        <FaAngleRight 
+                         <div className="icons">
+                             <FaTimes 
+                        className="close"
+                            onClick={() => {
+                         this.toggleHide(monster.name);
+                         this.abilHide(monster.name);
+                        
+                         }}
+                        />
+                        <FaAngleLeft 
                         className="arrowright"
                             onClick={() => {
                          this.abilHide(monster.name);
                          }}
                         />
+                         <FaAngleRight 
+                          className="arrowed"
+                        />
+                        </div>
                         </div>
                         <div className="monster-div1">
                         <div data-aos="flip-left" id={(`${monster.name}2`)}
-                        onClick={() => {
-                         this.toggleHide(monster.name);
-                        
-                         }}
+                  
                          className="monster-card1">
                       <div>
                          <img src={monster.img_url} className="monster-pic1" alt="monsterPic"></img>
@@ -540,7 +598,7 @@ class MonsterView extends Component {
                         <div className="skill-set">
                             <div className="skill">
                             <p className="skill-name">Skills</p>
-                            <p className="skill-name1">{monster.Skills}</p>
+                            <p id={`${monster.name}6`} className="skill-name1"/>
                             </div>
                                <div className="skill">
                             <p className="skill-name">Senses</p>
@@ -563,6 +621,20 @@ class MonsterView extends Component {
                                   <div className="skill">
                             <p className="skill-name">Exp Points</p>
                             <p className="skill-name1">{monster.xp}</p>
+                            </div>
+                        </div>
+                        <div className="skill-set3">
+                           <div className="skill">
+                            <p className="skill-name">Dmg Immune</p>
+                            <p id={`${monster.name}3`} className="skill-name1" />
+                            </div>
+                                  <div className="skill">
+                            <p  className="skill-name">Dmg Resist</p>
+                            <p id={`${monster.name}4`} className="skill-name1" />
+                            </div>
+                                  <div className="skill">
+                            <p className="skill-name">Cond Immune</p>
+                            <p id={`${monster.name}5`} className="skill-name1" />
                             </div>
                         </div>
                         </div>
@@ -612,12 +684,24 @@ class MonsterView extends Component {
                         </div>
                         </div>
                         </div>
+                        <div className="icons">
+                                     <FaTimes 
+                        className="close"
+                            onClick={() => {
+                         this.toggleHide(monster.name);
+                          this.abilHide(monster.name);
+                         }}
+                        />
                                 <FaAngleRight 
                                 className="arrowright"
                             onClick={() => {
                          this.abilShow(monster.name);
                          }}
                         />
+                                           <FaAngleRight 
+                                className="arrowed"
+                        />
+                        </div>
                         </div>
                         </div>
                         </div>
