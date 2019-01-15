@@ -89,7 +89,7 @@
   display: none;
   flex-direction: row;
   justify-content: space-between;
-  height: 246px;
+  height: 250px;
 }
 
 .ability-div{
@@ -98,6 +98,7 @@
   flex-direction: row;
   width: 97%;
   padding: 10px;
+
 }
 .ability-div h1{
   font-size: 2rem;
@@ -211,15 +212,17 @@
   width: 100%;
 }
 .monster-title01 h2 {
-  border-bottom: 2px solid #55150f;
+ 
   text-shadow: 1px 1px 1px #000000;
   padding-bottom: 2px;
   font-size: 2.4rem;
 }
 .monster-title01 p {
+  width: 100%;
+  border-bottom: 2px solid #55150f;
   color: rgb(0, 0, 0);
-  margin-top: -5px;
-  margin-bottom: 10px;
+  margin-top: -9px;
+  margin-bottom: 15px;
   justify-self: flex-start;
   align-self: flex-start;
   font-size: 2rem;
@@ -317,7 +320,7 @@
   display: flex;
   flex-direction: column;
   width: 30px;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
   align-items: center;
 }
