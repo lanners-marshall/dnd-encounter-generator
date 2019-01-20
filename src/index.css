@@ -25,6 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  
 }
 ol, ul {
 	
@@ -50,6 +51,8 @@ table {
 
 html, body {
   font-family: 'Ubuntu', sans-serif;
+  height: 100%;
+  background-color: #3a4253;
 }
 
 h1, h2, h3, h4, h5 {
