@@ -21,13 +21,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Route exact path='/register' component={SignUp} />
         <Container>
+        <Route exact path='/register' component={SignUp} />
           <Route exact path='/' component={Nav} />
           <Route exact path='/' component={GenGroup} />
           <Route exact path='/compendium' component={MonsterView} />
         </Container>
-        <Route path='/' component={Footer} />
       </div>
     )
   }

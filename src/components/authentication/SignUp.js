@@ -1,6 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import {SignUpForm, Container, PicDiv, FlexDiv, Submit} from './signup_css.js';
+import {SignUpForm, Container, FlexDiv, Submit} from './signup_css.js';
+import "./custom.css";
+import dragon from '../images/dragon.jpg';
+import dragon2 from '../images/dragon2.jpg';
+
 
 class SignUp extends React.Component {
 	constructor(){
@@ -18,8 +22,6 @@ class SignUp extends React.Component {
 
 	componentDidMount(){}
 
-	// extra in case you need to reference
-
 	handleChange = event => {
  	   this.setState({[event.target.name]: event.target.value})
  	 }
@@ -28,7 +30,7 @@ class SignUp extends React.Component {
 		return (
 			<Container>
 				<FlexDiv>
-					<PicDiv />
+						<img src={dragon2} alt="dragon" className="dragon2" />
 				 		<SignUpForm>
 				 			<h2>Registration Info</h2>
 					 		<input
@@ -58,9 +60,11 @@ class SignUp extends React.Component {
 					 			onChange={this.handleChange}
 					 			name="password_confirm"
 					 			value={this.state.password_confirm}
-					 		/>
+					 		/><br/>
 					 		<Submit>Submit</Submit>
 					 </SignUpForm>
+					 <img src={dragon} alt="dragon" className="dragon" />
+					 
 				</FlexDiv>
 			</Container>
 		)
@@ -68,3 +72,6 @@ class SignUp extends React.Component {
 }
 
 export default SignUp;
+
+
+// <img src={dragon} alt="dragon" className="dragon" />

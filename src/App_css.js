@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Banner = styled.div`
 	height: 60px;
-	
 	border-bottom: 2px solid #D1AE78;
 	box-shadow: 1px 1px 5px 1px black;
 	position: fixed;
@@ -32,5 +31,5 @@ export const Container = styled.div`
 	padding-top: 100px;
 	background:#272D38;
 	width: 100%;
-	height: 100vh;
+	min-height: 800px;
 `
