@@ -161,7 +161,10 @@ class SignUp extends React.Component {
 			let user = {username: this.state.name, email: this.state.email, password: this.state.password};
 			axios.post("https://dnd-backend.herokuapp.com/users/register", user)
 			.then(response => {
-				console.log(response)
+				console.log(response);
+				localStorage.setItem('token', response.data.token);
+				localStorage.setItem('user_id', response.data.id);
+				this.props.history.push('/')
 			})
 			.catch(error => {
 				console.log(error)
@@ -198,7 +201,7 @@ class SignUp extends React.Component {
 					 			value={this.state.password}
 					 		/><br/>
 					 		<input
-					 			type="password_confirm"
+					 			type="password"
 					 			placeholder="Password Confirm"
 					 			onChange={this.handleChange}
 					 			name="password_confirm"

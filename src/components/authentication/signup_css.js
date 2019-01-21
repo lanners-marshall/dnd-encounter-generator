@@ -18,7 +18,7 @@ export const SignUpForm = styled.form`
 	width: 100%;
 	>input {
 		width: 99%;
-		font-size: 2rem;
+		font-size: 1.8rem;
 		margin-bottom: 40px;
 	}
 	padding: 0 5%;
