@@ -56,3 +56,11 @@ export const Errors = styled.div`
 	text-align: center;
 	font-size: 1.6rem;
 `
+
+export const Register = styled.div`
+	
+`
+
+export const Login = styled.div`
+
+`

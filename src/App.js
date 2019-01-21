@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import {Container} from './App_css.js';
 import MonsterView from "./components/monsterView/monsterView.js";
-import SignUp from "./components/authentication/SignUp";
+import Authentication from "./components/authentication/Authentication";
 import Footer from "./components/footer/footer.js";
 import Nav from './components/nav/nav.js';
 import GenGroup from "./components/genGroup/genGroup.js";
@@ -28,7 +28,7 @@ class App extends React.Component {
     return (
       <div>
         <Container>
-        <Route exact path='/register' component={SignUp} />
+        <Route exact path='/register' component={Authentication} />
           <Route exact path='/' component={Nav} />
           <Route exact path='/' component={GenGroup} />
           <Route exact path='/compendium' component={MonsterView} />
