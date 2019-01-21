@@ -32,4 +32,10 @@ export const Container = styled.div`
 	background:#272D38;
 	width: 100%;
 	min-height: 800px;
+	@media (max-width: 740px){
+		min-height: 1200px;
+	}
+	@media (max-width: 500px){
+		min-height: 1000px;
+	}
 `

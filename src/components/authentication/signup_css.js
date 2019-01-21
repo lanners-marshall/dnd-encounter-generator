@@ -34,7 +34,6 @@ export const FlexDiv = styled.div`
 	display: flex;
 	@media (max-width: 740px){
 		flex-direction: column;
-		margin-bottom: 100px;
 	}
 `
 
@@ -51,38 +50,9 @@ export const Submit = styled.button`
 	}
 `
 
-	// height: 500px;
-	// background-color: #1d1d1d;
-	// color: #ddd7d7;
-	// > h2 {
-	// 	font-size: 2.5rem;
-	// 	margin: 40px 0;
-	// }
-	// > input {
-	// 	border:none;
-	// 	margin-bottom: 10px;
-	// 	background-color: #1d1d1d;
-	// 	::placeholder {
-	// 		color: #ddd7d7;
-	// 		font-size: 2rem;
-	// 	}
-	// 	padding-bottom: 5px;
-	// 	border-bottom: .5px solid #ddd7d7;
-	// 	margin-bottom: 50px;
-	// 	color: #ddd7d7;
-	// 	font-size: 2rem;
-	// 	&:focus {
-	// 		outline-width: 0;
-	// 	}
-	// 	@media (max-width: 740px){
-	// 		width: 100%;
-	// 		max-width: none;
-	// 		padding: 0;
-	// 	}
-	// }
-	// padding: 0 50px;
-	// @media (max-width: 740px){
-	// 	width: 100%;
-	// 	max-width: none;
-	// 	padding-bottom: 30px;
-	// }
+export const Errors = styled.div`
+	color: white;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 1.6rem;
+`
