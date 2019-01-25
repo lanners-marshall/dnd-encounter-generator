@@ -42,7 +42,7 @@ export const PlayersDiv = styled.div`
 	justify-content: center;
 	display:flex;
 	flex-wrap: wrap;
-		overflow-x: hidden;
+	overflow-x: hidden;
 	overflow-y: hidden;
 	// overflow: scroll;
 	> p {
