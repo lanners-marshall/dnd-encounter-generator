@@ -62,5 +62,10 @@ export const Register = styled.div`
 `
 
 export const Login = styled.div`
-
+  margin-top: 20px;
+  font-size: 1.6rem;
+  color: white;
+  &:hover {
+  	cursor:pointer;
+  }
 `
