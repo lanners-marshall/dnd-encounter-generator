@@ -38,14 +38,15 @@ class SignUp extends React.Component {
  		let user = {username: this.state.loginName, password: this.state.loginPassword}
 		axios.post("https://dnd-backend.herokuapp.com/users/login", user)
 		.then(response => {
-			// console.log(response);
+			console.log(response);
 			this.setState({
 				loginName: '',
 				loginPassword: '',
 			})
+			localStorage.setItem('name', response.data.username);
 			localStorage.setItem('token', response.data.token);
 			localStorage.setItem('user_id', response.data.id);
-			this.props.history.push('/')
+			this.props.history.push('/sessions')
 		})
 		.catch(error => {
 			console.log(error);
@@ -183,9 +184,10 @@ class SignUp extends React.Component {
 			axios.post("https://dnd-backend.herokuapp.com/users/register", user)
 			.then(response => {
 				// console.log(response);
+				localStorage.setItem('name', response.data.username);
 				localStorage.setItem('token', response.data.token);
 				localStorage.setItem('user_id', response.data.id);
-				this.props.history.push('/')
+				this.props.history.push('/sessions')
 			})
 			.catch(error => {
 				console.log(error)
