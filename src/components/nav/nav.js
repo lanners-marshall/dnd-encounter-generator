@@ -10,12 +10,12 @@ class Nav extends React.Component {
   render() {
     return (
         <div className="nav-container">
-        <Link to="/"><div className="nav-title">
-          <img src={dnd} alt="dungeons and dragons" className="dnd" />
-          <span>5e Encounter Generator</span>
-          </div></Link>
+        <div className="nav-title">
+          <img src={dnd} alt="dungeons and dragons" className="dnd-img" />
+          <Link to="/view/sessions"><span>Game Sessions List</span></Link>
+          </div>
             <div className="nav-list">
-              <Link to="/compendium"><p>Compendium</p></Link>
+              <p onClick={() => {localStorage.clear();window.location.reload(true);}}>Log Out</p>
             </div>
           </div>
     )
