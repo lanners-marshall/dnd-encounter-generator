@@ -46,7 +46,7 @@ class SignUp extends React.Component {
 			localStorage.setItem('name', response.data.username);
 			localStorage.setItem('token', response.data.token);
 			localStorage.setItem('user_id', response.data.id);
-			this.props.history.push('/sessions')
+			this.props.history.push('/view/sessions')
 		})
 		.catch(error => {
 			console.log(error);
@@ -187,7 +187,7 @@ class SignUp extends React.Component {
 				localStorage.setItem('name', response.data.username);
 				localStorage.setItem('token', response.data.token);
 				localStorage.setItem('user_id', response.data.id);
-				this.props.history.push('/sessions')
+				this.props.history.push('/view/sessions')
 			})
 			.catch(error => {
 				console.log(error)

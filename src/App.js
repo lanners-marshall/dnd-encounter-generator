@@ -6,6 +6,7 @@ import Authentication from "./components/authentication/Authentication";
 import Footer from "./components/footer/footer.js";
 import Nav from './components/nav/nav.js';
 import GenGroup from "./components/genGroup/genGroup.js";
+import Sessions from './components/sessions/Sessions.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './components/styles/custom.css';
@@ -28,10 +29,10 @@ class App extends React.Component {
     return (
       <div>
         <Container>
-        <Route exact path='/register' component={Authentication} />
-          <Route exact path='/' component={Nav} />
-          <Route exact path='/' component={GenGroup} />
-          <Route exact path='/compendium' component={MonsterView} />
+          <Route exact path='/register' component={Authentication} />
+          <Route path='/view' component={Nav} />
+          <Route exact path='/view/sessions' component={Sessions} />
+          <Route exact path='/view/sessions/:id' component={GenGroup} />
         </Container>
       </div>
     )
@@ -39,3 +40,5 @@ class App extends React.Component {
 }
 
 export default withRouter(App);
+
+// <Route exact path='/compendium' component={MonsterView} />
