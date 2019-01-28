@@ -61,11 +61,11 @@ class Players extends React.Component {
   }
 
   removePlayer = (event) => {
-  	console.log(event.target.id)
+  	// console.log(event.target.id)
   	let eventId = parseInt(event.target.id)
   	let players = this.state.players
   	let filtered = []
-  	console.log(typeof event.target.id)
+  	// console.log(typeof event.target.id)
   	for (let i in players){
   		if (players[i].id !== eventId){
   			filtered.push(players[i])

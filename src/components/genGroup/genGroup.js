@@ -9,9 +9,10 @@ import '../../components/styles/custom.css';
 
 
 class GenGroup extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
+      monsters: [],
       players: [],
       encounterDifficulty: '',
       monsterSize: '',
@@ -27,6 +28,21 @@ class GenGroup extends React.Component {
       players: players,
     })
   }
+
+  getMonsters = (monsters) => {
+    this.setState({
+      monsters: monsters,
+    }, () => {this.props.readyMonsters(this.state.monsters)})
+  }
+
+
+
+
+  //stuff happened here
+
+
+
+
 
   getEncounterDifficulty = (difficulty) => {
     this.setState({
@@ -94,6 +110,7 @@ class GenGroup extends React.Component {
             minCr={this.state.minChallenge}
             maxChallenge={this.state.maxChallenge}
             environment={this.state.environment}
+            getMonsters={this.getMonsters}
           />
         </div>
  
