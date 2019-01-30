@@ -17,7 +17,7 @@ class XpDisplay extends React.Component {
 	render() {
 		let players = this.props.players
 		let ar = []
-		console.log(players)
+		// console.log(players)
 		let easy = 0
 		let mid = 0
 		let hard = 0

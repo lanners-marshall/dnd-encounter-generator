@@ -159,6 +159,7 @@ class MonsterView extends Component {
             if (condition1 && condition2 && condition3 && condition4) {
                 ar.push(monsters[i])
             }
+
            this.setState({
                monsters: ar,
                total: ar.length,

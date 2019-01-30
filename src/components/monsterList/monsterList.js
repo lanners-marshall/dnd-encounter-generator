@@ -161,8 +161,15 @@ class MonsterList extends Component{
             diff: this.props.difficulty,
             xpPer: xpPer,
             xpTotal: monXp
-        })
+        }, () => {this.props.getMonsters(this.state.monsters)})
     }
+
+
+
+    ///stuff happend here
+
+
+    
 
     render(){
         return(
