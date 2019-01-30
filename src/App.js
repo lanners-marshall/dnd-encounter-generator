@@ -7,7 +7,7 @@ import Footer from "./components/footer/footer.js";
 import Nav from './components/nav/nav.js';
 import GenGroup from "./components/genGroup/genGroup.js";
 import Sessions from './components/sessions/Sessions.js';
-import Encounters from './components/encounters/Encounters.js';
+import Session from './components/sessions/Session.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './components/styles/custom.css';
@@ -33,7 +33,7 @@ class App extends React.Component {
           <Route exact path='/register' component={Authentication} />
           <Route path='/view' component={Nav} />
           <Route exact path='/view/sessions' component={Sessions} />
-          <Route exact path='/view/sessions/:id' component={Encounters} />
+          <Route exact path='/view/sessions/:id' component={Session} />
         </Container>
       </div>
     )

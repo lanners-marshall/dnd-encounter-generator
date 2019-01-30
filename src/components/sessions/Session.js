@@ -1,20 +1,37 @@
 import React from 'react';
 import axios from 'axios';
 import GenGroup from '../genGroup/genGroup';
+import { Link } from "react-router-dom";
 
-class Encounters extends React.Component {
+class Session extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
 			encounter_name: '',
-			monsters: []
+			monsters: [],
+			encounters: []
 		};
 	}
 
 	componentDidMount(){
-
+		let url = window.location.href
+	  let id = url.substring(url.lastIndexOf('/') + 1);
+		axios.get(`https://dnd-backend.herokuapp.com/sessions/${id}`,
+			{headers: {
+				"Authorization": localStorage.getItem('token')
+				}
+			}
+		)
+		.then(response => {
+			//console.log(response)
+			this.setState({
+				encounters: response.data
+			})
+		})
+		.catch(error => {
+			//console.log(error)
+		})
 	}
-
 	// extra in case you need to reference
 
 	handleChange = event => {
@@ -24,6 +41,37 @@ class Encounters extends React.Component {
  	readyMonsters = (monsters) => {
  		this.setState({
  			monsters: monsters
+ 		})
+ 	}
+
+ 	update = () => {
+ 		let id = localStorage.getItem('user_id')
+		axios.get(`https://dnd-backend.herokuapp.com/sessions/${id}`,
+			{headers: {
+				"Authorization": localStorage.getItem('token')
+				}
+			}
+		)
+		.then(response => {
+			// console.log(response)
+			this.setState({
+				encounters: response.data
+			})
+		})
+		.catch(error => {
+			console.log(error)
+		})
+ 	}
+
+ 	deleteEncounter = event => {
+ 		event.preventDefault()
+ 		axios.delete(`https://dnd-backend.herokuapp.com/encounters/${event.target.id}`)
+ 		.then(response => {
+ 			// console.log(response)
+ 			this.update()
+ 		})
+ 		.catch(error => {
+ 			console.log(error)
  		})
  	}
 
@@ -63,7 +111,10 @@ class Encounters extends React.Component {
 	  let encounter = {"encounter_name": this.state.encounter_name, "k": k_ar, "v": v_ar }
 	  axios.post(`https://dnd-backend.herokuapp.com/encounters/${id}`, encounter)
 	  .then(response => {
-	  	console.log(response)
+	  	this.setState({
+ 				encounter_name: ''
+ 			})
+	  	this.update()
 	  })
 	  .catch(error => {
 	  	console.log(error)
@@ -75,6 +126,12 @@ class Encounters extends React.Component {
 		console.log(this.state)
 		return (
 			<div>
+				<div>
+					{this.state.encounters.map(e => {
+						return <div key={e.id}><Link to={`/view/encounters/${e.id}`}><p>{e.encounter_name}</p></Link><p id={e.id} onClick={this.deleteEncounter}>X</p></div>
+					})}
+				</div>
+				<GenGroup readyMonsters={this.readyMonsters}/>
 				<form>
 					<input
 						type="text"
@@ -82,14 +139,12 @@ class Encounters extends React.Component {
 						onChange={this.handleChange}
 						name="encounter_name"
 						value={this.state.encounter_name}
-					/>
+					/><br/>
+					<button onClick={this.postEncounter}>Post Encounter to session</button>
 				</form>
-				<button onClick={this.postEncounter}>test</button>
-				<GenGroup readyMonsters={this.readyMonsters}/>
-
 			</div>
 		)
 	}
 }
 
-export default Encounters;
+export default Session;
