@@ -17,7 +17,7 @@ import axios from 'axios';
 class App extends React.Component {
     componentDidMount(){
     if (localStorage.getItem('token') == null){
-      this.props.history.push('/register')
+      this.props.history.push('/')
     }
     // console.log(localStorage.getItem('token'));
     // console.log(this.props)
@@ -30,7 +30,7 @@ class App extends React.Component {
     return (
       <div>
         <Container>
-          <Route exact path='/register' component={Authentication} />
+          <Route exact path='/' component={Authentication} />
           <Route path='/view' component={Nav} />
           <Route exact path='/view/sessions' component={Sessions} />
           <Route exact path='/view/sessions/:id' component={Session} />

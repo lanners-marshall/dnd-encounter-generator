@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import { SForm, Sbtn, Container, DeleteP, SessionP, ErrorD } from "./sessinos_css.js";
+import { SForm, Sbtn, Container, SessionP, DeleteP, ErrorD, Spacing, Holder } from "./sessinos_css.js";
 
 class Sessions extends React.Component {
 	constructor(props){
@@ -97,12 +97,9 @@ class Sessions extends React.Component {
 	render() {
 		// console.log(this.state)
 		return (
+			<div>
+			<Spacing/>
 			<Container>
-				<div>
-					{this.state.sessions.map(s => {
-						return <div key={s.session_id}><Link to={`/view/sessions/${s.session_id}`}><SessionP id={s.session_id}>{s.session_name}</SessionP></Link><DeleteP id={s.session_id} onClick={this.deleteSession}>X</DeleteP></div>
-					})}
-				</div>
 				<SForm onSubmit={this.createSession}>
 					<h2>Create Game Session</h2>
 					<input
@@ -112,15 +109,19 @@ class Sessions extends React.Component {
 						name="session_name"
 						value={this.state.session_name}
 					/>
-					<Sbtn onClick={this.createSession}>Create Session</Sbtn>
+				<Sbtn onClick={this.createSession}>Create Session</Sbtn>
 				</SForm>
-
 				{this.state.error ? (
 					<ErrorD>{this.state.error}</ErrorD>
 					) : null
 				}
-				
 			</Container>
+			<Holder>
+				{this.state.sessions.map(s => {
+					return <div key={s.session_id}><Link to={`/view/sessions/${s.session_id}`}><SessionP id={s.session_id}>{s.session_name}</SessionP></Link><DeleteP id={s.session_id} onClick={this.deleteSession}>X</DeleteP></div>
+				})}
+			</Holder>
+			</div>
 		)
 	}
 }

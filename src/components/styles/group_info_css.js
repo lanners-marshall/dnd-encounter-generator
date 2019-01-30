@@ -30,9 +30,10 @@ export const AddPlayer = styled.button`
 	font-size: 1.6rem;
 	border-radius: 4px;
 	margin-top: 10px;
+	background-color: #f5f3f3;
 	&:hover {
-		background-color: #f5f3f3;
 		cursor: pointer;
+		background-color: #ffffff
 	}
 `
 
