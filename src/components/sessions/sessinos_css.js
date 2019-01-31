@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+// wrap
 export const EColorDiv = styled.div`
 	border: solid #D1AE78 2px;
 	background-color: #3a4253;
@@ -32,14 +32,16 @@ export const BottomEColorDiv = styled(EColorDiv)`
 `
 
 export const EContainer = styled.div`
-	display: flex;
-	flex-wrap: wrap;
 	> div {
 		display: flex;
 		margin: 0 auto;
+		width: 100%;
 	}
 	> div > a {
 		text-decoration: none;
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
 	}
 `
 
@@ -88,6 +90,9 @@ export const Sbtn = styled.button`
 
 export const Spacing = styled.div`
 	padding-bottom: 150px;
+	@media (max-width: 625px){
+		padding-bottom: 230px;
+	}
 `
 
 export const Container = styled.div`
@@ -119,10 +124,10 @@ export const DeleteP = styled.p`
 export const SessionP = styled.p`
 	display: inline-block;
 	background-color: rgb(151, 69, 69);
-	padding: 1%;
 	font-size: 2rem;
 	margin-right: 1%;
 	margin-bottom: 15px;
+	padding: 1%;
 	border: solid #D1AE78 3px;
 	box-shadow: inset 1px 1px 1px black
 	&:hover { 
@@ -132,8 +137,12 @@ export const SessionP = styled.p`
 `
 
 export const SessionSP = styled(SessionP)`
-	padding: 3%;
-	margin-right: 5%;
+	padding: .4%;
+	maring: 0;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: center;
 	&:hover {
 		cursor: pointer;
 		background-color: rgb(128, 132, 136);
@@ -148,13 +157,24 @@ export const Sbmit = styled(SessionSP)`
 
 export const DeletePs = styled(DeleteP)`
 	width: 20px;
-	height: 20px;
+	height: 18px;
 	display:flex;
+	margin-left: 2.2%;
+	margin-bottom: 15px;
 	justify-content: center;
 	align-items: center;
 	&:hover {
 		cursor: pointer;
 		background-color: rgb(128, 132, 136);
+	}
+	@media (max-width: 1375px){
+		height: 22px;
+	}
+	@media (max-width: 910px){
+		height: 26px;
+	}
+	@media (max-width: 500px){
+		height: 28px;
 	}
 `
 

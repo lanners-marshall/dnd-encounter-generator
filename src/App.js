@@ -8,6 +8,7 @@ import Nav from './components/nav/nav.js';
 import GenGroup from "./components/genGroup/genGroup.js";
 import Sessions from './components/sessions/Sessions.js';
 import Session from './components/sessions/Session.js';
+import Encounters from './components/encounters/Encounters.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './components/styles/custom.css';
@@ -34,6 +35,8 @@ class App extends React.Component {
           <Route path='/view' component={Nav} />
           <Route exact path='/view/sessions' component={Sessions} />
           <Route exact path='/view/sessions/:id' component={Session} />
+          <Route exact path='/view/encounters/:id' component={Encounters} />
+          <Route exact path='/view/catalog' component={MonsterView} />
         </Container>
       </div>
     )

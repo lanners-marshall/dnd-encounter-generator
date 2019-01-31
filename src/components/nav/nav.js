@@ -19,7 +19,7 @@ class Nav extends React.Component {
       <div className="nav-container">
         <div className="nav-title">
           <img src={dnd} alt="dungeons and dragons" className="dnd-img" />
-          <Link to="/view/sessions"><span>Game Sessions List</span></Link>
+          <Link to="/view/sessions"><span>Game Sessions List</span></Link><Link to="/view/catalog"> <span>Monsters Catalog</span></Link>
         </div>
         <div className="nav-list">
           <p onClick={() => {localStorage.clear(); this.props.history.push('/')}}>Log Out</p>
