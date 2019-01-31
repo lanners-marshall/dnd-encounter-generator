@@ -1,9 +1,61 @@
 import styled from 'styled-components'
+// wrap
+export const EColorDiv = styled.div`
+	border: solid #D1AE78 2px;
+	background-color: #3a4253;
+	margin: 0 auto;
+	max-width: 1310px;
+	padding: 1%
+	@media (max-width: 1375px){
+		max-width: 870px;
+	}
+	@media (max-width: 910px){
+		max-width: 422px;
+	}
+	@media (max-width: 500px){
+		margin: 0 2.5%;
+	}
+	> form{
+		max-width: 700px;
+		margin: 30px auto;
+		> input {
+			font-size: 2rem;
+			border-radius: 2px;
+			margin-bottom: 15px;
+			padding: 1%;
+		}
+	}
+`
+
+export const BottomEColorDiv = styled(EColorDiv)`
+	margin-top: 30px;
+`
+
+export const EContainer = styled.div`
+	> div {
+		display: flex;
+		margin: 0 auto;
+		width: 100%;
+	}
+	> div > a {
+		text-decoration: none;
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+`
+
+export const Eh2 = styled.h2`
+	color: white;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+`
 
 export const SForm = styled.form`
 	border: solid #3a4253 3px;
-	margin-top: 20px;
 	max-width: 400px;
+	margin: 0 auto;
 	padding: 5%;
 	display: flex;
 	flex-direction: column;
@@ -36,42 +88,98 @@ export const Sbtn = styled.button`
 	}
 `
 
+export const Spacing = styled.div`
+	padding-bottom: 150px;
+	@media (max-width: 625px){
+		padding-bottom: 230px;
+	}
+`
+
 export const Container = styled.div`
 	max-width: 800px;
 	margin: 0 auto;
+	background-color: #3a4253;
+	border: solid #D1AE78 3px;
+`
+
+export const Holder = styled.div`
+	max-width: 800px;
+	margin: 0 auto;
+	margin-top: 30px;
 `
 
 export const DeleteP = styled.p`
-	border: solid #3a4253 3px;
+	background-color: rgb(151, 69, 69);
 	display: inline-block;
 	padding: 1%;
 	font-size: 2rem;
 	color: white;
+	border: solid #D1AE78 2px;
 	&:hover { 
-		color: rgb(255, 218, 7);
 		cursor: pointer;
-		background-color: #3a4253;
+		background-color: rgb(39,45,57);
 	}
 `
 
 export const SessionP = styled.p`
-	border: solid #3a4253 3px;
 	display: inline-block;
-	padding: 1%;
+	background-color: rgb(151, 69, 69);
 	font-size: 2rem;
-	margin-right: 2%;
+	margin-right: 1%;
 	margin-bottom: 15px;
+	padding: 1%;
+	border: solid #D1AE78 3px;
+	box-shadow: inset 1px 1px 1px black
 	&:hover { 
-		color: rgb(255, 218, 7);
 		cursor: pointer;
-		background-color: #3a4253;
+		background-color: rgb(39,45,57);
+	}
+`
+
+export const SessionSP = styled(SessionP)`
+	padding: .4%;
+	maring: 0;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	&:hover {
+		cursor: pointer;
+		background-color: rgb(128, 132, 136);
+	}
+`
+
+export const Sbmit = styled(SessionSP)`
+	color: white;
+	padding: 1%;
+`
+
+
+export const DeletePs = styled(DeleteP)`
+	width: 20px;
+	height: 18px;
+	display:flex;
+	margin-left: 2.2%;
+	margin-bottom: 15px;
+	justify-content: center;
+	align-items: center;
+	&:hover {
+		cursor: pointer;
+		background-color: rgb(128, 132, 136);
+	}
+	@media (max-width: 1375px){
+		height: 22px;
+	}
+	@media (max-width: 910px){
+		height: 26px;
+	}
+	@media (max-width: 500px){
+		height: 28px;
 	}
 `
 
 export const ErrorD = styled.div`
-	border: solid #3a4253 3px;
 	font-size: 2rem;
-	margin-top: 15px;
 	color: white;
 	display: inline-block;
 	padding: 2%;

@@ -28,10 +28,9 @@ export const GroupAndSearch = styled.div`
 `
 
 export const Container = styled.div`
-	padding-top: 100px;
-	background:#272D38;
 	width: 100%;
 	min-height: 800px;
+	background-color: rgb(39,45,57);
 	@media (max-width: 740px){
 		min-height: 1200px;
 	}

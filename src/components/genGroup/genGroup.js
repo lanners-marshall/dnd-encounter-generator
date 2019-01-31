@@ -35,15 +35,6 @@ class GenGroup extends React.Component {
     }, () => {this.props.readyMonsters(this.state.monsters)})
   }
 
-
-
-
-  //stuff happened here
-
-
-
-
-
   getEncounterDifficulty = (difficulty) => {
     this.setState({
       encounterDifficulty: difficulty,
@@ -111,6 +102,8 @@ class GenGroup extends React.Component {
             maxChallenge={this.state.maxChallenge}
             environment={this.state.environment}
             getMonsters={this.getMonsters}
+            handleBool={this.props.handleBool}
+            trueBool={this.props.trueBool}
           />
         </div>
  

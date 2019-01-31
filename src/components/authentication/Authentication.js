@@ -1,10 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import {SignUpForm, Container, FlexDiv, Submit, Errors, Register, Login} from './signup_css.js';
-import "./custom.css";
-import dragon from '../images/dragon.jpg';
-import dragon2 from '../images/dragon2.jpg';
-
+import {Errors, Sh2, Switch} from './signup_css.js';
+import "./main.css";
 
 class SignUp extends React.Component {
 	constructor(){
@@ -28,13 +25,16 @@ class SignUp extends React.Component {
 		};
 	}
 
-	componentDidMount(){}
+	componentDidMount(){
+
+	}
 
 	handleChange = event => {
  	  this.setState({[event.target.name]: event.target.value})
  	}
 
  	login = event => {
+ 		event.preventDefault();
  		let user = {username: this.state.loginName, password: this.state.loginPassword}
 		axios.post("https://dnd-backend.herokuapp.com/users/login", user)
 		.then(response => {
@@ -105,7 +105,7 @@ class SignUp extends React.Component {
  		//check on password length
  		if (pass.length < 8 ){
  			this.setState({
- 				length: "MUST contain at least 8 characters (12+ recommended)."
+ 				length: "password MUST contain at least 8 characters (12+ recommended)."
  			})
  			error = true;
  		} else {
@@ -117,7 +117,7 @@ class SignUp extends React.Component {
  		//has no lower case letters
  		if (pass.toUpperCase() === pass){
  			this.setState({
- 				upper: 'MUST contain at least one lowercase letter.'
+ 				upper: 'password MUST contain at least one lowercase letter.'
  			})
  			error = true;
  		} else {
@@ -129,7 +129,7 @@ class SignUp extends React.Component {
  		//has no upper case letters
  		if (pass.toLowerCase() === pass){
  			this.setState({
- 				lower: 'MUST contain at least one uppercase letter.'
+ 				lower: 'password MUST contain at least one uppercase letter.'
  			})
  			error = true;
  		} else {
@@ -140,10 +140,10 @@ class SignUp extends React.Component {
 
  		let hasNum = /\d/;
 
- 		//must contain at least one number
+ 		//password must contain at least one number
  		if (hasNum.test(pass) === false){
  			this.setState({
- 				number: "MUST contain at least one number."
+ 				number: "password MUST contain at least one number."
  			})
  			error = true;
  		} else {
@@ -159,7 +159,7 @@ class SignUp extends React.Component {
 
 		if (containsSpecialCharacters(pass) === false){
 			this.setState({
-				special: `MUST contain at least one special character [!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]`
+				special: `password MUST contain at least one special character [!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]`
 			})
 			error = true;
 		} else {
@@ -203,46 +203,35 @@ class SignUp extends React.Component {
 
 	render() {
 		return (
-			<Container>
+			<div>
 				{this.state.register ? (
-				<div>
-					<FlexDiv>
-							<img src={dragon2} alt="dragon" className="dragon2" />
-					 		<SignUpForm onSubmit={this.register}>
-					 			<h2>Registration Info</h2>
-						 		<input
-									type="text"
-							 		placeholder='Name'
-							 		onChange={this.handleChange}
-							 		name="name"
-							 		value={this.state.name}
-						 		/><br/>
-						 		<input
-						 			type="email"
-						 			placeholder='Email'
-						 			onChange={this.handleChange}
-						 			name="email"
-						 			value={this.state.email}
-						 		/><br/>
-						 		<input
-						 			type="password"
-						 			placeholder="Password"
-						 			onChange={this.handleChange}
-						 			name="password"
-						 			value={this.state.password}
-						 		/><br/>
-						 		<input
-						 			type="password"
-						 			placeholder="Password Confirm"
-						 			onChange={this.handleChange}
-						 			name="password_confirm"
-						 			value={this.state.password_confirm}
-						 		/><br/>
-						 		<Submit onClick={this.register}>Submit</Submit>
-						 		<Login onClick={this.switch}>already have an account? log in here.</Login>
-						 </SignUpForm>
-						 <img src={dragon} alt="dragon" className="dragon" />
-					</FlexDiv>
+				<div className="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+				  <div className="wrapper wrapper--w680">
+				    <div className="card card-1">
+				      <div className="card-heading"></div>
+				      <div className="card-body">
+				        <Sh2>Register</Sh2>
+				        <form onSubmit={this.register}>
+				          <div className="input-group">
+				          	<input className="input--style-1" type="text" placeholder='Name' onChange={this.handleChange} name="name" value={this.state.name}/>
+				          </div>
+				          <div className="input-group">
+				            <input className="input--style-1" type="email" placeholder='Email' onChange={this.handleChange} name="email" value={this.state.email} />
+				          </div>
+				          <div className="input-group"> 
+				          	<input className="input--style-1" type="password" placeholder="Password" onChange={this.handleChange} name="password" value={this.state.password} />
+				          </div>
+				          <div className="input-group">
+										<input className="input--style-1" type="password" placeholder="Password Confirm" onChange={this.handleChange} name="password_confirm" value={this.state.password_confirm}/>
+				          </div>
+				          <div className="p-t-20">
+				            <button className="btn btn--radius btn--green" onClick={this.register} >Submit</button>
+				          </div>
+				          <Switch onClick={this.switch}>already have a account? Click here.</Switch>
+				        </form>
+				      </div>
+				    </div>
+				  </div>
 					<Errors>
 						<p>{this.state.error_name}</p>
 						<p>{this.state.error_email}</p>
@@ -255,35 +244,30 @@ class SignUp extends React.Component {
 					</Errors>
 				</div>
 				) : 
-
-				<div>
-					<FlexDiv>
-							<img src={dragon2} alt="dragon" className="dragon2" />
-					 		<SignUpForm onSubmit={this.register}>
-					 			<h2>Log In</h2>
-						 		<input
-									type="text"
-							 		placeholder='Name'
-							 		onChange={this.handleChange}
-							 		name="loginName"
-							 		value={this.state.loginName}
-						 		/><br/>
-						 		<input
-						 			type="password"
-						 			placeholder="Password"
-						 			onChange={this.handleChange}
-						 			name="loginPassword"
-						 			value={this.state.loginPassword}
-						 		/><br/>
-						 		<Submit onClick={this.login}>Submit</Submit>
-						 		<Login onClick={this.switch}>Back to Sign Up</Login>
-						 </SignUpForm>
-						 <img src={dragon} alt="dragon" className="dragon" />
-					</FlexDiv>
+				<div className="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+				  <div className="wrapper wrapper--w680">
+				    <div className="card card-1">
+				      <div className="card-heading"></div>
+				      <div className="card-body">
+				        <Sh2>Log In</Sh2>
+				        <form onSubmit={this.login}>
+				          <div className="input-group">
+				          	<input className="input--style-1" type="text" placeholder='Name' onChange={this.handleChange} name="loginName" value={this.state.loginName}/>
+				          </div>
+				          <div className="input-group">
+				            <input className="input--style-1" type="password" placeholder="Password" onChange={this.handleChange} name="loginPassword" value={this.state.loginPassword}/>
+				          </div>
+				          <div className="p-t-20">
+				            <button className="btn btn--radius btn--green" onClick={this.login}>Submit</button>
+				          </div>
+				          <Switch onClick={this.switch}>Don't have an account? Click Here.</Switch>
+				        </form>
+				      </div>
+				    </div>
+				  </div>
 				</div>
 				}
-				
-			</Container>
+			</div>
 		)
 	}
 }

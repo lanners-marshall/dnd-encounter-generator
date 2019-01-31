@@ -29,7 +29,7 @@
         color: rgb(255, 218, 7);
     }
     .nav-title{
-        width: 300px;
+        width: 500px;
         margin-left: 20px;
         display: inline-block;
     }
@@ -70,6 +70,18 @@
         margin-left: -25px;
         width: 200px;
         justify-content: space-evenly;
-    }    
+    }
+    @media (max-width: 625px){
+        .nav-container {
+            height: 150px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-container a {
+            text-align: center;
+        }
+    }
 }
 

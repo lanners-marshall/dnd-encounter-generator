@@ -8,6 +8,7 @@ import Nav from './components/nav/nav.js';
 import GenGroup from "./components/genGroup/genGroup.js";
 import Sessions from './components/sessions/Sessions.js';
 import Session from './components/sessions/Session.js';
+import Encounters from './components/encounters/Encounters.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './components/styles/custom.css';
@@ -17,7 +18,7 @@ import axios from 'axios';
 class App extends React.Component {
     componentDidMount(){
     if (localStorage.getItem('token') == null){
-      this.props.history.push('/register')
+      this.props.history.push('/')
     }
     // console.log(localStorage.getItem('token'));
     // console.log(this.props)
@@ -30,10 +31,13 @@ class App extends React.Component {
     return (
       <div>
         <Container>
-          <Route exact path='/register' component={Authentication} />
+          <Route exact path='/' component={Authentication} />
           <Route path='/view' component={Nav} />
           <Route exact path='/view/sessions' component={Sessions} />
           <Route exact path='/view/sessions/:id' component={Session} />
+          <Route exact path='/view/encounters/:id' component={Encounters} />
+          <Route exact path='/view/catalog' component={MonsterView} />
+          <Route path='/view' component={Footer} />
         </Container>
       </div>
     )

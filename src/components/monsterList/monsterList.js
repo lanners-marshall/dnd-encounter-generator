@@ -23,7 +23,7 @@ class MonsterList extends Component{
             diff: "",
             xpTotal: "",
             xpPer: ""
-        })
+        }, this.props.handleBool())
     }
 
     getXpForFight = () => {
@@ -154,6 +154,9 @@ class MonsterList extends Component{
             countMonster(ar2[i], ar2)
         }
         let returnVal = [...new Set(ar2)]
+        if (returnVal.length > 0){
+            this.props.trueBool()
+        }
         this.setState({
             monsters: returnVal,
             monsterNum: ar2.length,

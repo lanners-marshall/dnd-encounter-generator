@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import GenGroup from '../genGroup/genGroup';
 import { Link } from "react-router-dom";
+import {EContainer, Spacing, DeletePs, SessionSP, Eh2, EColorDiv, Sbmit, BottomEColorDiv} from './sessinos_css.js';
 
 class Session extends React.Component {
 	constructor(props){
@@ -9,7 +10,8 @@ class Session extends React.Component {
 		this.state = {
 			encounter_name: '',
 			monsters: [],
-			encounters: []
+			encounters: [],
+			boolv: false
 		};
 	}
 
@@ -23,15 +25,28 @@ class Session extends React.Component {
 			}
 		)
 		.then(response => {
-			//console.log(response)
+			console.log(response)
 			this.setState({
-				encounters: response.data
+				encounters: response.data,
 			})
 		})
 		.catch(error => {
 			//console.log(error)
 		})
 	}
+
+	handleBool = () => {
+		this.setState({
+			boolv: false
+		})
+	}
+
+	trueBool = () => {
+		this.setState({
+			boolv: true
+		})
+	}
+
 	// extra in case you need to reference
 
 	handleChange = event => {
@@ -126,22 +141,33 @@ class Session extends React.Component {
 		console.log(this.state)
 		return (
 			<div>
-				<div>
-					{this.state.encounters.map(e => {
-						return <div key={e.id}><Link to={`/view/encounters/${e.id}`}><p>{e.encounter_name}</p></Link><p id={e.id} onClick={this.deleteEncounter}>X</p></div>
-					})}
-				</div>
-				<GenGroup readyMonsters={this.readyMonsters}/>
-				<form>
-					<input
-						type="text"
-						placeholder='encounter name'
-						onChange={this.handleChange}
-						name="encounter_name"
-						value={this.state.encounter_name}
-					/><br/>
-					<button onClick={this.postEncounter}>Post Encounter to session</button>
-				</form>
+				<Spacing/>
+				<EColorDiv>
+					<Eh2>Encounters List</Eh2>
+					<EContainer>
+						{this.state.encounters.map(e => {
+							return <div key={e.id}><Link to={`/view/encounters/${e.id}`}><SessionSP>{e.encounter_name}</SessionSP></Link><DeletePs id={e.id} onClick={this.deleteEncounter}>X</DeletePs></div>
+						})}
+					</EContainer>
+				</EColorDiv>
+				<GenGroup readyMonsters={this.readyMonsters} handleBool={this.handleBool} trueBool={this.trueBool}/>
+					{this.state.boolv ? (
+					<BottomEColorDiv>
+						<form>
+							<input
+								type="text"
+								placeholder='encounter name'
+								onChange={this.handleChange}
+								name="encounter_name"
+								value={this.state.encounter_name}
+							/><br/>
+							<Sbmit onClick={this.postEncounter}>Post Encounter to session</Sbmit>
+						</form>
+					</BottomEColorDiv>
+					) : 
+					null
+				}
+				<Spacing/>
 			</div>
 		)
 	}

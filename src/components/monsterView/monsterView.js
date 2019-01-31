@@ -338,9 +338,10 @@ class MonsterView extends Component {
     str.charAt(0).toUpperCase() + str.slice(1);
 
     render(){
-        console.log("monsters",this.state.monsters)
+    console.log("monsters",this.state.monsters)
     let totalDiv = null;
     let statDiv = null;
+
     if (this.state.totalDiv === true) {
       totalDiv = (
         <div className="total-mon">

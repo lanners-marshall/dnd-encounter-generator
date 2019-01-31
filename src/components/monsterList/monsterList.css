@@ -2,10 +2,9 @@
     margin-top: 20px;
     display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    max-width: 1405px;
-
-    margin: auto;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
     flex-wrap:wrap;
     color:white;
     padding-bottom: 10px;
@@ -25,10 +24,11 @@
     font-size: 1.55rem;
     padding-bottom: 10px;
     margin-bottom: 10px;
+
   }
   .monster-card{
     box-shadow: 1px 1px 5px 1px rgb(29, 29, 29);
-   
+    background-color: #3a4253;
     border: 2px solid #D1AE78;
     text-align: center;
     padding-bottom: 5px;
@@ -115,7 +115,9 @@
     margin: auto;
     justify-content: space-evenly;
     width: 250px;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
   }
   .sort-button{
     width: 100px;
@@ -223,5 +225,17 @@
     border-top: 2px solid #D1AE78;
   }
 }
+
+@media (max-width: 1375px){
+  .monster-div {
+    max-width: 770px;
+  }
+}
+@media (max-width: 910px){
+  .monster-div{
+    justify-content: center;
+  }
+}
+
   
 
