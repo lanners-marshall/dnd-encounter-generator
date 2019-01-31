@@ -37,6 +37,7 @@ class App extends React.Component {
           <Route exact path='/view/sessions/:id' component={Session} />
           <Route exact path='/view/encounters/:id' component={Encounters} />
           <Route exact path='/view/catalog' component={MonsterView} />
+          <Route path='/view' component={Footer} />
         </Container>
       </div>
     )

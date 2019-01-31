@@ -12,6 +12,9 @@
     padding-bottom: 30px;
     overflow-y: hidden;
     z-index: 1;
+    position: fixed;
+    left: 0;
+    bottom: 0;
   }
   .foot-tag{
     color: rgb(110, 110, 110);
