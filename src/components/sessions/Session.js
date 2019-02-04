@@ -47,7 +47,7 @@ class Session extends React.Component {
 		})
 	}
 
-	// extra in case you need to reference
+	//   extra in case you need to reference
 
 	handleChange = event => {
  	  this.setState({[event.target.name]: event.target.value})
