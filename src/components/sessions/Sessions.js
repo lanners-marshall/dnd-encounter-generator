@@ -42,7 +42,7 @@ class Sessions extends React.Component {
  			this.setState({
  				error: "please provide session name"
  			})
- 			// console.log(this.state)
+ 			//   console.log(this.state)
  			return
  		} else {
  			this.setState({
