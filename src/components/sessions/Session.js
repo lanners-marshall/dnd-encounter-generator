@@ -129,8 +129,7 @@ class Session extends React.Component {
 	  .then(response => {
 	  	this.setState({
  				encounter_name: ''
- 			})
-	  	this.update()
+ 			}, this.update())
 	  })
 	  .catch(error => {
 	  	console.log(error)
