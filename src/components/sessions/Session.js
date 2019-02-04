@@ -72,7 +72,7 @@ class Session extends React.Component {
 			// console.log(response)
 			this.setState({
 				encounters: response.data
-			})
+			}, window.scrollTo(0, 0))
 		})
 		.catch(error => {
 			console.log(error)
