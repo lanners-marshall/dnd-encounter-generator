@@ -47,7 +47,10 @@ class Session extends React.Component {
 		})
 	}
 
-	//   extra in case you need to reference
+	top = () => {
+		document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
 
 	handleChange = event => {
  	  this.setState({[event.target.name]: event.target.value})
@@ -161,7 +164,7 @@ class Session extends React.Component {
 								name="encounter_name"
 								value={this.state.encounter_name}
 							/><br/>
-							<Sbmit onClick={this.postEncounter}>Post Encounter to session</Sbmit>
+							<Sbmit onClick={() => {this.postEncounter(), this.top()}}>Post Encounter to session</Sbmit>
 						</form>
 					</BottomEColorDiv>
 					) : 
