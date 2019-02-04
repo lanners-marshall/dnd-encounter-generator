@@ -60,7 +60,8 @@ class Session extends React.Component {
  	}
 
  	update = () => {
- 		let id = localStorage.getItem('user_id')
+ 		let url = window.location.href
+	  let id = url.substring(url.lastIndexOf('/') + 1);
 		axios.get(`https://dnd-backend.herokuapp.com/sessions/${id}`,
 			{headers: {
 				"Authorization": localStorage.getItem('token')
