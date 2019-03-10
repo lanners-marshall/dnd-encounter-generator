@@ -1,4 +1,4 @@
-# Dungeon Helper
+# Dungeon Helper - Front End
 
 Dungeon Helper is a simple app made to let you make monster encounters for your Dungeons and Dragons 5th edition games. You can make game sessions, register encounters for game sessions, generate encounters, and save them to your game sessions. 
 
