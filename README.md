@@ -21,4 +21,18 @@ The website is deployed live on Firebase.com.
 
 ## License
 
-This project is licensed under the MIT License 
+This project is licensed under the MIT License
+
+## Authors
+
+* **Marshall Lanners**
+* **Mark Stesney** - [Github](https://github.com/markstez05)
+* **J. Hayden** - [Github](https://github.com/JHaydenDev)
+
+
+
+
+
+
+
+
