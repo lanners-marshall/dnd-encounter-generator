@@ -22,5 +22,3 @@ The website is deployed live on Firebase.com.
 ## License
 
 This project is licensed under the MIT License 
-
-]
