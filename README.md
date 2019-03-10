@@ -25,7 +25,7 @@ This project is licensed under the MIT License
 
 ## Authors
 
-* **Marshall Lanners**
+**Marshall Lanners**
 * **Mark Stesney** - [Github](https://github.com/markstez05)
 * **J. Hayden** - [Github](https://github.com/JHaydenDev)
 
